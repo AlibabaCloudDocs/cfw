@@ -5,6 +5,7 @@
 ## 请求参数 {#section_lgd_3rt_vdb .section}
 
 |参数|类型|是否必选|示例值|描述|
+|:-|:-|:---|:--|:-|
 |BizId|String|是|1068|业务区ID。|
 |BizName|String|否|登录业务|业务区名称。|
 |Remark|String|否|提供登录服务|业务区备注。|
@@ -17,6 +18,7 @@
 ## 返回参数 {#section_trk_zx1_pfb .section}
 
 |参数|类型|描述|
+|:-|:-|:-|
 |code|Number|请求结果，code为200代表请求成功。|
 |message|String|操作是否成功的消息提示。|
 
