@@ -6,11 +6,11 @@ After you subscribe Cloud Firewall service, the Firewall setting is disabled by 
 
 On the **Firewalls** \> **Internet Firewall**page of Cloud Firewall console, click **Enable Firewall for All** to enable the service for all assets protected by Internet Firewall, or select assets and click **Enable Firewall** to enable the service for specified assets.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21210/155637007637812_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21210/155637011037812_en-US.png)
 
 ## VPC Firewall {#section_9dm_yat_5gn .section}
 
-On the **Firewalls** \> **VPC Firewall** page of Cloud Firewall console, select the assets you need to monitor and click the **Firewall Settings**![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21210/155637007645638_en-US.png)switch to enable the service for specified assets.
+On the **Firewalls** \> **VPC Firewall** page of Cloud Firewall console, select the assets you need to monitor and click the **Firewall Settings**![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21210/155637011045638_en-US.png)switch to enable the service for specified assets.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21210/155637007645639_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21210/155637011045639_en-US.png)
 
