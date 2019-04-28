@@ -1,8 +1,10 @@
 # Upgrade and renewal {#concept_ayn_41b_kfb .concept}
 
-Cloud Firewall includes the **Advanced Edition**, **Enterprise Edition**, and **Flagship Edition**. You can upgrade Cloud Firewall to the required edition for more features.
+Cloud Firewall includes the **Pro Edition**, **Enterprise Edition**, and **Flagship Edition**. You can upgrade Cloud Firewall to the required edition for more features.
 
 Click **Upgrade** or **Renew** in the upper-right corner of the **Overview** page in the Cloud Firewall console to upgrade or renew the Cloud Firewall service.
+
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/22634/155641881335250_en-US.png)
 
 For more information on the features available in each edition, see [Features](../../../../intl.en-US/Product Introduction/Features.md#ul_iyx_d1x_1fb).
 
