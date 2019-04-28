@@ -7,7 +7,7 @@ The Cloud Firewall service supports annual and monthly subscriptions. The minimu
 1.  Log on to the [Purchase Cloud Firewall](https://common-buy.aliyun.com/?spm=5176.151680.785291.ee.28e77a94Kd4YTC&commodityCode=vipcloudfw#/buy) page.
 2.  Select the Cloud Firewall edition you want.
 
-    **Note:** Cloud Firewall has three editions: Premium, Enterprise, and Ultimate. Different editions support different features and billing methods. For more details, refer to[Features](../../../../intl.en-US/Product Introduction/Features.md#) and [Billing method](intl.en-US/Pricing/Billing method.md#).
+    **Note:** Cloud Firewall has three editions: Pro, Enterprise, and Flagmenship editions. Different editions support different features and billing methods. For more details, see[Features](../../../../intl.en-US/Product Introduction/Features.md#) and [Billing method](intl.en-US/Pricing/Billing method.md#).
 
 3.  Drag the slider to select the bandwidth or enter a bandwidth value in the **Bandwidth** text box.
 4.  Select a value for **Subscription period**.
