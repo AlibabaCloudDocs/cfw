@@ -38,11 +38,11 @@ The internal firewall works in the same way as security groups to manage the tra
 
 The following figure shows how the Internet firewall and internal firewall work and where they are deployed in the network topology:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/124497/155650879338798_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/124497/155651814138798_en-US.png)
 
 The VPC firewall is deployed at the border of the VPC networks to manage the traffic forwarded through Express Connect. The following figure shows how the VPC firewall works and where it is deployed in the network topology:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/124497/155650879338893_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/124497/155651814138893_en-US.png)
 
 You can use all of the three types of firewalls to precisely control your network access activities and build three protection systems: Internet traffic protection, VPC network protection, and instance protection.
 
