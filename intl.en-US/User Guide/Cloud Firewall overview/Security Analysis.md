@@ -9,13 +9,13 @@ In Security Analysis page, you can view the **Overall protection level** of host
 -   IPS settings
 -   Asset protection
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155647188411751_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155654097011751_en-US.png)
 
 ## Security Policies {#section_qz4_545_5fb .section}
 
 The **Security Policies** modules displays the percentage of the assets for which access control policies are configured in all your assets. The access control policies include those for outbound traffic to the Internet \(in-out traffic\) and those for inbound traffic from the Internet \(out-in traffic\).
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155647188445842_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155654097045842_en-US.png)
 
 Click in this area to go to the **Access Control** page. On the **Inbound Traffic** and **Outbound Traffic** tab pages, you can configure access policies. The stricter the access policies are configured, the higher the score of this protection item.
 
@@ -23,7 +23,7 @@ Click in this area to go to the **Access Control** page. On the **Inbound Traffi
 
 The **Unresolved Risks** area displays the number of abnormal activities that have not been resolved within the last **30 days** and the corresponding risk levels.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155647188445843_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155654097045843_en-US.png)
 
 Click in this area to go to the **Intrusion Detection** tab page of the Network Traffic Analysis page, you can view and process threat activities detected by Cloud Firewall. The earlier the intrusions are handled, the higher the score.
 
@@ -36,19 +36,19 @@ IPS features include:
 -   Threat intelligence
 -   Virtual patching
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155647188445844_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155654097245844_en-US.png)
 
 Click in this area to go to the **Intrusion Prevention** page. On this page, you can enable or disable the interception mode, basic policies, threat intelligence, and virtual patches features of IPS.
 
 For more information, see [Intrusion prevention policies](intl.en-US/User Guide/Security policies/Intrusion prevention policies.md#).
 
-**Note:** You can quickly determine whether an IPS feature is enabled based on the protection status icon displayed in the lower part of the **IPS Settings** area. ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155647188435248_en-US.png) indicates **Protecting**, while ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155647188435249_en-US.png) indicates **Protection disabled**.
+**Note:** You can quickly determine whether an IPS feature is enabled based on the protection status icon displayed in the lower part of the **IPS Settings** area. ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155654097235248_en-US.png) indicates **Protecting**, while ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155654097235249_en-US.png) indicates **Protection disabled**.
 
 ## Asset protection {#section_hyk_ws5_5fb .section}
 
 The **Asset Protection** module displays the number of assets that have been protected by Cloud Firewall.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155647188545845_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155654097245845_en-US.png)
 
 Click in this area to go to the **Firewall** page. On this page, you can enable or disable Cloud Firewall protection for your assets. The more assets are protected by Cloud Firewall, the higher the score of this protection item.
 
@@ -60,7 +60,7 @@ The Inbound or Outbound Internet Traffic module displays trend charts for inboun
 
 After **Cloud Firewall protection** is enabled, click **Yesterday**, **Today**, or **Seven Days** in the upper-right corner of the **Internet Inbound or Outbound Protection Trends** area to view data in the specified time range.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155647188545846_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155654097245846_en-US.png)
 
 You can view the following protection data for inbound or outbound traffic:
 
@@ -68,8 +68,16 @@ You can view the following protection data for inbound or outbound traffic:
 -   **Relative Change of Average Blocked Sessions**: displays the change rate of the average number of intercepted sessions in the specified time range compared with the average number in the previous time range. The change rate is calculated as follows: \(Number of intercepted sessions in the current time range - Number of intercepted sessions in the previous time range\)/Number of intercepted sessions in the previous time range
 -   Click a certain time on the trend chart to view the total number of sessions, number of intercepted sessions, interception percentage, and interception change rate until that time point.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155647188545847_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155654097245847_en-US.png)
 
 
 **Note:** The **Internet Inbound or Outbound Protection Trends** area can display traffic protection trends only after **Cloud Firewall protection** is enabled. We recommend that you click **Protect All** on the Firewall page to enable Cloud Firewall protection for all assets.
+
+## News {#section_tpx_p2y_yud .section}
+
+The **News** area displays latest news about Cloud Firewall, such as updates of security intelligence, virtual patches, and IPS rules.
+
+You can click **Learn More** in the upper-right corner of the **Product News** area to view all news about Cloud Firewall.
+
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21267/155654097346008_en-US.png)
 
