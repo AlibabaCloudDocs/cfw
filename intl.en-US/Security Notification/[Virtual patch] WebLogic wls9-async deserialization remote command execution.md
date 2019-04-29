@@ -8,5 +8,5 @@ Scope of impact: Oracle WebLogic 10. X and Oracle WebLogic 12.1.3
 
 Risk level: High risk
 
-Rule-based defense: A virtual patch is available in the Cloud Firewall console to defend against this vulnerability.
+Policy-based protection: Cloud Firewall provides virtual patches to fix this vulnerability. We recommend that you enable the Virtual Patches in [Intrusion Prevention](../../../../intl.en-US/User Guide/Security policies/Intrusion prevention policies.md#) to defend against this vulnerability.
 
