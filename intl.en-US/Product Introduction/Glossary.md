@@ -4,7 +4,7 @@
 
 An Internet firewall monitors and centrally manages the traffic between the Internet and your cloud assets. An Internet firewall works as follows:
 
-![](images/38818_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/124630/155653871538818_en-US.png)
 
 The built-in intrusion prevention module of an Internet firewall allows you to detect victim servers, block external connections started by your servers, and view the connections among cloud services. An Internet firewall is delivered based on the SaaS model. You can quickly enable the firewall without complex network configurations or firewall installation using an image file. Internet firewalls are deployed in a cluster by default and support smooth scale-up.
 
@@ -12,7 +12,7 @@ The built-in intrusion prevention module of an Internet firewall allows you to d
 
 A VPC firewall is a distributed firewall that monitors the traffic between two VPC networks. A VPC firewall works as follows:
 
-![](images/38820_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/124630/155653871538820_en-US.png)
 
 A VPC firewall can be deployed between two VPC networks that are connected by Express Connect or are bound to the same CEN instance. A VPC firewall is not created by default. You must specify two VPC networks and create a firewall.
 
