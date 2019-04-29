@@ -1,30 +1,30 @@
 # Glossary {#concept_mcl_ldc_5gb .concept}
 
-## Internet firewall {#section_o1r_vdc_5gb .section}
+## Internet Firewall {#section_o1r_vdc_5gb .section}
 
-An Internet firewall monitors and centrally manages the traffic between the Internet and your cloud assets. An Internet firewall works as follows:
+An Internet Firewall monitors and centrally manages the traffic between the Internet and your cloud assets. An Internet Firewall works as follows:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/124630/155653871538818_en-US.png)
+ ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/124630/155654000338818_en-US.png) 
 
-The built-in intrusion prevention module of an Internet firewall allows you to detect victim servers, block external connections started by your servers, and view the connections among cloud services. An Internet firewall is delivered based on the SaaS model. You can quickly enable the firewall without complex network configurations or firewall installation using an image file. Internet firewalls are deployed in a cluster by default and support smooth scale-up.
+The built-in Intrusion Prevention module of an Internet Firewall allows you to detect victim servers, block external connections started by your servers, and view the connections among cloud services. An Internet firewall is delivered based on the SaaS model. You can quickly enable the firewall without complex network configurations or firewall installation using an image file. Internet Firewalls are deployed in a cluster by default and support smooth scale-up.
 
-## VPC firewall {#section_otd_ggc_5gb .section}
+## VPC Firewall {#section_otd_ggc_5gb .section}
 
 A VPC firewall is a distributed firewall that monitors the traffic between two VPC networks. A VPC firewall works as follows:
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/124630/155653871538820_en-US.png)
+ ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/124630/155654000338820_en-US.png) 
 
-A VPC firewall can be deployed between two VPC networks that are connected by Express Connect or are bound to the same CEN instance. A VPC firewall is not created by default. You must specify two VPC networks and create a firewall.
+A VPC Firewall can be deployed between two VPC networks that are connected by Express Connect or are bound to the same CEN instance of the VPC network. A VPC Firewall is not created by default. You must specify two VPC networks to create a VPC Firewall.
 
-## Security group, internal firewall {#section_hct_kgc_5gb .section}
+## Security Group/Internal Firewall {#section_hct_kgc_5gb .section}
 
-A security group is a distributed virtual internal firewall provided by ECS. It provides port status monitoring and packet filtering. You can use a security group to configure access control among ECS instances. A security group is a group of ECS instances from the same region. These instances have the same security requirements and trust each other. When you create an ECS instance, you must specify at least one security group.
+A Security Group is a distributed virtual internal firewall provided by ECS. It provides port status monitoring and packet filtering. You can use Security Group to configure access control among ECS instances. A Security Group is set for a group of ECS instances from the same region. These instances have the same security requirements and trust each other. When you create an ECS instance, you must specify at least one Security Group.
 
-The internal firewalls provided by Cloud Firewall are based on security groups. To configure internal firewall policies, you can choose **Cloud Firewall** \> **Internal Firewall** or go to the security group configuration page in the **ECS console**. The configurations are automatically synchronized between the two platforms.
+The Internal Firewall provided by Cloud Firewall IS based on Security Groups. To configure Internal Firewall policies, you can choose **Cloud Firewall** \> **Internal Firewall** or go to the Security Group configuration page in the **ECS console**. The configurations are automatically synchronized between the two platforms.
 
-## Active external connections {#section_wb5_lgc_5gb .section}
+## External connections {#section_wb5_lgc_5gb .section}
 
-Cloud Firewall analyzes the external connections started by your servers in Alibaba Cloud. You can use Cloud Firewall to detect suspicious servers.
+Cloud Firewall analyzes the external connections started by your ECS instances. You can detect suspicious servers by monitoring the external connections data.
 
 ## Intrusion detection {#section_vcw_pgc_5gb .section}
 
@@ -82,6 +82,9 @@ Cloud Firewall supports the following types of address books:
 The following rules apply to address books:
 
 -   Cloud Firewall has built-in global address books. You cannot modify or delete these address books.
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/124630/155654000446007_en-US.png)
+
 -   An IP address or port number can be added to multiple address books.
--   Changes in IP addresses or port numbers in address books automatically apply to the access control policies.
+-   Changes of IP addresses or port numbers in address books automatically apply to the access control policies.
 
