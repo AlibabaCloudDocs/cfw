@@ -6,5 +6,5 @@ The following vulnerabilities have been exploited frequently: CVE-2019-1003000, 
 
 Risk level: High
 
-Rule-based defense: A virtual patch is available in the Cloud Firewall console to defend against this vulnerability. We recommend that you enable [Intrusion Prevention](../../../../intl.en-US/User Guide/Security policies/Intrusion prevention policies.md#).
+Policy-based protection: Cloud Firewall provides virtual patches to fix this vulnerability. We recommend that you enable [Intrusion Prevention](../../../../intl.en-US/User Guide/Security policies/Intrusion prevention policies.md#) to avoid this vulnerability.
 
