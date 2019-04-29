@@ -19,7 +19,7 @@ To grant Cloud Firewall the access to cloud resources, you must have one of the 
 
     -   **AliyunCloudFirewallAccessingECSRole**: Allows Cloud Firewall to access ECS instances.
     -   **AliyunCloudFirewallDefautlRole**: Allows Cloud Firewall to access other cloud services, such as OSS and SLB.
-    ![](images/37959_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/116911/155652456637959_en-US.png)
 
     After the authorization is complete, the system automatically returns to the Cloud Firewall console.
 
