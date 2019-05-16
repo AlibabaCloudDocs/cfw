@@ -27,7 +27,7 @@ Cloud firewall records the inbound and outbound traffic logs, including multiple
 |Out\_packet\_count|Total number of packet of outbound traffic|15|-|
 |Out\_pps|Pps of outbound traffic|7|Unit: pps|
 |region\_id|Region to which the access traffic belongs|cn-beijing|-|
-|Rule\_result|Result of matching the rules|pass23|The matched. valid value: -   pass: The traffic is allowed to pass through Cloud Firewall.
+|Rule\_result|Result of matching with the rules|pass23|The result of matching with the rules. The values are: -   Pass: The traffic is allowed to pass through Cloud Firewall.
 -   Alert: Cloud Firewall detects threats in the traffic.
 -   Discard: The traffic is not allowed to pass through Cloud Firewall.
 
