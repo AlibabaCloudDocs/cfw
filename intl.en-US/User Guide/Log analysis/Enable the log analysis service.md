@@ -14,7 +14,7 @@ After the Log Analysis service is activated, real-time logs of the internet traf
 2.  In the left-side navigation pane, select **Advanced Features** \> **Log Analysis**.
 3.  Click **Activate Now** on the Log Analysis page.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154091/155834414547616_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154091/155834549547616_en-US.png)
 
 4.  Select your **log storage capacity**, and then click **Pay** to complete the payment.
 
@@ -23,7 +23,7 @@ After the Log Analysis service is activated, real-time logs of the internet traf
 5.  Go back to Log Analysis page in Cloud Firewall console.
 6.  Click the **Status** switch on the right side to enable the Log Analysis service.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154091/155834414547617_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154091/155834549547617_en-US.png)
 
     Log Analysis service retrieves records of both inbound and outbound Internet traffic flowing through Cloud Firewall. You can use the retrieved records to detect threats in real time.
 
