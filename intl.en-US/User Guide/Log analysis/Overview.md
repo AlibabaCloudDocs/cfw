@@ -17,7 +17,7 @@ The log analysis service of Cloud Firewall has the following benefits:
 
 Before you begin to use the function of log analysis, the following prerequisite must be available:
 
--   You have purchased and activated the log analysis service of Cloud Firewall \(log analysis is available in Advanced, Enterprise, and Flagship editions\). For details, refer to [Enable the log analysis function](reseller.en-US/.md#).
+-   You have purchased and activated the log analysis service of Cloud Firewall \(log analysis is available in Pro, Enterprise, and Flagship editions\). For details, refer to [Enable the log analysis service](reseller.en-US/.md#).
 
 ## Restrictions {#section_g7p_mg6_fop .section}
 
