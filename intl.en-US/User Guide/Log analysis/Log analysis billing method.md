@@ -20,7 +20,7 @@ Different log storage specifications of Cloud Firewall are charged as follows:
 
 If you have no log storage left, a notification appears to remind you to expand the storage size. You can click **Upgrade** on the console to expand the storage size.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/161299/155802177645235_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/161299/155833759145235_en-US.png)
 
 **Notice:** If you fail to upgrade the log storage capacity when the storage capacity is full, Cloud Firewall will stop writing new log data to the exclusive logstore of log analysis service, the stored log data in the logstore is retained. Log data is deleted automatically if it is stored for more than 180 days or is not renewed after the Log Analysis service expires for 7 days. Once the log data is deleted, it cannot be recovered.
 
