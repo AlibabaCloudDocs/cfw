@@ -27,7 +27,7 @@ The logstore of Cloud Firewall is an exclusive logstore with the following restr
 
     **Note:** Other general logstore features \(such as query, statistics, alarms, and stream consumption\) are supported, and there is no difference with the general logstore.
 
--   Alibaba Cloud's Log Service \(SLS\) does not charge for the exclusive logstore of Cloud Firewall, but SLS itself must be available \(not overdue \).
+-   Alibaba Cloud's Log Service \(SLS\) does not charge for the exclusive logstore of Cloud Firewall, but SLS itself must be available \(not overdue\).
 -   Built-in reports provided by log analysis of Cloud Firewall may be updated and upgraded automatically.
 
 ## Scenarios {#section_yyw_kpd_2gb .section}
