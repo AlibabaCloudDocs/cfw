@@ -2,7 +2,7 @@
 
 The log analysis service of Cloud Firewall provides internet traffic logs and real-time log analysis.
 
-The log analysis service of Cloud Firewall can automatically collect and store real-time log of both inbound and outbound traffic. It outputs query analysis, reports, alarms, and downstream computing interconnection and delivery capabilities to provide you with analysis result and .
+The log analysis service of Cloud Firewall can automatically collect and store real-time log of both inbound and outbound traffic. It outputs query analysis, reports, alarms, and downstream computing interconnection and delivery capabilities to provide you with analysis result.
 
 ## Benefits {#section_nx2_jxn_rx8 .section}
 
