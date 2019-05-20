@@ -2,7 +2,7 @@
 
 The log analysis service of Cloud Firewall provides internet traffic logs and real-time log analysis.
 
-The log analysis service of Cloud Firewall can automatically collect and store real-time log of both inbound and outbound traffic. It outputs query analysis, reports, alarms, and downstream computing interconnection and delivery capabilities to provide you with analysis result.
+The log analysis service of Cloud Firewall can automatically collect and store real-time log of both inbound and outbound traffic. It outputs query analysis, reports, alarms, and downstream computing interconnection and provide you with detailed analysis result.
 
 ## Benefits {#section_nx2_jxn_rx8 .section}
 
@@ -10,7 +10,7 @@ The log analysis service of Cloud Firewall has the following benefits:
 
 -   **Classified Protection compliance**: Log analysis provides log storage duration of six months to help your website meet the requirements of classified protection compliance.
 -   **Easy configuration**: Easy configuration allows you to collect Internet traffic logs in real time.
--   **Real-time analysis**: Integrated with the Simple Log Service, the log analysis service provides the real-time log analysis service and the out-of-the-box report center. With the help of log analysis, you can view all the traffic and user's visits going through Cloud Firewall.
+-   **Real-time analysis**: Integrated with the Simple Log Service \(SLS\), the log analysis service provides the real-time log analysis service and report center. With the help of log analysis, you can view all the traffic and user's visits going through Cloud Firewall.
 -   **Real-time alarms**: Log analysis supports you to customize real-time monitoring and alerts based on specific indicators. This ensures you receive real-time alerts when there is any threats detected in the critical business.
 
 ## Prerequisites {#section_mxf_3pd_2gb .section}
@@ -23,7 +23,7 @@ Before you begin to use the function of log analysis, the following prerequisite
 
 The logstore of Cloud Firewall is an exclusive logstore with the following restrictions:
 
--   You cannot write data in logstore with APIs or SDKs, or modify the attributes of the logstore \(such as the storage cycle\).
+-   You cannot write data into logstore with APIs or SDKs, or modify the attributes of the logstore \(such as the storage cycle\).
 
     **Note:** Other general logstore features \(such as query, statistics, alarms, and stream consumption\) are supported, and there is no difference with the general logstore.
 
