@@ -15,9 +15,8 @@
 
     -   default-accept-login：默认放行入方向所有流量的22和3389端口。
     -   default-drop-all：默认拒绝该策略组中的所有流量。
-    -   default-accept-all：默认放行该策略组中的所有流量
+    -   default-accept-all：默认放行该策略组中的所有流量。
 -   同应用组配合，自动创建安全组。
--   支持组内ECS实例间访问默认不通。
 
 ## 操作步骤 {#section_9av_68m_tlu .section}
 
@@ -26,11 +25,11 @@
 1.  登录[云防火墙控制台](https://yundun.console.aliyun.com/?p=cfwnext#/overview)。
 2.  单击导航栏的**安全策略** \> **访问控制** \> **主机边界防火墙**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155887006111761_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155892298611761_zh-CN.png)
 
 3.  单击右上角**新建策略组**，在新建策略组对话框中配置策略组。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155887006111762_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155892298611762_zh-CN.png)
 
     策略组配置项说明如下。
 
@@ -44,9 +43,9 @@
 
  |
     |**描述**|该策略组的备注信息。字符长度限制范围为2-256。|手动输入描述内容，便于您后续识别该策略组。|
-    |**模板**|该策略组的模板。|单击**模板**下拉框并选择模板类型。模板类型可选：     -   default-accept-login：默认放行入方向所有流量的22和3389端口。
+    |**模板**|该策略组允许或拒绝流量通过的模板。|单击**模板**下拉框并选择模板类型。模板类型可选：     -   default-accept-login：默认放行入方向所有流量的22和3389端口。
     -   default-drop-all：默认拒绝该策略组中的所有流量。
-    -   default-accept-all：默认放行该策略组中的所有流量
+    -   default-accept-all：默认放行该策略组中的所有流量。
  |
 
 4.  单击**提交**，完成策略组的创建。
@@ -57,17 +56,17 @@
 
 5.  单击策略组**操作**栏的**配置策略**，将主机访问控制策略添加到该策略组中。
 
-    **说明：** 策略组中支持添加多条主机访问控制策略，策略数量无上限。
+    **说明：** 策略组中支持添加多条主机访问控制策略。默认情况下，您最多可创建100个策略组和100条策略。 如果当前策略数量上限无法满足您的需求，建议您及时清理无需使用的策略或提交工单，申请阿里云技术支持。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155887006111763_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155892298611763_zh-CN.png)
 
 6.  在策略配置页面选择**入方向**或**出方向**，并单击右上角**新建策略**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155887006111764_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155892298611764_zh-CN.png)
 
 7.  在新建策略组策略对话框中完成策略项配置。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155887006111765_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155892298611765_zh-CN.png)
 
     策略配置说明如下。
 
@@ -85,7 +84,7 @@
     -   ICMP
     -   ANY：表示任何协议类型。不确定该访问流量的类型时可选择ANY。
  |
-    |**端口范围**|该策略限制的端口。|需输入端口的地址范围。例如：22/22。|
+    |**端口范围**|该策略限制的端口。|手动输入端口的地址范围。例如：22/22。|
     |**优先级**|该策略生效的优先级。|手动输入优先级。 **说明：** 主机访问控制策略优先级范围为1-100，优先级可重复。策略优先级相同时，**拒绝**策略优先生效。优先级相同的策略，如果都是**放行**类型，那这两条策略将同时生效。
 
  |
@@ -109,17 +108,17 @@
 
     您可策略配置页面的入方向或出方向策略列表中，查看、编辑或删除已创建的策略。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155887006147929_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155892298747929_zh-CN.png)
 
     **说明：** 策略删除后，该策略中对应流量的访问控制将失效，请谨慎删除。策略删除后，该策略的记录仍会保留在策略列表中，但您无法再对其执行任何操作。
 
 9.  在主机防火墙页面定位到需要生效的策略组，并单击右侧**操作**栏的**发布**，使策略生效并同步到ECS安全组。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155887006147931_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155892298747931_zh-CN.png)
 
     **说明：** 策略发布后才会生效并同步到ECS安全组。您可在ECS控制台**安全组** \> **安全组列表**页面，查看您在云防火墙主机边界防火墙页面创建、并同步到安全组中的访问控制策略。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155887006147930_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155892298747930_zh-CN.png)
 
 
 ## 主机边界防火墙和ECS安全组的区别 {#section_r21_d8e_czu .section}
