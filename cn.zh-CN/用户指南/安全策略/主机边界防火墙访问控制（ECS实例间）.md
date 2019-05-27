@@ -18,6 +18,8 @@
     -   default-accept-all：默认放行该策略组中的所有流量。
 -   同应用组配合，自动创建安全组。
 
+**说明：** 默认情况下，您最多可创建100个策略组和100条策略（也就是在ECS安全组创建并同步到云防火墙的策略数量和在云防火墙主机边界防火墙侧创建的策略数加起来不超过100条）。如果当前策略数量上限无法满足您的需求，建议您及时清理无需使用的策略或提交工单，申请阿里云技术支持。
+
 ## 操作步骤 {#section_9av_68m_tlu .section}
 
 配置主机间访问控制策略时，您需先新建策略组，然后在该策略组中配置对应的**入方向**或**出方向**访问控制策略。
@@ -25,11 +27,11 @@
 1.  登录[云防火墙控制台](https://yundun.console.aliyun.com/?p=cfwnext#/overview)。
 2.  单击导航栏的**安全策略** \> **访问控制** \> **主机边界防火墙**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155892298611761_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155893930011761_zh-CN.png)
 
 3.  单击右上角**新建策略组**，在新建策略组对话框中配置策略组。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155892298611762_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155893930011762_zh-CN.png)
 
     策略组配置项说明如下。
 
@@ -56,17 +58,17 @@
 
 5.  单击策略组**操作**栏的**配置策略**，将主机访问控制策略添加到该策略组中。
 
-    **说明：** 策略组中支持添加多条主机访问控制策略。默认情况下，您最多可创建100个策略组和100条策略。 如果当前策略数量上限无法满足您的需求，建议您及时清理无需使用的策略或提交工单，申请阿里云技术支持。
+    **说明：** 策略组中支持添加多条主机访问控制策略。默认情况下，您最多可创建100个策略组和100条策略。如果当前策略数量上限无法满足您的需求，建议您及时清理无需使用的策略或提交工单，申请阿里云技术支持。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155892298611763_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155893930011763_zh-CN.png)
 
 6.  在策略配置页面选择**入方向**或**出方向**，并单击右上角**新建策略**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155892298611764_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155893930011764_zh-CN.png)
 
 7.  在新建策略组策略对话框中完成策略项配置。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155892298611765_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155893930011765_zh-CN.png)
 
     策略配置说明如下。
 
@@ -108,17 +110,17 @@
 
     您可策略配置页面的入方向或出方向策略列表中，查看、编辑或删除已创建的策略。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155892298747929_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155893930047929_zh-CN.png)
 
     **说明：** 策略删除后，该策略中对应流量的访问控制将失效，请谨慎删除。策略删除后，该策略的记录仍会保留在策略列表中，但您无法再对其执行任何操作。
 
 9.  在主机防火墙页面定位到需要生效的策略组，并单击右侧**操作**栏的**发布**，使策略生效并同步到ECS安全组。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155892298747931_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155893930047931_zh-CN.png)
 
     **说明：** 策略发布后才会生效并同步到ECS安全组。您可在ECS控制台**安全组** \> **安全组列表**页面，查看您在云防火墙主机边界防火墙页面创建、并同步到安全组中的访问控制策略。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155892298747930_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155893930047930_zh-CN.png)
 
 
 ## 主机边界防火墙和ECS安全组的区别 {#section_r21_d8e_czu .section}
