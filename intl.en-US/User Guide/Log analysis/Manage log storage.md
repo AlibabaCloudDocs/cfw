@@ -2,9 +2,9 @@
 
 After you enable the Log Analysis function of Cloud Firewall, the log storage space is allocated based on your specified log storage size. You can view the usage of the log storage space on the **Log Analysis** page in the Cloud Firewall console.
 
-## View the log storage information {#section_obl_hnz_qfb .section}
+## Chethe log storage {#section_obl_hnz_qfb .section}
 
-You can view the log storage information in the Cloud Firewall console at any time.
+You can view the log storage in the Cloud Firewall console at any time.
 
 **Note:** The log storage information in the console is not updated in real time. It takes up to two hours to update the actual storage information to the console. We recommend that you expand the log storage space before it is exhausted.
 
@@ -12,14 +12,14 @@ You can view the log storage information in the Cloud Firewall console at any ti
 2.  In the left-side navigation pane, select **Advanced Features** \> **Log Analysis**.
 3.  View the log storage information in the upper-right corner of the Log Analysis page.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154334/155922105443271_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154334/155922543143271_en-US.png)
 
 
 ## Expand log storage {#section_uqq_2rz_qfb .section}
 
 To expand the log storage, click **Upgrade Storage** at the top of the Log Analysis page.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154334/155922105548324_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154334/155922543248324_en-US.png)
 
 **Note:** We recommend that you expand the log storage space before it is exhausted. If no storage space is available, then the new log data cannot be written into the dedicated Logstore.
 
@@ -29,7 +29,7 @@ You can delete all log entries stored in the Logstore. For example, you can dele
 
 Click **Clear** at the top of the Log Analysis page, and confirm to delete all stored log entries.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154334/155922105548325_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154334/155922543248325_en-US.png)
 
 **Notice:** You cannot recover the deleted log entries. This operation is irreversible.
 
