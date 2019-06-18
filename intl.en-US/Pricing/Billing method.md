@@ -4,7 +4,7 @@ Cloud Firewall has three editions: Advanced, Enterprise, and Flagship. These edi
 
 **Billing of the Cloud Firewall service**
 
-**Note:** Currently, only the users with ECS instances based in Malaysia or Singapore can purchase the Cloud Firewall
+**Note:** Currently, only the users with ECS instances based in Malaysia or Singapore can purchase the Cloud Firewall.
 
 |Feature and billing item|Advanced Edition|Enterprise Edition|Flagship Edition|
 |------------------------|----------------|------------------|----------------|
