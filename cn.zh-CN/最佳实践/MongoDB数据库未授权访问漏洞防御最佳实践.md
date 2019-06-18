@@ -17,7 +17,7 @@ MongoDB默认设置为无权限访问限制，也就是说开启MongoDB服务时
 1.  **配置云防火墙访问控制策略。** 
     1.  在云防火墙控制台 **网络流量分析** \> **互联网访问活动** \> **开放应用**页面查看公网中MongoDB服务所属的IP地址。如果该服务仅对内网服务器提供服务，建议禁止将MongoDB服务开放到互联网上。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156086262841436_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156086365841436_zh-CN.png)
 
 执行以下命令启动IP地址绑定、限定该MongoDB服务仅对内网服务器提供服务（本示例中MongoDB数据库实例将只监听10.0.0.1内网的请求）。
 
@@ -31,11 +31,11 @@ mongod --bind_ip 10.0.0.1
 
         1.  将MongoDB所有可信源加入地址簿。
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156086262841444_zh-CN.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156086365841444_zh-CN.png)
 
         2.  对MongoDB可信源进行放行。
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156086262941446_zh-CN.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156086365841446_zh-CN.png)
 
             -   **访问源**：选择已配置好的MongoDB所有可信源地址簿。
             -   **目的**：为MongoDB可信源地址。
@@ -43,7 +43,7 @@ mongod --bind_ip 10.0.0.1
             -   **端口**： 设置为0/0，表示可信源的所有端口地址。
     3.  **拒绝所有其他非可信源访问MongoDB服务。** 
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156086262941455_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156086365941455_zh-CN.png)
 
         -   **访问源**：设置为Any，表示所有访问源。
         -   **目的**：为MongoDB 服务所属的公网IP地址。
@@ -93,7 +93,7 @@ mongod --bind_ip 10.0.0.1
 
     4.  验证之前添加的用户是否创建成功。
 
-        执行命令后，返回 `%1;` ，表示用户已创建成功。
+        执行命令后，返回1，表示用户已创建成功。
 
         ``` {#codeblock_0u3_iqf_drb}
         > db.auth("supper","supWDxsf67%H")
@@ -101,12 +101,20 @@ mongod --bind_ip 10.0.0.1
         							
         ```
 
-    5.  结束Mongodb进程并重启Mongodb服务，然后执行以下命令，启动用户权限认证。
+    5.  结束Mongodb进程并重启Mongodb服务。
+
+        ``` {#codeblock_4ga_odi_alw}
+        > db.auth("supper","supWDxsf67%H")
+        > exit
+        bye
+        ```
+
+    6.  执行以下命令，启动用户权限认证。
 
         开启用户权限认证后，未登录的客户端就没有权限做任何操作。
 
         ``` {#codeblock_3fm_hu7_x59}
-        > mongod --dbpath=/path/mongodb --bind_ip=10.0.0.1 --port=27028 --fork=true logpath=/path/mongod.log --auth
+        > mongod --dbpath=/path/mongodb --bind_ip=10.0.0.1 --port=27028 --fork=true logpath=/path/mongod.log --auth&
         ```
 
     **说明：** 
