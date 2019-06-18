@@ -42,6 +42,10 @@ Cloud Firewall has three editions: Advanced, Enterprise, and Flagship. These edi
 
 **Note:** Cloud Firewall protects Alibaba Cloud assets including ECS, EIP, and intranet SLB. It currently does not support non-Alibaba Cloud servers.
 
+## Billing example {#section_ktc_zzz_ygb .section}
+
+Assume that an Enterprise Edition user has 60 Alibaba Cloud assets with the bandwidth being 60 Mbit/s. Compared to the default number of supported Alibaba Cloud assets and default bandwidth, the user uses 10 additional ECS instances and 10 Mbit/s increased bandwidth. If this user subscribes to the Cloud Firewall service for six months, the service fee \(unit: USD\) is calculated as follows: \(1,500 USD + 4 USD x 10 + 16 USD × 10\) × 6
+
 ## Billing method {#section_gbn_fbc_zdb .section}
 
 Subscription.
