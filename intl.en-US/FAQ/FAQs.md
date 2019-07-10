@@ -26,11 +26,7 @@ Recommended workaround: Regard the decrypted IPsec traffic as east-west traffic,
 
 ## Can Cloud Firewall control the access traffic tunneled through Express Connect? {#section_jcz_dhr_cfb .section}
 
-Currently, Cloud Firewall does not support this function. You can configure [security groups](../../../../intl.en-US/Security/Security groups/Create a security group.md#) to control the access traffic tunneled through Express Connect.
-
-## Can Cloud Firewall control the access traffic tunneled through bastion hosts? {#section_nqs_wkb_yfb .section}
-
-Currently, Cloud Firewall does not support this function.
+Currently, Cloud Firewall does not support this function. You can configure [security groups](../../../../reseller.en-US/Security/Security groups/Create a security group.md#) to control the access traffic tunneled through Express Connect.
 
 ## The traffic of the Unknown application type accounts for a large proportion of all inbound network traffic. Is this because Cloud Firewall cannot identify specific requests from the Internet? {#section_fkx_b2k_1gb .section}
 
