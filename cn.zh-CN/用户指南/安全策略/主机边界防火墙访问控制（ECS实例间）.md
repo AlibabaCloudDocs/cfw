@@ -27,11 +27,11 @@
 1.  登录[云防火墙控制台](https://yundun.console.aliyun.com/?p=cfwnext#/overview)。
 2.  单击导航栏的**安全策略** \> **访问控制** \> **主机边界防火墙**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155893975211761_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/156385978611761_zh-CN.png)
 
 3.  单击右上角**新建策略组**，在新建策略组对话框中配置策略组。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155893975211762_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/156385978711762_zh-CN.png)
 
     策略组配置项说明如下。
 
@@ -52,7 +52,7 @@
 
 4.  单击**提交**，完成策略组的创建。
 
-    策略组创建完成后，您可在主机边界防火墙页面的策略组列表中找到该策略组，可对策略组**配置策略**、**发布策略**、**编辑策略组**或**删除策略组**。
+    策略组创建完成后，您可在主机边界防火墙页面的策略组列表中找到该策略组，可对策略组**配置策略**、**发布**策略、**编辑**策略组或**删除**策略组。
 
     **说明：** 策略组支持修改和删除。策略组修改仅限修改实例和描述信息；策略组删除后，该策略中组的主机访问控制策略也将被自动删除并失效，请谨慎操作。
 
@@ -60,15 +60,15 @@
 
     **说明：** 策略组中支持添加多条主机访问控制策略。默认情况下，您最多可创建100个策略组和100条策略。如果当前策略数量上限无法满足您的需求，建议您及时清理无需使用的策略或提交工单，申请阿里云技术支持。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155893975211763_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/156385978711763_zh-CN.png)
 
 6.  在策略配置页面选择**入方向**或**出方向**，并单击右上角**新建策略**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155893975211764_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/156385978711764_zh-CN.png)
 
 7.  在新建策略组策略对话框中完成策略项配置。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155893975211765_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/156385978711765_zh-CN.png)
 
     策略配置说明如下。
 
@@ -86,13 +86,13 @@
     -   ICMP
     -   ANY：表示任何协议类型。不确定该访问流量的类型时可选择ANY。
  |
-    |**端口范围**|该策略限制的端口。|手动输入端口的地址范围。例如：22/22。|
+    |**端口范围**|该策略限制或放行某个访问流量所经过的目的端口。|手动输入端口的地址范围。例如：22/22。|
     |**优先级**|该策略生效的优先级。|手动输入优先级。 **说明：** 主机访问控制策略优先级范围为1-100，优先级可重复。策略优先级相同时，**拒绝**策略优先生效。优先级相同的策略，如果都是**放行**类型，那这两条策略将同时生效。
 
  |
     |**源类型**|该策略限制的访问源的类型。|可选项：     -   地址段访问：该策略的访问源为地址段。
     -   策略组：该策略的访问源类型为策略组访问，表示访问源为该策略组中的多个实例地址。
-    -    **说明：** 在ECS安全组中创建的策略，您将无法选择策略组作为源类型，**只允许**选择地址段访问源类型。
+ **说明：** 在ECS安全组中创建的策略，您将无法选择策略组作为源类型，**只允许**选择地址段访问源类型。
 
  |
     |**源对象**|该策略访问源地址，为单个地址段或者策略组中的多个实例地址。|根据选择的**源类型**配置源对象。     -   源类型选择地址段访问时，需手动输入访问源地址段。仅支持单个地址段。
@@ -110,17 +110,17 @@
 
     您可策略配置页面的入方向或出方向策略列表中，查看、编辑或删除已创建的策略。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155893975247929_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/156385978747929_zh-CN.png)
 
     **说明：** 策略删除后，该策略中对应流量的访问控制将失效，请谨慎删除。策略删除后，该策略的记录仍会保留在策略列表中，但您无法再对其执行任何操作。
 
 9.  在主机防火墙页面定位到需要生效的策略组，并单击右侧**操作**栏的**发布**，使策略生效并同步到ECS安全组。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155893975247931_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/156385978747931_zh-CN.png)
 
     **说明：** 策略发布后才会生效并同步到ECS安全组。您可在ECS控制台**安全组** \> **安全组列表**页面，查看您在云防火墙主机边界防火墙页面创建、并同步到安全组中的访问控制策略。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/155893975247930_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/156385978847930_zh-CN.png)
 
 
 ## 主机边界防火墙和ECS安全组的区别 {#section_r21_d8e_czu .section}
