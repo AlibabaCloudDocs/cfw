@@ -43,14 +43,11 @@ You can use virtual patches to defend against popular high-risk vulnerabilities 
 
     **Note:** We recommend that you turn on both the Basic Rules and Threat Intelligence switches.
 
-5.  In the **Virtual Patching** area, enable or disable the virtual patching function.
+5.  In the **Virtual Patching**, enable or disable the virtual patching function.
 
     **Note:** We recommend that you enable the virtual patching function.
 
 6.  Select the required virtual patches as follows: Click **Custom** in the **Virtual Patching** area to go to the **Virtual Patch Management** dialog box.
-
-    ![](images/11765_en-US.png)
-
 7.  Click **Enable** or **Disable** to enable or disable a specified patch.
 
     **Note:** Disabled patches cannot be automatically updated. We recommend that you enable all virtual patches.
