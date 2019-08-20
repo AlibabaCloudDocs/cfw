@@ -30,8 +30,8 @@ Cloud Firewall has three editions: Advanced, Enterprise, and Flagship. These edi
  |
 |Number of supported policies|1,000|2,000|5,000|
 |Threat detection and virtual patching of IPS|Supported|Supported|Supported|
-|Custom rule|Not supported|Not supported|Supported|
-|Visible network topology and business topology|Not supported|Supported|Supported|
+|IPS whitelist|Not supported|Supported|Supported|
+|Security group and business topology|Not supported|Supported|Supported|
 |Logs \(default storage duration: six months\)|Logs collecting 5-tuple information|Logs collecting 5-tuple information|Logs collecting 5-tuple information|
 |Number of supported regions|Support 1 region by default. **Extra charge**: Support one more region for each additional 50 Mbit/s bandwidth
 
