@@ -1,6 +1,8 @@
 # Billing method {#concept_twk_1lk_bfb .concept}
 
-Cloud Firewall has three editions: Advanced, Enterprise, and Flagship. These editions provide different features. For more information, see [Features](../../../../reseller.en-US/Product Introduction/Features.md#table_qsv_slr_cfb).
+Cloud Firewall has three editions: Advanced, Enterprise, and Flagship.
+
+These editions provide different features. For more information, see [Features](../../../../reseller.en-US/Product Introduction/Features.md#table_qsv_slr_cfb).
 
 **Billing of the Cloud Firewall service**
 
@@ -8,17 +10,17 @@ Cloud Firewall has three editions: Advanced, Enterprise, and Flagship. These edi
 
 |Feature and billing item|Advanced Edition|Enterprise Edition|Flagship Edition|
 |------------------------|----------------|------------------|----------------|
-|Basic price/month|500 USD/month|1,500 USD/month|4,000 USD/month|
-|Number of supported Alibaba Cloud assets \(ECS, EIP, and SLB instances\)|The micro-isolation feature is not supported, and the number of ECS instances is not limited.|50 ECS instances by default, which can be scaled out **Extra charge**: 4 USD/month for each additional ECS instance
+|Basic price/month|420 USD/month|1450 USD/month|3900 USD/month|
+|Number of supported Alibaba Cloud assets \(ECS, EIP, and SLB instances\)|The micro-isolation feature is not supported, and the number of ECS instances is not limited.|50 ECS instances by default, which can be scaled out **Extra charge**: 3.8 USD/month for each additional ECS instance
 
- |200 ECS instances by default, which can be scaled out **Extra charge**: 4 USD/month for each additional ECS instance
+ |200 ECS instances by default, which can be scaled out **Extra charge**: 3.8 USD/month for each additional ECS instance
 
  |
-|Bandwidth \(Internet firewall throughput\)|10 Mbit/s by default, which can be increased **Extra charge**: 16 USD/month/Mbit/s for increased bandwidth
+|Bandwidth \(Internet firewall throughput\)|10 Mbps/month by default, which can be increased **Extra charge**: 15.5 USD/month/Mbps for increased bandwidth
 
- |50 Mbit/s by default, which can be increased **Extra charge**: 16 USD/month/Mbit/s for increased bandwidth
+ |50 Mbps/month by default, which can be increased **Extra charge**: 15.5 USD/month/Mbps for increased bandwidth
 
- |200 Mbit/s by default, which can be increased **Extra charge**: 16 USD/month/Mbit/s for increased bandwidth
+ |Mbps/month by default, which can be increased **Extra charge**: 15.5 USD/month/Mbps for increased bandwidth
 
  |
 |Number of enabled public IP addresses|Support 20 public IPs by default. **Extra charge**: Support one more public IP for each additional 1 Mbit/s bandwidth
@@ -32,7 +34,13 @@ Cloud Firewall has three editions: Advanced, Enterprise, and Flagship. These edi
 |Threat detection and virtual patching of IPS|Supported|Supported|Supported|
 |IPS whitelist|Not supported|Supported|Supported|
 |Security group and business topology|Not supported|Supported|Supported|
-|Logs \(default storage duration: six months\)|Logs collecting 5-tuple information|Logs collecting 5-tuple information|Logs collecting 5-tuple information|
+|Logs \(default storage duration: six months\)|Logs collecting 5-tuple information. The log storage capacity is 80 USD/T\(1000G\).
+
+ |Logs collecting 5-tuple information. The log storage capacity is 80 USD/T\(1000G\).
+
+ |Logs collecting 5-tuple information. The log storage capacity is 80 USD/T\(1000G\).
+
+ |
 |Number of supported regions|Support 1 region by default. **Extra charge**: Support one more region for each additional 50 Mbit/s bandwidth
 
  |Support 3 regions by default. **Extra charge**: Support one more region for each additional 50 Mbit/s bandwidth
