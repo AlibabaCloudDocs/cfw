@@ -8,7 +8,7 @@ Cloud firewall also provides the Log Analysis function to store log data within 
 
 The **Event logs** record the information of each event, including the event detection time, threat type, traffic direction \(inbound or outbound\), source IP address, destination IP address, application type, severity, and policy action.
 
-![Event Logs](images/11767_en-US.png)
+![event logs](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21271/156691407658174_en-US.png)
 
 You can specify the source IP address, destination IP address, threat type, action, or other information to search for an **event log**.
 
@@ -20,7 +20,7 @@ You can also specify a time range to search for relevant event logs.
 
 The **Traffic logs** record traffic information including the access start time and end time, direction \(inbound or outbound\), source IP address, destination IP address, application type, source port number, application, protocol, policy action, byte count, and packet count.
 
-![Traffic logs](images/11768_en-US.png)
+![event logs](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21271/156691407658175_en-US.png)
 
 You can specify the source IP address, destination IP address, application, or other information to search for a traffic log.
 
@@ -30,7 +30,7 @@ You can also specify a time range to search for relevant traffic logs.
 
 To search for traffic logs more precisely, you can click **Show Advanced Search** next to the search bar and specify advanced conditions such as **Direction**, **Policy Source**, **Port,** and **Region**.
 
-![Search traffic logs](images/36889_en-US.png)
+![search event logs](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21271/156691407658176_en-US.png)
 
 For the traffic that matches an access control policy or IPS policy, the name of the matching policy is displayed in the **Policy Name** column of the traffic log. For the traffic that does not match any policy, the **Policy Name** column is empty.
 
@@ -38,7 +38,7 @@ For the traffic that matches an access control policy or IPS policy, the name of
 
 The **Operation logs** record the time, type, severity, and details about each operation in Cloud Firewall.
 
-![Operation logs](images/11769_en-US.png)
+![operation logs](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21271/156691407658177_en-US.png)
 
 You can select a value from the **Severity** drop-down list on the **Operation Logs** tab page to search for the operation logs of the specified severity
 
