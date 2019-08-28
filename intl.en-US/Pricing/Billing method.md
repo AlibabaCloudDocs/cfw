@@ -34,11 +34,13 @@ These editions provide different features. For more information, see [Features](
 |Threat detection and virtual patching of IPS|Supported|Supported|Supported|
 |IPS whitelist|Not supported|Supported|Supported|
 |Security group and business topology|Not supported|Supported|Supported|
-|Logs \(default storage duration: six months\)|Logs collecting 5-tuple information. The log storage capacity is 80 USD/T\(1000G\).
+|Logs \(default storage duration: 7 days\) **Note:** If you need log duration to be extended to 6 months, you can buy the Log Analysis service of Cloud Firewall.
 
- |Logs collecting 5-tuple information. The log storage capacity is 80 USD/T\(1000G\).
+ |Logs collecting 5-tuple information. The log storage capacity of Log Analysis is 80 USD/T \(1000G\).
 
- |Logs collecting 5-tuple information. The log storage capacity is 80 USD/T\(1000G\).
+ |Logs collecting 5-tuple information. The log storage capacity of Log Analysis is 80 USD/T \(1000G\).
+
+ |Logs collecting 5-tuple information. The log storage capacity of Log Analysis is 80 USD/T \(1000G\).
 
  |
 |Number of supported regions|Support 1 region by default. **Extra charge**: Support one more region for each additional 50 Mbit/s bandwidth
