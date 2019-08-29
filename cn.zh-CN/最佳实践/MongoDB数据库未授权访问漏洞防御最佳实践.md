@@ -1,10 +1,8 @@
-# MongoDB数据库未授权访问漏洞防御最佳实践 {#concept_cpt_f2t_2hb .concept}
+# MongoDB数据库未授权访问漏洞防御最佳实践 {#concept_cpt_f2t_2hb .task}
 
 MongoDB数据库未授权访问漏洞可以导致数据库数据泄露或被删除勒索。
 
 为保证您的业务和应用的安全，云防火墙提供以下漏洞修复指导方案。
-
-## 背景信息 {#section_dk9_cfu_7d1 .section}
 
 MongoDB服务安装完成后，会默认存在一个admin数据库，该admin数据库内容未空，并且没有记录任何权限相关的信息。
 
@@ -15,27 +13,29 @@ MongoDB默认设置为无权限访问限制，也就是说开启MongoDB服务时
 ## 修复方案 {#section_ht2_kbk_49b .section}
 
 1.  **配置云防火墙访问控制策略。** 
-    1.  在云防火墙控制台 **网络流量分析** \> **互联网访问活动** \> **开放应用**页面查看公网中MongoDB服务所属的IP地址。如果该服务仅对内网服务器提供服务，建议禁止将MongoDB服务开放到互联网上。
+    1.  **限定MongoDB服务仅对内网服务器提供服务** 
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156086365841436_zh-CN.png)
+        在云防火墙控制台 **网络流量分析** \> **互联网访问活动** \> **开放应用**页面，查看公网中MongoDB服务所属的IP地址。如果该服务仅对内网服务器提供服务，建议禁止将MongoDB服务开放到互联网上。
 
-执行以下命令启动IP地址绑定、限定该MongoDB服务仅对内网服务器提供服务（本示例中MongoDB数据库实例将只监听10.0.0.1内网的请求）。
+        ![定位MongoDB](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156704344341436_zh-CN.png)
 
-``` {#codeblock_sa5_usp_mv0}
-mongod --bind_ip 10.0.0.1
-```
+        执行以下命令启动IP地址绑定、限定该MongoDB服务仅对内网服务器提供服务（本示例中MongoDB数据库实例将只监听1.2.3.4内网的请求）。
+
+        ``` {#codeblock_7tm_59k_nq9}
+        mongod --bind_ip 1.2.3.4
+        ```
 
     2.  **配置MongoDB云防火墙访问控制策略只对可信源放行。** 
 
-        在云防火墙控制台 **安全策略** \> **访问控制** \> **互联网边界防火墙** \> **外对内**页面配置访问控制策略，仅允许与MongoDB数据库依赖的服务器访问该MongoDB服务。
+        在云防火墙控制台 **安全策略** \> **访问控制** \> **互联网边界防火墙** \> **外对内**页面，配置访问控制策略，仅允许与MongoDB数据库依赖的服务器访问该MongoDB服务。
 
         1.  将MongoDB所有可信源加入地址簿。
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156086365841444_zh-CN.png)
+            ![将MongoDB所有可信源加入地址簿](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156704344341444_zh-CN.png)
 
         2.  对MongoDB可信源进行放行。
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156086365841446_zh-CN.png)
+            ![对MongoDB可信源进行放行](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156704344441446_zh-CN.png)
 
             -   **访问源**：选择已配置好的MongoDB所有可信源地址簿。
             -   **目的**：为MongoDB可信源地址。
@@ -43,7 +43,7 @@ mongod --bind_ip 10.0.0.1
             -   **端口**： 设置为0/0，表示可信源的所有端口地址。
     3.  **拒绝所有其他非可信源访问MongoDB服务。** 
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156086365941455_zh-CN.png)
+        ![拒绝所有其他非可信源访问MongoDB服务](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156704344441455_zh-CN.png)
 
         -   **访问源**：设置为Any，表示所有访问源。
         -   **目的**：为MongoDB 服务所属的公网IP地址。
@@ -53,7 +53,7 @@ mongod --bind_ip 10.0.0.1
 
     1.  执行以下命令，在未开启认证的环境下登录到数据库。
 
-        ``` {#codeblock_ts8_6ki_25j}
+        ``` {#codeblock_hxf_lk0_17i}
         [mongodbrac3 bin]$ ./mongo 127.0.0.1:27028 (此处修改了默认端口)
         MongoDB shell version: 2.0.1
         connecting to: 127.0.0.1:27028/test
@@ -61,7 +61,7 @@ mongod --bind_ip 10.0.0.1
 
     2.  执行以下命令切换到admin数据库。
 
-        ``` {#codeblock_oxy_5eb_r2i}
+        ``` {#codeblock_gyb_xk9_9el}
         > use admin
         switched to db admin
         ```
@@ -72,7 +72,7 @@ mongod --bind_ip 10.0.0.1
 
         **说明：** MongoDB从V3版本开始取消使用addUser方法、采用db.createUser命令创建用户。
 
-        ``` {#codeblock_ezd_rmp_if4}
+        ``` {#codeblock_p0w_29k_2lz}
         > db.addUser("supper", "supWDxsf67%H") 或
         { "n" : 0, "connectionId" : 4, "err" : null, "ok" : 1 }
         > db.createUser({user:"****",pwd:"***********",roles:["root"]})
@@ -95,15 +95,15 @@ mongod --bind_ip 10.0.0.1
 
         执行命令后，返回1，表示用户已创建成功。
 
-        ``` {#codeblock_0u3_iqf_drb}
+        ``` {#codeblock_xvt_c3s_ywu}
         > db.auth("supper","supWDxsf67%H")
         1
-        							
+        								
         ```
 
     5.  结束Mongodb进程并重启Mongodb服务。
 
-        ``` {#codeblock_4ga_odi_alw}
+        ``` {#codeblock_aa0_mqr_lvy}
         > db.auth("supper","supWDxsf67%H")
         > exit
         bye
@@ -113,7 +113,7 @@ mongod --bind_ip 10.0.0.1
 
         开启用户权限认证后，未登录的客户端就没有权限做任何操作。
 
-        ``` {#codeblock_3fm_hu7_x59}
+        ``` {#codeblock_klg_lbp_gh7}
         > mongod --dbpath=/path/mongodb --bind_ip=10.0.0.1 --port=27028 --fork=true logpath=/path/mongod.log --auth&
         ```
 
@@ -121,8 +121,8 @@ mongod --bind_ip 10.0.0.1
 
     -   admin.system.users中将会保存比在其它数据库中设置的用户权限更大的用户信息，拥有超级权限，也就是说在admin中创建的用户可以对MongoDB中的其他数据库数据进行操作。
     -   MongoDB系统中，数据库是由超级用户来创建的，一个数据库可以包含多个用户，一个用户只能在一个数据库下，不同数据库中的用户可以同名。
-    -   特定数据库（比如DB1）的用户User1不能够访问其他数据库DB2，但是可以访问本数据库下其他用户创建的数据。
-    -   不同数据库中同名的用户不能够登录其他数据库，比如DB1、DB2都有user1，以user1登录DB1后，不能登录到DB2进行数据库操作。
+    -   特定数据库（例如：DB1）的用户User1不能够访问其他数据库DB2，但是可以访问本数据库下其他用户创建的数据。
+    -   不同数据库中同名的用户不能够登录其他数据库，例如：DB1、DB2都有user1，以user1登录DB1后，不能登录到DB2进行数据库操作。
     -   在admin数据库创建的用户具有超级权限，可以对MongoDB系统内的任何数据库的数据对象进行操作。
     -   使用db.auth\(\)可以对数据库中的用户进行验证，如果验证成功则返回1，否则返回0。db.auth\(\)只能针对登录用户所属的数据库的用户信息进行验证，不能验证其他数据库的用户信息。
 
