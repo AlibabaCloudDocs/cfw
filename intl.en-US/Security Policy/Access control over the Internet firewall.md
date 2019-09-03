@@ -4,7 +4,7 @@ Cloud Firewall supports access control over the Internet firewall. You can confi
 
 To make sure that the Internal firewall policies take effect on an instance, you must enable **Internet firewall** for this instance.
 
-![Internet firewall](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/83630/156749670747922_en-US.png)
+![Internet firewall](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/83630/156750444047922_en-US.png)
 
 Internet firewall allows you to configure both **outbound** and **inbound** access policies.
 
@@ -13,11 +13,11 @@ Internet firewall allows you to configure both **outbound** and **inbound** acce
 1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext#/overview).
 2.  In the left pane, choose **Security Policies** \> **Access Control** \> **Internet Firewall** \> **Outbound Policies**. 
 
-    ![Outbound Policies](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/83630/156749670735485_en-US.png)
+    ![Outbound Policies](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/83630/156750444035485_en-US.png)
 
 3.  In the upper-left corner of the **Outbound Policies** tab page, click **Create**. The **Create Outbound Policy** dialog box is displayed. 
 
-    ![Create Outbound Policy](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/83630/156749670735483_en-US.png)
+    ![Create Outbound Policy](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/83630/156750444035483_en-US.png)
 
 4.  Create an **outbound** access control policy. 
 
@@ -69,11 +69,11 @@ Internet firewall allows you to configure both **outbound** and **inbound** acce
 1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext#/overview).
 2.  In the left pane, choose **Security Policies** \> **Access Control** \> **Internet Firewall** \> **Inbound Policies**. 
 
-    ![外对内](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1318789/156749670755070_en-US.png)
+    ![外对内](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1318789/156750444055070_en-US.png)
 
 3.  In the upper-left corner of the **Inbound Policies** tab page, click **Create**. The **Create Inbound Policy** dialog box is displayed. 
 
-    ![新增外-内策略](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1318789/156749670755072_en-US.png)
+    ![新增外-内策略](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1318789/156750444055072_en-US.png)
 
 4.  In the first **inbound** policy, **allow** traffic from trusted external IP addresses. 
 
@@ -93,7 +93,7 @@ A newly created policy takes effect immediately by default. However, if the poli
 
 In the policy list, click the number in the Hits column of a policy. The Traffic Logs page is displayed. If the name of the policy is displayed in the **Policy Name** column on the **Traffic Logs** page, this policy has taken effect.
 
-![check policies](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/83630/156749670747923_en-US.png)
+![check policies](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/83630/156750444147923_en-US.png)
 
 **Note:** After you delete a policy, the allow or deny policy that you have configured becomes invalid. Exercise caution.
 
