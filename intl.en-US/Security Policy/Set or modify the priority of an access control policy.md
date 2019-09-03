@@ -20,11 +20,11 @@ The maximum number of policies varies with the edition of Cloud Firewall. Theref
 2.  In the left-side navigation pane, choose **Security Policies** \> **Access Control** \> **Internet Firewall**.
 3.  On the **Outbound Policies** or **Inbound Policies** tab page, locate the access control policy of which the priority needs to be modified. Click **Move** in the **Actions** column.
 
-    ![Move](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24037/156749177313959_en-US.png)
+    ![Move](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24037/156750377713959_en-US.png)
 
 4.  Modify the priority in the displayed dialog box.
 
-    ![Priority](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24037/156749177313960_en-US.png)
+    ![Priority](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24037/156750377713960_en-US.png)
 
 5.  Click **OK**.
 
