@@ -6,7 +6,7 @@ VPC firewalls are not automatically created. Before you create access control po
 
 The access control policies take effect only after you have enabled the VPC firewall.
 
-![VPC firewall](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/83631/156749780648189_en-US.png)
+![VPC firewall](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/83631/156750467448189_en-US.png)
 
 Cloud Firewall supports access control over VPC firewalls. You can use a VPC firewall to detect and control the traffic between two VPC networks.
 
@@ -19,18 +19,18 @@ A VPC firewall allows all traffic by default. To control the traffic between VPC
 1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext#/overview).
 2.  In the left pane, choose **Security Policies** \> **Access Control** \> **VPC Firewall**.
 
-    ![VPC Access Control](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/83631/156749780648035_en-US.png)
+    ![VPC Access Control](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/83631/156750467448035_en-US.png)
 
 3.  Click **Create**.
 4.  In the **Create VPC Firewall Policy** dialog box, configure the access control policy.
 
-    ![Create VPC Firewall Policy](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/83631/156749780648187_en-US.png)
+    ![Create VPC Firewall Policy](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/83631/156750467548187_en-US.png)
 
     You can choose either of the following configuration methods based on your needs:
 
     -   Create a policy to **deny** the traffic from untrusted sources.
     -   Create a policy to **allow** the traffic from trusted sources, and then create another policy to **deny** the traffic from all other sources. Make sure that the **allow** policy has a higher priority than the **deny** policy. For more information on policy priority, see [Set or modify the priority of an access control policy](../../../../reseller.en-US/Security Policy/Set or modify the priority of an access control policy.md#).
-    For more information about the parameters in an access control policy, see the **Policy parameters** table in this topic.
+    For more information on the parameters in an access control policy, see the **Policy parameters** table in this topic.
 
     **Note:** A VPC firewall allows all traffic by default.
 
