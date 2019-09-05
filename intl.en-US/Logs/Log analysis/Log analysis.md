@@ -12,11 +12,11 @@ After you enable the Log Analysis function in Cloud Firewall console, you can pe
 2.  In the left-side navigation pane, select **Logs** \> **Log Analysis**.
 3.  Click the **Status** switch on the right side to enable the Log Analysis function.
 
-    ![状态](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765318143216_en-US.png)
+    ![状态](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765338143216_en-US.png)
 
 4.  Enter a search and analysis statement, select a time range, and click **Search & Analysis**.
 
-    ![查询分析](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765318243218_en-US.png)
+    ![查询分析](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765338143218_en-US.png)
 
 
 ## More actions {#section_xgc_bsn_qfb .section}
@@ -33,31 +33,31 @@ On the **Log Analysis** page, you can perform the following actions to handle th
 
     **Note:** You can drag the mouse pointer in the histogram to narrow down the time period. The `time picker` automatically updates the time period, and the search results are also updated accordingly.
 
-    ![时间分布](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765318243220_en-US.png)
+    ![时间分布](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765338143220_en-US.png)
 
 -   **View raw logs** 
 
     On the **Raw Logs** tab page, each log entry is detailed on an individual page, which includes the time when the log is generated, the content, and the columns in the log entry. You can click **Display Content Column** to set the display mode for the long strings in the content column. The display modes include **Full Line** and **New Line**. You can click **Column Settings** to customize the columns to be displayed, or click the Download icon to download the search results.
 
-    ![原始日志](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765318243221_en-US.png)
+    ![原始日志](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765338143221_en-US.png)
 
-    Additionally, you can click a value or a property name in the content column to add a search condition to the search box. For example, if you click `GET` in the `request_method: GET` field, the following search statement is added to the search box:
+    Additionally, you can click a value or a property name in the content column to add a search condition to the search box. For example, if you click `log_service` in the `__source__: log_service` field, the following search statement is added to the search box:
 
     ``` {#codeblock_pfd_jvk_4jh}
-    "Former Search Statement" and request_method: GET
+    "Former Search Statement" and source: log_service
     ```
 
 -   **View analysis graphs** 
 
     The log analysis function enables you to show the analysis results in graphs. You can select the graph type as needed on the Graph tab page. For more information, see [Analysis graphs](reseller.en-US/Index and query/Query and visualization/Analysis graph/Graph description.md#section_pn5_ymv_tdb).
 
-    ![统计图表](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765318243222_en-US.png)
+    ![统计图表](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765338143222_en-US.png)
 
 -   **Quick analysis** 
 
     The quick analysis function on the Raw Logs tab provides you with a quick interactive search function. You can view the distribution of a property within a specific time period. This function can reduce the time used for indexing key data. For more information, see [Quick analysis](reseller.en-US/Index and query/Query/Quick analysis.md#section_lly_xvj_5cb).
 
-    ![快速分析](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765318243223_en-US.png)
+    ![快速分析](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765338143223_en-US.png)
 
 
 ## Customize search and analysis {#section_ncn_mvt_j2b .section}
@@ -188,7 +188,7 @@ For more information about the statements and functions supported by Log Service
 
 Each Could Firewall log entry has a `time` field, which is used to indicate the time. The format of field is `year-month-dayThour:minute:second+time zone`. For example, in `2018-05-31T20:11:58+08:00`, the time zone is `UTC+8`.
 
-Meanwhile, each log has a built-in field `__time__`, This field also indicates the time when the log entry is generated. The field is used for calculation during the time-based statistics process. The format of this field is [Unix timestamp](https://en.wikipedia.org/wiki/Unix_time), and the value of this field indicates the amount of seconds that have elapsed since 00:00:00 Coordinated Universal Time \(UTC\), January 1, 1970. Therefore, if you want to display a calculated result, you must convert the format first.
+Meanwhile, each log has a built-in field `__time__`, This field also indicates the time when the log entry is generated. The field is used for calculation during the time-based statistics process. The format of this field is Unix timestamp, and the value of this field indicates the amount of seconds that have elapsed since 00:00:00 Coordinated Universal Time \(UTC\), January 1, 1970. Therefore, if you want to display a calculated result, you must convert the format first.
 
 -   **Select and display the time**
 -   **Calculate the time**
@@ -196,7 +196,7 @@ Meanwhile, each log has a built-in field `__time__`, This field also indicates t
 
     **Note:** You can also display the results with a line graph.
 
-    ![折线](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765318243231_en-US.png)
+    ![折线](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765338143231_en-US.png)
 
 
 The `date_parse` and `date_format` functions are used to convert the time format. For more information about the functions that can be used to parse the time field, see [Date and time functions](../../../../reseller.en-US/Index and query/Analysis grammar/Date and time functions.md#).
