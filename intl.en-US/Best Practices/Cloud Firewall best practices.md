@@ -12,7 +12,7 @@ In access policies for out-in traffic, do not allow access to all ports from pub
 
     On the **Access Control** page, click the **Out-In Traffic** tab. Add an access policy. Set the source to `0.0.0.0/0` or a specific IP address. You can also set the source to the default address book **ANY** \(`0.0.0.0/0`\) or a specific IP address. Set the destination to the IP address that needs to be accessed or a specific IP address. Set the protocol to **ANY** or a specific protocol based on business requirements. Set the action to **Allow**.
 
-    ![ANY](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21289/156819482260334_en-US.png)
+    ![选择](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21289/156819501535632_en-US.png)
 
     Example:
 
