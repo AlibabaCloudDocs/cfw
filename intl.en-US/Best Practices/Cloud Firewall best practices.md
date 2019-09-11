@@ -2,7 +2,7 @@
 
 ## How to choose the appropriate Cloud Firewall edition {#section_w5s_w4r_cfb .section}
 
-Cloud Firewall includes the Advanced Edition, Enterprise Edition, and Flagship Edition. The features and asset or bandwidth scaling specifications vary according to the edition. For more information, see [Features](../../../../intl.en-US/Product Introduction/Features.md#table_qsv_slr_cfb).
+Cloud Firewall includes the Advanced Edition, Enterprise Edition, and Flagship Edition. The features and asset or bandwidth scaling specifications vary according to the edition. For more information, see [Features](../../../../reseller.en-US/Product Introduction/Features.md#table_qsv_slr_cfb).
 
 ## Configure access policies for out-in traffic {#section_ytv_xkr_cfb .section}
 
@@ -11,6 +11,8 @@ In access policies for out-in traffic, do not allow access to all ports from pub
 1.  Allow access traffic to necessary applications or ports.
 
     On the **Access Control** page, click the **Out-In Traffic** tab. Add an access policy. Set the source to `0.0.0.0/0` or a specific IP address. You can also set the source to the default address book **ANY** \(`0.0.0.0/0`\) or a specific IP address. Set the destination to the IP address that needs to be accessed or a specific IP address. Set the protocol to **ANY** or a specific protocol based on business requirements. Set the action to **Allow**.
+
+    ![ANY](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21289/156819482260334_en-US.png)
 
     Example:
 
