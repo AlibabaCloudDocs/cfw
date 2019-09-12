@@ -8,7 +8,7 @@ You can export log entries on the current page to a CSV file, or export all log 
 
 1.  Log on to the [Cloud Firewall console](https://partners-intl.console.aliyun.com/#/cfwnext).
 2.  In the left-side navigation pane, select **Advanced Features** \> **Log Analysis**.
-3.  On the Raw Logs tab page, click the **Download** icon ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154313/156825345743249_en-US.png)on the right side.
+3.  On the Raw Logs tab page, click the **Download** icon ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154313/156825363343249_en-US.png)on the right side.
 
     **Note:** The download icon does not appear if there's no search result.
 
@@ -22,7 +22,7 @@ You can export log entries on the current page to a CSV file, or export all log 
         1.  For more information about installing the CLI, see [CLI guide](https://github.com/aliyun/aliyun-log-cli/blob/master/README.md#installation).
         2.  Click [Security Information Management Link](https://usercenter.console.aliyun.com/#/manage/ak) to view and record the AccessKey ID and AccessKey Secret of the current user.
         3.  Click **Copy Command** and paste the command into CLI, replace the `AccessID obtained in step 2`and `AccessKey Secret obtained in step 2` with the AccessKey ID and AccessKey Secret of the current user, and run the command.
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154313/156825345743250_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154313/156825363343250_en-US.png)
 
         After you run the command, all raw log entries created by Cloud Firewall are automatically exported and saved to the file download\_data.txt.
 
