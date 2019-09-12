@@ -58,7 +58,7 @@ Assume that an Enterprise Edition user has 60 Alibaba Cloud assets with the band
 
 ## Billing method {#section_gbn_fbc_zdb .section}
 
-Subscription.
+Annual and monthly subscriptions.
 
 For more information, see [Subscription](reseller.en-US/Pricing/Subscription.md#ol_vyl_1sf_cfb).
 
