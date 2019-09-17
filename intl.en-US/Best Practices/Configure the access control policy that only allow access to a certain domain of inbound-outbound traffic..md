@@ -46,3 +46,5 @@ For example, an ECS \(host\) IP address is 10.1.1.1, and the EIP is 200.2.2.2, y
 
 Once the access control policy configuration is complete, you can use the number of hits in **Access control** page to observe the condition of hits. In **Traffic log** page, you can view hits done by the policy.
 
+![traffic log](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/93164/156868598760753_en-US.png)
+
