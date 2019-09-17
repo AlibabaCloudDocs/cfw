@@ -36,5 +36,5 @@ Access control of outbound-inbound traffic and inbound-outbound traffic allows s
 
 Once the access control policy configuration is complete, you can use the number of hits in **Access control** page to observe the condition of hits. In **Traffic log** page, you can view hits done by the policy.
 
-![traffic log](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/92815/156868573060749_en-US.png)
+![traffic log](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/92815/156868591060749_en-US.png)
 
