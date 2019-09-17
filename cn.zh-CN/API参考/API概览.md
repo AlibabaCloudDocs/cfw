@@ -2,7 +2,7 @@
 
 云防火墙提供以下相关API接口。
 
-## 访问控制API {#section_tfh_ku0_4fm .section}
+## 访问控制API {#section_2gb_ull_go7 .section}
 
 |API|描述|
 |---|--|
@@ -13,7 +13,7 @@
 |[DeleteControlPolicy](cn.zh-CN/API参考/访问控制API/DeleteControlPolicy.md)|调用DeleteControlPolicy接口删除访问控制策略。|
 |[ModifyControlPolicy](cn.zh-CN/API参考/访问控制API/ModifyControlPolicy.md)|调用ModifyControlPolicy接口修改访问控制策略。|
 
-## 地址簿API {#section_wnb_a9w_rs3 .section}
+## 地址簿API {#section_ogv_zzy_9de .section}
 
 |API|描述|
 |---|--|
