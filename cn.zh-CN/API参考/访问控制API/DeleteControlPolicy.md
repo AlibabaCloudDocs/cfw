@@ -10,13 +10,13 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|AclUuid|String|是|00281255-d220-4db1-8f4f-c4df221ad84c|访问控制策略唯一ID。
+|AclUuid|String|是|00281255-d220-4db1-8f4f-c4df221ad84c|指定待删除的安全访问控制策略唯一ID。可通过DescribeControlPolicy接口获取安全策略的ID。
 
  |
 |Action|String|是|DeleteControlPolicy|系统规定参数。取值：DeleteControlPolicy。
 
  |
-|Direction|String|是|in|访问控制策略的流量方向。
+|Direction|String|是|in|指定待删除安全访问控制策略的流量方向。
 
  -   **in**：外对内流量访问控制
 -   **out**：内对外流量访问控制
