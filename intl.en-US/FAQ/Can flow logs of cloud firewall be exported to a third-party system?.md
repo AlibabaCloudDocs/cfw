@@ -6,5 +6,5 @@ You can use the log analysis function to connect exported traffic log files to y
 
 **Note:** Currently, cloud firewall supports Internet traffic logs, including vulnerability risk levels and access control rule hit results. At present, it does not support exporting event logs and Operation logs.
 
-For more information about log export, see[Import Cloud Firewall Internet logs to a third-party system](../../../../reseller.en-US/Best Practices/Import Cloud Firewall Internet logs to a third-party system.md#).
+For more information about log export, see [Import Cloud Firewall Internet logs to a third-party system](../../../../reseller.en-US/Best Practices/Import Cloud Firewall Internet logs to a third-party system.md#).
 
