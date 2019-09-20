@@ -27,11 +27,11 @@ Create a policy group, and then configure **inbound** or **outbound** access con
 1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext#/overview).
 2.  In the left-side navigation pane, choose **Security Policies** \> **Access Control** \> **Internal Firewall**.
 
-    ![](images/11761_en-US.png)
+    ![主机边界防火墙](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/156897215511761_en-US.png)
 
 3.  In the upper-right corner, click **Create Policy Group**. In the Create Policy Group dialog box, configure the policy group.
 
-    ![](images/11762_en-US.png)
+    ![新建策略](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/156897215511762_en-US.png)
 
     The configuration items of a policy group are described as follows:
 
@@ -60,15 +60,15 @@ Create a policy group, and then configure **inbound** or **outbound** access con
 
     **Note:** You can create multiple policies in a policy group. By default, you can create up to 100 policy groups and 100 policies. If you want to create more policies than allowed, we recommend that you delete unnecessary policies or submit a ticket for technical support.
 
-    ![](images/11763_en-US.png)
+    ![配置策略](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/156897215611763_en-US.png)
 
 6.  On the Policies page, click the **Inbound** or **Outbound** tab, and click **Create Policy** in the upper-right corner.
 
-    ![](images/11764_en-US.png)
+    ![管理策略](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/156897215611764_en-US.png)
 
 7.  In the Create Policy dialog box, configure the policy.
 
-    ![](images/11765_en-US.png)
+    ![配置策略参数](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/156897215611765_en-US.png)
 
     The policy configuration items are as follows:
 
@@ -110,17 +110,17 @@ Create a policy group, and then configure **inbound** or **outbound** access con
 
     On the Policies page, you can view, modify, or delete the inbound or outbound policies.
 
-    ![](images/47929_en-US.png)
+    ![编辑删除](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/156897215647929_en-US.png)
 
     **Note:** After you delete a policy, the traffic control rule specified in this policy becomes invalid. After you delete a policy, you can still view this policy in the list but cannot perform any operation on it.
 
 9.  On the Internal Firewall page, find the policy group to be applied. Click **Publish** in the **Actions** column. The policies take effect and are synchronized to the ECS security group module.
 
-    ![](images/47931_en-US.png)
+    ![发布](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/156897215647931_en-US.png)
 
     **Note:** To apply a policy and synchronize it to the ECS security group module, you must publish it first. To view the policies that are created on the Internal Firewall page in Cloud Firewall and synchronized to the ECS security group module, log on to the ECS console, and choose **Security Groups** \> **Security Groups**.
 
-    ![](images/47930_en-US.png)
+    ![安全组](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21269/156897215747930_en-US.png)
 
 
 ## Differences between the internal firewall and ECS security groups {#section_r21_d8e_czu .section}
