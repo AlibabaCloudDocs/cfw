@@ -82,13 +82,7 @@ This module displays a pie chart in the **Applications** section and a table in 
 **Protocol Details**: displays the details about the application protocols used in outbound connections. You can follow or ignore a specific application or view its logs.
 
 -   Follow an application: Find the application that you want to follow, click **More** in the Actions column, and then click **Follow**. The port of the followed application is added to the Destination Port tab on the Followed tab. You can click **Followed** in the upper-right corner, click the **Destination Port** tab, find the port, and then click **Unfollow** in the Actions column to unfollow it.
-
-    ![Follow list](../images/p80348.png)
-
 -   Ignore an application: Find the application that you want to ignore, click **More** in the Actions column, and click **Ignore**. The port of the ignored application is added to the Destination Port tab on the Ignored tab. The ignored application is removed from the Protocol Analysis section. You can click **Ignored** in the upper-right corner, click the **Destination Port** tab, find the port, and then click **Cancel Ignore** in the Actions column to unignore it.
-
-    ![Ignored list](../images/p80347.png)
-
 -   View logs of an application: Find the application whose logs you want to view, click **More** in the Actions column, and then click **View Logs**. The Traffic Logs tab appears. You can view traffic logs of this application on this tab.
 
 ## Outbound connections
