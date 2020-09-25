@@ -1,4 +1,4 @@
-# Features {#concept_xn2_hlj_bfb .concept}
+# Features
 
 Cloud Firewall supports centralized management of north-south and east-west traffic, and provides features including real-time traffic monitoring, precise access control, real-time intrusion prevention, and traffic logs to comprehensively protect your network.
 
