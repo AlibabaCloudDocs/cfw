@@ -1,12 +1,30 @@
-# Scenarios {#concept_imn_nlj_bfb .concept}
+# Scenarios
 
-Cloud Firewall is the primary infrastructure that you need to deploy to ensure network security of the businesses when you have migrated onto Alibaba Cloud. Cloud Firewall supports the functions including network-wide traffic identification, centralized policy management, intrusion detection, and logging.
+Cloud Firewall is the primary infrastructure that you can deploy to ensure network security for your business migrated to Alibaba Cloud. Cloud Firewall provides core functions such as network-wide traffic identification, centralized policy management, intrusion detection, and log auditing.
 
-Cloud Firewall controls the access traffic from the Internet to your ECS instances, external connection traffic from ECS instances to the Internet, and access traffic between ECS instances.
+Cloud Firewall controls the traffic from the Internet to your ECS instances, the traffic from ECS instances to the Internet, and the traffic between ECS instances.
 
-Cloud Firewall applies to the following scenarios:
+## Access control on the Internet firewall
 
--   **Control the access traffic from the Internet to ECS instances**: For example, a financial company on Alibaba Cloud uses IPS to protect their HTTP and other businesses exposed on the Internet.
--   **Prevent abnormal external connection activities**: For example, a government sector on Alibaba Cloud analyzes not only the access traffic from the Internet to ECS instances, but also the external connection traffic from ECS instances to the Internet. Based on the analysis, the government sector can determine which ECS instances are at risk and then block abnormal access in real time to avoid potential risks.
--   **Protect the access traffic between ECS instances through micro-isolation**: For example, an e-commerce company on Alibaba Cloud runs businesses based on HTTP and uses Web Application Firewall \(WAF\) for business protection. To isolate the different businesses from each other, the company now deploys Cloud Firewall to comprehensively improve network control. This helps avoid threats to the company's cloud-based businesses due to security risks on a certain ECS instance.
+Controls inbound and outbound traffic on the Internet, and intercepts attacks and threats from the Internet, such as hacker intrusions, mining activities, and malicious traffic.
+
+## Access control on internal firewalls
+
+Controls the traffic between ECS instances on an internal network and isolates business, so that risks on a specific ECS instance do not pose security threats to the business on the cloud.
+
+## Access control on VPC firewalls
+
+Controls the traffic between VPCs.
+
+## Intrusion prevention
+
+Detects and analyzes outbound connections of cloud assets, Internet access traffic, and traffic between ECS instances on an internal network. This helps you monitor the network traffic in real time, determine which cloud assets are at risk, and stop abnormal activities in real time to prevent risks.
+
+## Traffic visualization
+
+Presents asset information and access relationships to help you identify suspicious traffic in real time.
+
+## Classified protection compliance
+
+Stores the logs of more than six months of cloud assets, which helps websites meet classified protection compliance requirements.
 
