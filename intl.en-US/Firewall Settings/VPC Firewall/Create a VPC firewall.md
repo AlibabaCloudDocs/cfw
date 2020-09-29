@@ -2,27 +2,29 @@
 
 You can use a VPC firewall to detect and control the traffic between two VPCs. If your VPCs are connected by using an Express Connect or if they belong to the same Cloud Enterprise Network \(CEN\), you can create a VPC firewall for the Express Connect or CEN. Cloud Firewall can be used to analyze and control traffic between two VPCs only after a VPC firewall is created and enabled.
 
+You have purchased a CEN or Express Connect instance, and have connected two VPCs by using the instance. For more information, see [Interconnect two VPCs under the same account](/intl.en-US/Peering connections/Interconnect two VPCs under the same account.md).
+
 The VPC Firewall feature is available in Cloud Firewall Enterprise and Ultimate Editions. A VPC firewall can be created only between two VPCs that are connected by using an [Express Connect](/intl.en-US/Product Introduction/What is Express Connect?.md) or a [CEN]().
 
 ## Create a VPC firewall for a CEN
 
-Cloud Firewall of the **Ultimate Edition** can be used to protect VPCs that are connected by using a CEN and are created by using different Alibaba Cloud accounts. If you want to enable VPC Firewall for such VPCs, Cloud Firewall must be authorized to access the cloud assets under both accounts. Otherwise, you cannot create a VPC firewall for the CEN, and the message **It is not allowed to be created because of the existing unauthorized network instance** is displayed on the **CEN** tab. To go to this tab, log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext), click **Firewall Settings** in the left-side navigation pane, and click the **VPC Firewall** tab and then the CEN tab.
+Cloud Firewall of the **Ultimate Edition** can be used to protect VPCs that are connected by using a CEN and are created by using different Alibaba Cloud accounts. If you want to enable VPC Firewall for such VPCs, Cloud Firewall must be authorized to access the cloud assets under both accounts. Otherwise, you cannot create a VPC firewall for the CEN, and the message **It is not allowed to be created because of the existing unauthorized network instance** is displayed on the **CEN** tab. To go to this tab, log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext), click **Firewall Settings** in the left-side navigation pane, click the **VPC Firewall** tab, and then click the CEN tab.
 
 To authorize Cloud Firewall to access cloud assets of an Alibaba Cloud account, perform the following operations:
 
-1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext) by using the target account.
+1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext) by using the account.
 2.  On the welcome page of Cloud Firewall, get started as instructed.
 3.  On the Cloud Resource Access Authorization page, click **Confirm Authorization Policy**.
 
-**Note:** If you want to enable VPC Firewall for a CEN, note the following points:
+**Note:** If you want to enable VPC Firewall for a CEN, note the following items:
 
 -   VPC firewalls can be used to protect VPCs that are deployed in different regions or created by different Alibaba Cloud accounts. If your VPC is connected with a VPC that is created by another Alibaba Cloud account, you can enable VPC Firewall to protect these VPCs even if Cloud Firewall Premium, Enterprise, or Ultimate Edition is not enabled for the VPC that is created by another Alibaba Cloud account.
--   VPC Firewall can be enabled for up to 10 VPCs in a region of a CEN. If you want to increase the quota, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm#/ticket/createIndex).
+-   VPC Firewall can be enabled for a maximum of 10 VPCs in a region of a CEN. If you want to increase the quota, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm#/ticket/createIndex).
 -   VPC firewalls can protect traffic between VPCs, between a VPC and a Virtual Border Router \(VBR\), and between a VPC and a Cloud Connect Network \(CCN\), but cannot protect traffic between VBRs, between CCNs, or between a CCN and a VBR.
 
 To create a VPC firewall for a CEN, perform the following operations:
 
-**Note:** When you create, enable, disable, or delete a VPC firewall, the system automatically modifies custom routes in your VPC route table, causing a short network interruption. If you need to perform batch operations on VPC firewalls or frequently enable and disable VPC firewalls, we recommend that you perform such operations during off-peak hours to prevent impact on your business.
+**Note:** When you create, enable, disable, or delete a VPC firewall, the system automatically modifies custom routes in your VPC route table, causing a short network interruption. If you need to perform batch operations on VPC firewalls or frequently enable and disable VPC firewalls, we recommend that you perform such operations during off-peak hours to prevent the impact on your business.
 
 1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext).
 
@@ -63,11 +65,11 @@ To create a VPC firewall for a CEN, perform the following operations:
     ![CEN with Cloud Firewall enabled](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8463068951/p72475.png)
 
 
-**Note:** After a VPC firewall is enabled, a security group named Cloud\_Firewall\_Security\_Group is automatically added and an access control policy is created to allow traffic to the VPC firewall. Do not delete or modify this security group and the access control policy.
+**Note:** After a VPC firewall is enabled, a security group named Cloud\_Firewall\_Security\_Group is automatically added and an access control policy is created to allow traffic to the VPC firewall. Do not modify or delete this security group and the access control policy.
 
 ## Create a VPC firewall for an Express Connect
 
-If you want to enable VPC Firewall for an Express Connect, note the following points:
+If you want to enable VPC Firewall for an Express Connect, note the following items:
 
 -   VPC firewalls can control traffic between VPCs that are deployed in the same region, but cannot control traffic between VPCs that are deployed in different regions or are created by using different Alibaba Cloud accounts.
 -   VPC firewalls cannot control traffic between a VPC and a VBR.
@@ -100,7 +102,7 @@ When you create a VPC firewall in the Cloud Firewall console, Cloud Firewall aut
 
     -   Destination CIDR Block
 
-After you select a route table from the Route Table drop-down list, the default destination CIDR block of the route table is displayed in the Destination CIDR Block section. If you need to protect traffic to other CIDR blocks, you can manually modify this destination CIDR block. You can add multiple CIDR blocks that are separated with commas \(,\). |
+After you select a route table from the Route Table drop-down list, the default destination CIDR block of the route table is displayed in the Destination CIDR Block section. If you need to protect traffic to other CIDR blocks, you can modify this destination CIDR block. You can add multiple CIDR blocks that are separated with commas \(,\). |
     |**Peer VPC**|Confirm the region and name of the peer VPC, and configure **Peer Route Table** and **Peer Destination CIDR Blocks**. For more information about route tables and destination CIDR blocks, see the **VPC** configuration description.|
     |**Intrusion Prevention**|Select the intrusion prevention policies that you want to enable. Valid values:     -   **Monitoring Mode** or **Traffic Control Mode**. In monitoring mode, traffic that hits intrusion prevention rules is monitored but not blocked. In traffic control mode, traffic that hits intrusion prevention rules is blocked. You can select only one of the two modes.
     -   **Basic Policies**: This feature provides basic intrusion prevention capabilities such as protection against brute force attacks and attacks that exploit command execution vulnerabilities. It also allows you to manage and control the connections from infected hosts to a command and control \(C&C\) server.
