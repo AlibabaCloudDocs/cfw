@@ -4,6 +4,12 @@ The Internet Firewall feature allows you to detect traffic between the Internet 
 
 The public IP address quota does not exceed the threshold. The public IP address quota refers to the maximum number of public IP addresses that the Internet firewall can protect. Different Cloud Firewall editions have different public IP address quotas. For more information, see [Features](/intl.en-US/Product Introduction/Features.md). You can increase the bandwidth of Cloud Firewall to increase the quota. For more information, see [Renewal and upgrade](/intl.en-US/Pricing/Renewal and upgrade.md).
 
+All the protection capabilities of Cloud Firewall are achieved after Cloud Firewall is activated. Cloud Firewall detects and analyzes traffic from public IP addresses only after Internet Firewall is enabled.
+
+After you enable Internet Firewall, the traffic passes through the Cloud Firewall. The default access control policy is set to **allow**, so no impact is caused on your business. If you need to control specific traffic, you must configure access control policies after you enable Internet Firewall. For more information, see [Outbound and inbound traffic control on the Internet firewall](/intl.en-US/Access control/Outbound and inbound traffic control on the Internet firewall.md).
+
+**Note:** We recommend that you enable Internet Firewall for all assets under your Alibaba Cloud account.
+
 ## Procedure
 
 1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext).
@@ -18,27 +24,27 @@ The public IP address quota does not exceed the threshold. The public IP address
 
     You can perform the following operations on the Internet Firewall tab to enable or disable Internet Firewall.
 
-    -   To enable or disable Internet Firewall for all public IP addresses, follow these steps:
+    -   To enable or disable Internet Firewall for all public IP addresses, perform the following operations:
         1.  In the Public IP section, click **Batch**.
 
             ![Enable or disable Internet Firewall](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/5463068951/p72297.png)
 
         2.  In the Batch dialog box, click **Enable** or **Disable**.
 
-            You can also select **Enable Protection** next to **New Assets** and click Enable. Then, Internet Firewall is enabled for new public IP addresses added under the current Alibaba Cloud account by default.
+            You can also select **Enable Protection** next to **New Assets** and click Enable. Then, Internet Firewall is enabled for public IP addresses that are newly added under the current Alibaba Cloud account by default.
 
             ![Batch management](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/5463068951/p53973.png)
 
-    -   To enable or disable Internet Firewall for one or more public IP addresses, follow these steps:
-        1.  In the IP address list at the lower section of the page, find the target public IP addresses.
+    -   To enable or disable Internet Firewall for one or more public IP addresses, perform the following steps:
+        1.  In the IP address list at the lower section of the page, find the public IP addresses for which you want to enable or disable Internet Firewall.
 
-            You can filter the target IP addresses by using **Asset Type**, **Region**, and **Firewall Status**. Alternatively, you can search for the target IP addresses by using **Instance ID/IP**.
+            You can filter the IP addresses based on **Asset Type**, **Region**, and **Firewall Status**. Alternatively, you can search for IP addresses by using **Instance ID/IP**.
 
-        2.  Select the target IP addresses and click **Enable Firewall** or **Disable Firewall** at the lower section of the page. Alternatively, find the target IP address and click **Enable Firewall** or **Disable Firewall** in the Actions column.
+        2.  Select the IP addresses and click **Enable Firewall** or **Disable Firewall** at the lower section of the page. Alternatively, find the IP address and click **Enable Firewall** or **Disable Firewall** in the Actions column.
 
             ![Select IP addresses](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/5463068951/p32275.png)
 
-            Due to the network restrictions, Internet Firewall cannot be enabled for some public IP addresses of SLB instances. For such IP addresses, the Enable Firewall button is dimmed. When you move your pointer over this button, a message **"You cannot enable Cloud Firewall for this IP address because the network where the SLB instance is located does not support Cloud Firewall."** appears. We recommend that you use another security service, such as Web Application Firewall, to protect these public IP addresses.
+            Due to network limits, Internet Firewall cannot be enabled for some public IP addresses of SLB instances. For such IP addresses, the Enable Firewall button is dimmed. When you move your pointer over this button, the message **"You cannot enable Cloud Firewall for this IP address because the network where the SLB instance is located does not support Cloud Firewall."** appears. We recommend that you use another security service, such as Web Application Firewall, to protect these public IP addresses.
 
             ![Failed to enable Internet Firewall](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/5463068951/p127298.png)
 
