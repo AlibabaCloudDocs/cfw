@@ -1,36 +1,38 @@
-# Benefits {#concept_syh_klj_bfb .concept}
+# Benefits
 
-This document introduces the benefits of Cloud Firewall, which is the industry's first FWaaS solution for cloud platforms. It manages north-south and east-west traffic in a centralized manner to comprehensively protect your network. Cloud Firewall's out-of-the-box features make it easy to use. In addition, it supports precise access control and network-wide traffic visibility.
+Cloud Firewall is the first Firewall as a Service \(FWaaS\) solution on the cloud. It manages north-south and east-west traffic in a centralized manner to protect your network. The out-of-the-box feature of Cloud Firewall makes it easy to use. In addition, Cloud Firewall supports precise access control and network-wide traffic visualization.
 
-## FWaaS, which is easy to use {#section_enp_gzp_1fb .section}
+## Fully managed service
 
-Cloud Firewall is the first FWaaS solution provided for public clouds based on software-defined networking \(SDN\) technology. Once you subscribe to the Cloud Firewall service in the console, you can use it after several simple steps of policy configurations. Cloud Firewall helps you get rid of the basic but complex system and network configurations such as image installation and routing setup that are required by traditional firewalls. In addition, you do not need to be concerned about issues such as disaster recovery, capacity expansion, and deployment.
+Cloud Firewall is the first FWaaS solution that is available on a public cloud platform, Alibaba Cloud. It adopts software-defined networking \(SDN\) technology. Cloud Firewall is a fully managed service that spares you from complex device deployment and system configurations, such as firewall image installation and routing configurations. In addition, you do not need to pay attention to disaster recovery, scale-out, or access issues.
 
-## Smooth scaling {#section_utq_lzp_1fb .section}
+## Ease of use
 
-Cloud Firewall is deployed in cluster mode and supports smooth scaling. It provides a defense capability of up to 2 Gbit/s per IP address, which is customizable.
+After you purchase a Cloud Firewall edition and complete necessary configurations in the console, you can use Cloud Firewall immediately to defend your network. Cloud Firewall effectively reduces the cost of network security control and O&M.
 
-## High availability and reliability {#section_d2c_mzp_1fb .section}
+## Smooth scaling
 
-Cloud Firewall is deployed in dual available zone \(AZ\) mode. The failure of any server or AZ does not affect Cloud Firewall's normal service.
+Cloud Firewall is deployed in cluster mode and supports smooth scaling. It provides a defense capability of up to 2 Gbit/s for each IP address. You can customize the defense capability based on your business requirements.
 
-Cloud Firewall supports easily bypassing a certain IP address, helping you rapidly diagnose faults during O&M.
+## Stability and reliability
 
-## Centralized policy management {#section_s5f_mzp_1fb .section}
+Cloud Firewall is deployed in two availability zones \(AZs\) to achieve high availability. This way, Cloud Firewall does not break down if a server or AZ fails.
 
-Cloud Firewall provides complete north-south and east-west traffic control for your assets. You can fully control the access to your ECS instances and isolate ECS instances for security.
+## On-cloud in-depth integration
 
-With Cloud Firewall, you can control access to common cloud assets such as ECS instances at the network level and fix the problems of abnormal accessing to the cloud assets.
+Cloud Firewall provides complete north-south and east-west traffic control for your assets. You can fully control access to your ECS instances and isolate ECS instances for security.
 
-## Real-time intrusion prevention {#section_vwc_fxf_ggb .section}
+Cloud Firewall integrates access by Alibaba Cloud network service, such as Virtual Private Cloud \(VPC\), Cloud Enterprise Network \(CEN\), Elastic IP Address \(EIP\), and Server Load Balancer \(SLB\). Cloud Firewall controls access to common cloud assets at the network layer and exploits security capabilities of terminals to monitor and block suspicious access to cloud assets.
 
-With the built-in IPS, Cloud Firewall can receive simultaneous updates of network-wide threat intelligence, detect and block threats from the Internet in real time.
+## Real-time intrusion prevention
 
-## Business relationship visibility {#section_k2h_mzp_1fb .section}
+A built-in intrusion prevention system \(IPS\) allows Cloud Firewall to update network-wide threat intelligence in real time and monitors more than 5 million active malicious IP addresses and domain names. In this way, Cloud Firewall can detect and block threats from the Internet. In addition, Cloud Firewall provides a cyber kill chain to defend against critical cyberattacks.
 
-Cloud Firewall shows assets and their access relationships in topology views. Once you subscribe to the Cloud Firewall service, you can gain instant visibility of your business regions, groups, assets, access relationships between assets, and clustering analysis of user traffic without any configurations. Cloud Firewall supports visual analysis of traffic to maximize the correctness of policies.
+## Visualized business relationships
 
-## Compliance with classified protection requirements {#section_z4g_4x2_2gb .section}
+Cloud Firewall shows assets and their access relationships in topology views. After you activate Cloud Firewall, you can view your business groups, application groups, assets, and access relationships between assets in topologies, and perform clustering analysis of user traffic without any configurations. Cloud Firewall supports visualized analysis of traffic to ensure policy accuracy.
 
-Cloud Firewall meets the boundary protection, access control, and other requirements on classified protection.
+## Compliance with classified protection requirements
+
+Cloud Firewall meets classified protection requirements such as boundary protection and access control.
 
