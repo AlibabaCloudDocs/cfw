@@ -4,12 +4,12 @@ After Cloud Firewall is activated for network assets, the Outbound Connections p
 
 ## Overview
 
-The Outbound Connections page consists of the following four modules. You can click a module name to view its details and perform required operations. To go to the Outbound Connections page, log on to the Cloud Firewall console, and choose **Traffic Analysis** \> **Outbound Connections** in the left-side navigation pane.
+To go to the Outbound Connections page, log on to the Cloud Firewall console, and choose **Traffic Analysis** \> **Outbound Connections** in the left-side navigation pane. You can click a module name on the Outbound Connections page to view the module details and perform required operations. The Outbound Connections page consists of the following modules:
 
 -   [Outbound connection statistics](#section_18l_93v_ny7)
 -   [IP traffic statistics](#section_oqf_ktv_0dq)
 -   [Protocol analysis](#section_aci_5zu_thf)
--   [Outbound connections](#section_4vp_qif_noe)
+-   [Outbound traffic](#section_4vp_qif_noe)
 
 **Note:** The Outbound Connections page displays traffic analysis data only after you activate Cloud Firewall. For information about how to activate Cloud Firewall, see [Activate Cloud Firewall](/intl.en-US/Quick Start/Activate Cloud Firewall.md).
 
@@ -23,7 +23,7 @@ This module provides statistics on outbound connections.
 
 ![Outbound connection statistics](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3997570061/p72797.png)
 
--   **Outbound Domains**: the total number of outbound domain names and the number of risky outbound domain names. You can click this section to view details about the outbound domain names.
+-   **Outbound Domains**: the total number of domain names and the number of risky domain names in outbound connections. You can click this section to view details about the domain names.
 -   **Outbound IP Addresses**: the total number of outbound IP addresses and the number of risky outbound IP addresses. You can click this section to view details about the outbound IP addresses.
 -   **Assets**: the total number of assets that initiate outbound connections and the number of risky assets. You can click this section to view details about the assets.
 -   **Protocol Analysis**: the analysis results of protocols used in outbound connections, including the total number of protocols and the proportion of outbound connections with unidentified protocols. You can click this section to view details about the protocols.
@@ -34,11 +34,11 @@ This module provides IP address lists in the **IP Traffic** section and traffic 
 
 ![IP traffic statistics](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3997570061/p72799.png)
 
-**IP Traffic**: lists private and public IP addresses in descending order based on their response traffic at a specific point of time.
+**IP Traffic**: lists private and public IP addresses in descending order based on their response traffic at a specific time point.
 
 -   Click the **Private IP** or **Public IP** tab to check the traffic of IP addresses.
 -   In the **Trends of Traffic** section, click a time point on the horizontal axis to refresh the traffic rankings in the IP Traffic section.
--   Find the IP address that you want to query, click the drop-down arrow next to **More** in the Actions column, and then click **View Logs**. The Traffic Logs tab appears, and you can view traffic logs of the IP address on this tab.
+-   Find the IP address that you want to query, choose **More** \> **View Logs**. The Traffic Logs tab appears. You can view traffic logs of the IP address on this tab.
 
     ![View Logs](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3997570061/p80304.png)
 
@@ -56,7 +56,7 @@ This module provides IP address lists in the **IP Traffic** section and traffic 
     -   **Last 30 Days**
 -   Specify the data range. By default, the overall traffic trends of all protected network assets are displayed. In the **IP Traffic** section, you can specify an IP address to view its trends by using one of following methods:
 
-    -   Click the IP address or find the IP address, click the drop-down arrow next to **More** in the Actions column, and then click **View Trend**.
+    -   Click the IP address or find the IP address and choose **More** \> **View Trend**.
 
         ![View traffic trends](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/4997570061/p80311.png)
 
@@ -66,7 +66,7 @@ This module provides IP address lists in the **IP Traffic** section and traffic 
 
         ![Search for an IP address](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/4997570061/p80312.png)
 
-    The filter condition you specified is displayed on top of the chart.
+    The filter condition you specified is displayed on the top of the chart.
 
     ![Filter condition](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/4997570061/p80340.png)
 
@@ -77,30 +77,36 @@ This module displays a pie chart in the **Applications** section and a table in 
 
 ![Protocol analysis](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/4997570061/p72800.png)
 
-**Applications**: displays the proportions of application protocols used in outbound connections.
+**Applications**: displays the proportion of each application protocol used in outbound connections.
 
-**Protocol Details**: displays the details about the application protocols used in outbound connections. You can follow or ignore a specific application or view its logs.
+**Protocol Details**: displays the details about application protocols used in outbound connections. You can find a required application, click **View Logs** in the **Actions** column, and then view the traffic logs of the application on the Traffic Logs tab.
 
--   Follow an application: Find the application that you want to follow, click **More** in the Actions column, and then click **Follow**. The port of the followed application is added to the Destination Port tab on the Followed tab. You can click **Followed** in the upper-right corner, click the **Destination Port** tab, find the port, and then click **Unfollow** in the Actions column to unfollow it.
--   Ignore an application: Find the application that you want to ignore, click **More** in the Actions column, and click **Ignore**. The port of the ignored application is added to the Destination Port tab on the Ignored tab. The ignored application is removed from the Protocol Analysis section. You can click **Ignored** in the upper-right corner, click the **Destination Port** tab, find the port, and then click **Cancel Ignore** in the Actions column to unignore it.
--   View logs of an application: Find the application whose logs you want to view, click **More** in the Actions column, and then click **View Logs**. The Traffic Logs tab appears. You can view traffic logs of this application on this tab.
+## Outbound traffic
 
-## Outbound connections
-
-This module displays domain names, destination IP addresses, and assets used in outbound connections. Click the **Outbound Domains**, **Outbound IP Addresses**, or **Assets** tab to view details.
+This module displays domain names, destination IP addresses, and assets used in outbound connections. You can click the **Outbound Domains**, **Outbound IP Addresses**, or **Assets** tab to view details.
 
 -   Outbound Domains
 
-    ![Outbound connections](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/4997570061/p72801.png)
+    ![Outbound traffic](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/4997570061/p72801.png)
 
     Each record includes the following information: **Domain Name**, **Traffic**, **Requests**, **Category**, **Tag**, and **Recommended Operation**.
 
-    -   **Category** and **Tag** are website attributes of an outbound domain name.
-    -   **Recommended Operation**includes the following options: [Intelligent policies](/intl.en-US/Traffic Analysis/Intelligent policy delivery.md)
-        -   **Follow**: Add the current outbound domain name to the followed list. You can click **Followed** in the upper-right corner, click the **Destination Domain** tab, find the domain name, and then click **Unfollow** to unfollow it.
-        -   **Ignore**: Add the current outbound domain name to the ignored list. You can click **Ignored** in the upper-right corner, click the **Destination Domain** tab, find the domain name, and then click **Cancel Ignore** to unignore it.
-        -   **View Logs**: View the detailed traffic information of an outbound domain name on the Traffic Logs tab.
-        -   **View Details**: View the access details of an outbound domain name. The details include ECS instance IP addresses that are mapped to this domain name, the time outbound connections are initiated, transmission rates of request and response traffic, and the number of requests. The following figure shows the access details of an outbound domain name.
+    -   **Category** and **Tag** are website attributes of a domain name.
+
+        For more information about labels, see [What are the meanings of the tags of domain names on the Outbound Connections page?](/intl.en-US/FAQ/What are the meanings of the tags of domain names on the Outbound Connections page?.md).
+
+    -   **Recommended Operation** includes the following options:
+        -   **Ignore**: Click **Ignore** in the Recommended Operation column to add the current domain name to the **Destination Domain** tab under the **Ignored** tab. If you want to remove the domain name from the ignored list, click **Ignored** in the upper-right corner of the section. Then, on the **Destination Domain** tab, click **Cancel Ignore** in the Actions column in the row that the domain name is located.
+
+            ![Ignore a domain name](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/6407482061/p148044.png)
+
+        -   **Follow**: Choose **More** \> **Follow** to add the current domain name to the **Destination Domain** tab under the **Followed** tab.
+        -   **Unfollow**: If you want to unfollow a domain name, find the domain name and choose **More** \> **Unfollow**. Alternatively, you can click **Followed** in the upper-right corner of the section. Then, on the **Destination Domain** tab, click **Unfollow** in the Actions column in the row that the domain name is located.
+
+            ![Follow a domain name](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/6407482061/p148048.png)
+
+        -   **View Logs**: View the detailed traffic information of a domain name on the Traffic Logs tab.
+        -   **View Details**: View the access details of the domain name. The details include ECS instance IP addresses that are mapped to this domain name, the time outbound connections are initiated, transmission rates of request and response traffic, and the number of requests. The following figure shows the access details of a domain name.
 
             ![View details](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/4997570061/p80383.png)
 
@@ -110,13 +116,23 @@ This module displays domain names, destination IP addresses, and assets used in 
 
     Each record includes the following information: **Destination IP**, **Applications/Ports**, **Traffic**, **Sessions**, **Category**, **Address Book**, **Tag**, and **Recommended Operation**.
 
-    -   **Category** and **Tag** are website attributes of an outbound IP address.
-    -   **Address Book** indicates the address book that stores an outbound IP address.
-    -   **Recommended Operation** includes the following options: [Intelligent policies](/intl.en-US/Traffic Analysis/Intelligent policy delivery.md)
-        -   **Follow**: Add the current outbound IP address to the followed list. You can click **Followed** in the upper-right corner, click the **Destination IP** tab, find the IP address, and then click **Unfollow** to unfollow it.
-        -   **Ignore**: Add the current outbound IP address to the ignored list. You can click **Ignored** in the upper-right corner, click the **Destination IP** tab, find the IP address, and then click **Cancel Ignore** to unignore it.
-        -   **View Logs**: View the detailed traffic information of an outbound IP address on the Traffic Logs tab.
-        -   **View Details**: View the access details of an outbound IP address. The details include ECS instances bound to this IP address, the time outbound connections are initiated, transmission rates of request and response traffic, and the number of requests. The following figure shows the access details of an outbound IP address.
+    -   **Category** and **Tag** are website attributes of an IP address.
+
+        For more information about labels, see [What are the meanings of the tags of domain names on the Outbound Connections page?](/intl.en-US/FAQ/What are the meanings of the tags of domain names on the Outbound Connections page?.md).
+
+    -   **Address Book** indicates the address book that stores an IP address.
+    -   **Recommended Operation** includes the following options:
+        -   **Ignore**: Click **Ignore** in the Recommended Operation column to add the current IP address to the **Destination IP** tab under the **Ignored** tab. If you want to remove the IP address from the ignored list, click **Ignored** in the upper-right corner of the section. On the Ignored tab, click the **Destination IP** tab. Then, click **Cancel Ignore** in the Actions column in the row that the IP address is located.
+
+            ![Ignore an IP address](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/6407482061/p148044.png)
+
+        -   **Follow**: Choose **More** \> **Follow** to add the current IP address to the **Destination IP** tab under the **Followed** tab.
+        -   **Unfollow**: If you want to unfollow an IP address, find the IP address and choose **More** \> **Unfollow**. Alternatively, you can click **Followed** in the upper-right corner of the section. On the Followed tab, click the **Destination IP** tab. Then, click **Unfollow** in the Actions column in the row that the IP address is located.
+
+            ![Follow an IP address](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/6407482061/p148048.png)
+
+        -   **View Logs**: View the detailed traffic information of the IP address on the Traffic Logs tab.
+        -   **View Details**: View the access details of the IP address. The details include ECS instances bound to this IP address, the time outbound connections are initiated, transmission rates of request and response traffic, and the number of requests. The following figure shows the access details of an IP address.
 
             ![View details](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/5997570061/p80634.png)
 
@@ -127,15 +143,27 @@ This module displays domain names, destination IP addresses, and assets used in 
     Each record includes the following information: **Asset IP**, **Asset Type**, **Instance ID/Name**, **Region**, **Traffic**, **Requests**, **Security Risk**, and **Actions**.
 
     -   **Security Risk** indicates the status Cloud Firewall sets for an asset based on outbound connection records.
-    -   Supported operations in the **Actions** column include:
-        -   **Follow**: Add the current asset IP address to the followed list. You can click **Followed** in the upper-right corner, click the **Asset IP** tab, find the asset IP address, and then click **Unfollow** to unfollow it.
-        -   **Ignore**: Add the current asset IP address to the ignored list. You can click **Ignored** in the upper-right corner, click the **Asset IP** tab, find the asset IP address, and then click **Cancel Ignore** to unignore it.
-        -   **View Logs**: View the detailed traffic information of an asset IP address \(the source IP address of an outbound connection\) on the Traffic Logs tab.
+    -   **Actions** include the following options:
+        -   **Follow**: Add the current asset IP address to the **Asset IP** tab under the **Followed** tab. If you want to unfollow the IP address, click **Followed** in the upper-right corner of the section. On the Followed tab, click the **Asset IP** tab. Then, click **Unfollow** in the Actions column in the row that the IP address is located.
+        -   **View Logs**: View the detailed traffic information of the asset IP address \(the source IP address of an outbound connection\) on the Traffic Logs tab.
     Click the plus sign next to an asset to view more details about its outbound connections, including **Outbound Domains/Outbound IP Addresses**, **Requests**, **Category**, **Tag**, and **Recommended Operation**.
 
-    -   **Category** and **Tag** are website attributes of an outbound IP address or domain name.
-    -   **Recommended Operation** includes the following options: [Intelligent policies](/intl.en-US/Traffic Analysis/Intelligent policy delivery.md)
-        -   **Follow**: Add the current outbound IP address or domain name to the followed list. You can click **Followed** in the upper-right corner, click the **Destination IP** or **Destination Domain** tab, find the IP address or domain name, and then click **Unfollow** to unfollow it.
-        -   **Ignore**: Add the current outbound IP address or domain name to the ignored list. You can click **Ignored** in the upper-right corner, click the **Destination IP** or **Destination Domain** tab, find the IP address or domain name, and then click **Cancel Ignore** to unignore it.
-        -   **View Logs**: View the detailed traffic information of an outbound IP address or domain name on the Traffic Logs tab.
+    ![Assets](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7407482061/p148071.png)
+
+    -   **Category** and **Tag** are website attributes of a domain name or IP address.
+
+        For more information about labels, see [What are the meanings of the tags of domain names on the Outbound Connections page?](/intl.en-US/FAQ/What are the meanings of the tags of domain names on the Outbound Connections page?.md).
+
+    -   **Recommended Operation** includes the following options:
+        -   **Ignore**: Click **Ignore** in the Recommended Operation column to add the current domain name or public IP address to **Destination Domain** or **Destination IP** tab under the **Ignore** tab. If you want to remove the domain name or IP address from the ignored list, click **Ignored** in the upper-right corner of the section. On the Ignored tab, click the **Destination Domain** or **Destination IP** tab. Then, click **Cancel Ignore** in the Actions column in the row that the domain name or IP address is located.
+        -   **Follow**: Choose **More** \> **Follow** to add the current domain name or IP address to the **Destination Domain** or **Destination IP** tab under the **Followed** tab.
+        -   **Unfollow**: If you want to unfollow a domain name or IP address, find the domain name and choose **More** \> **Unfollow**. Alternatively, you can click **Followed** in the upper-right corner of the section. On the Followed tab, click the **Destination Domain** or **Destination IP** tab, and then click **Unfollow** in the Actions column in the row that the domain name or IP address is located.
+        -   **View Logs**: View the detailed traffic information of a domain name or IP address on the Traffic Logs tab.
+
+## References
+
+-   [Activate Cloud Firewall](/intl.en-US/Quick Start/Activate Cloud Firewall.md)
+-   [What are the meanings of the tags of domain names on the Outbound Connections page?](/intl.en-US/FAQ/What are the meanings of the tags of domain names on the Outbound Connections page?.md)
+-   [Intelligent policies](/intl.en-US/Traffic Analysis/Intelligent policy delivery.md)
+-   [Manage address books](/intl.en-US/Access control/Manage address books.md)
 
