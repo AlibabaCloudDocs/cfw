@@ -45,7 +45,7 @@ Yes, Cloud Firewall can protect traffic on Express Connect and CEN.
 -   Cloud Firewall can protect only traffic between VPCs that are connected by using Express Connect in the same region. It cannot protect traffic between a VPC and a Virtual Border Router \(VBR\) that are connected by using Express Connect.
 -   Cloud Firewall can protect traffic between two VPCs in different regions, as well as a VPC and a VBR, that are connected by using a CEN.
 
-**Note:** If you need Cloud Firewall to protect traffic between two VPCs in different regions, or between a VPC and a VBR, migrate the traffic of Express Connect to a CEN. For more information, see [t630439.md\#]().
+**Note:** If you need Cloud Firewall to protect traffic between two VPCs in different regions, or between a VPC and a VBR, migrate the traffic of Express Connect to a CEN. For more information, see [Migrate a VPC in a peering connection to a CEN instance]().
 
 ## Why does Cloud Firewall provide three types of firewalls?
 
