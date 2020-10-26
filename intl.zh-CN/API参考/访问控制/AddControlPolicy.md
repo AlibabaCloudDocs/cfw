@@ -36,7 +36,7 @@
 -   **VNC**
 -   **ANY**（表示所有类型的应用）
 
- **说明：** 支持的应用类型取值与协议类型（Proto）取值存在依赖关系。Proto为TCP协议时，ApplicationName支持选择以上所有应用类型中的任意一种；Proto为UDP、ICMP和ANY协议类型时，ApplicationName仅支持选择ANY。 |
+ **说明：** 支持的应用类型取值与协议类型（Proto）取值存在依赖关系。Proto为TCP协议时，ApplicationName支持选择以上所有应用类型中的任意一种；Proto为UDP、ICMP或ANY协议类型时，ApplicationName仅支持选择ANY。 |
 |Description|String|是|放行所有TCP流量。|访问控制策略的描述信息。 |
 |Destination|String|是|1.2.3.4/24|访问控制策略中的目的地址。取值：
 
