@@ -32,23 +32,23 @@ The Internet firewall allows you to configure **Outbound Policies** and **Inboun
             |**Source Type**|Select IP or Address Book.             -   **IP**: Specify only one CIDR block.
             -   **Address Book**: Select a preconfigured address book. The address book contains multiple CIDR blocks, which simplifies the configuration of access control policies. |
             |**Source**|The source IP address \(public IP address\) of the request.             -   If Source Type is set to **IP**, enter a CIDR block, for example, 1.1.1.1/32. You can configure only one CIDR block for each policy.
-            -   If Source Type is set to **Address Book**, find the required address book and click **Select** in the Actions column to configure IP addresses in the address book as the source.
+            -   If Source Type is set to Address Book, find the required address book and click Select in the Actions column to configure IP addresses in the address book as the source.
 
 **Note:** You can select only one address book at a time. If you want to use multiple address books, click **Create Policy**. |
             |**Destination Type**|Select IP, Address Book, Domain Name, or Region.
 
 **Note:** If you select Region, you can select a destination from all seven continents in the world and regions in China. The regions in China include 23 provinces, 4 municipalities, 5 autonomous regions, and 2 special administrative regions. |
             |**Destination**|Specify the destination addresses that can be accessed.             -   If Destination Type is set to **IP**, enter a CIDR block, for example, 1.1.1.1/32. You can configure only one CIDR block for each policy.
-            -   If Destination Type is set to **Address Book**, find the required address book and click **Select** in the Actions column to configure IP addresses in the address book as the destination.
+            -   If Destination Type is set to Address Book, find the required address book and click Select in the Actions column to configure IP addresses in the address book as the destination.
 
 **Note:** You can select only one address book at a time. If you want to use multiple address books, click **Create Policy**.
 
             -   If Destination Type is set to **Domain Name**, Cloud Firewall automatically resolves the domain name and implements access control. For more information, see [Configure access control policies for domain names](/intl.en-US/Access control/Configure access control policies for domain names.md).
             -   If Destination Type is set to **Region**, select the region where the **destination** resides. |
             |**Protocol**|Select the protocol for outbound traffic. Valid values: TCP, UDP, ICMP, and ANY. If you are not sure about the protocol, select ANY, which means that all protocols are matched.|
-            |**Port Type**|Valid values: Ports andAddress Book.             -   **Ports**: Specify only one port range.
+            |**Port Type**|Valid values: Ports and Address Book.             -   **Ports**: Specify only one port range.
             -   **Address Book**: Select a preconfigured **port address book**. A port address book contains multiple ports, which simplifies policy configuration. |
-            |**Ports**|Specify the ports on which you want to control traffic. If Port Type is set to Ports, enter a port number range. If Port Type is set to Address Book, find the required port address book and click **Select** in the Actions column. **Note:** You can select only one address book at a time. If you want to use multiple address books, click **Create Policy**. |
+            |**Ports**|Specify the ports on which you want to control traffic. If Port Type is set to Ports, enter a port number range. If Port Type is set to Address Book, find the required port address book and click Select in the **Actions** column.**Note:** You can select only one address book at a time. If you want to use multiple address books, click **Create Policy**. |
             |**Application**|Select the application to which the policy applies. **Note:** If **Destination Type** is set to Domain Name, you can set **Application** to HTTP, HTTPS, SMTP, or SMTPS. |
             |**Policy Action**|Specify whether the Internet firewall allows or denies the traffic of the protocol type. Select Allow in this step.|
             |**Description**|Enter a description to identify the policy.|
@@ -91,6 +91,20 @@ The Internet firewall allows you to configure **Outbound Policies** and **Inboun
 6.  Make sure that the priority of the **allow** policy on the trusted IP addresses is higher than that of the **deny** policy.
 
 
+## Export policies
+
+You can export inbound or outbound policies for the Internet firewall based on your business requirements.
+
+![Export policies](../images/p204925.png)
+
+## Search for a specific policy based on the policy ID
+
+Each access control policy for the Internet firewall has a policy ID. You can use this policy ID to identify a specific access control policy. This gives you the ability to know the status of the policy and adjust the policy based on your business requirements.
+
+To view the ID of a policy, you can find the policy on the Internet Firewall tab and move the pointer over the ![Policy display icon](../images/p204923.png) icon in the **Description/Policy ID** column.
+
+![View the ID of a policy](../images/p204922.png)
+
 ## Check whether access traffic hits a control policy
 
 By default, an access control policy takes effect immediately after it is created. However, if the policy parameters are incorrectly configured or the Internet firewall is disabled, the policy does not take effect.
@@ -107,8 +121,8 @@ You can click the number to go to the Traffic Logs tab. On the **Traffic Logs** 
 
 |Parameter|Description|
 |---------|-----------|
-|**Source Type**|The type of the source address. Set this parameter in the following way: -   If you select **IP**, enter a CIDR block in the **Source** field.
--   If you select **Address Book**, select a preconfigured address book.
+|**Source Type**|The type of the source address. Valid values: -   **IP**: Enter a CIDR block in the **Source** field.
+-   **Address Book**: Select a preconfigured address book.
 
 **Note:** You can add multiple CIDR blocks to an address book to simplify policy configurations. |
 |**Source**|The source CIDR block of the traffic. **Note:** You can enter only one CIDR block, for example, 1.1.1.1/32.
@@ -140,18 +154,18 @@ If you set **Source Type** to **Address Book**, select a preconfigured address b
 -   ICMP |
 |**Port Type**|Set this parameter in the following way: -   If you select **Ports**, enter a port range.
 -   If you select **Address Book**, select a preconfigured **port address book**. A port address book contains multiple ports, which simplifies policy configurations. |
-|**Ports**|Specify the ports on which you want to control traffic. If Port Type is set to Ports, enter a port number range. If Port Type is set to Address Book, find the required port address book and click **Select** in the Actions column. **Note:**
+|**Ports**|Specify the ports on which you want to control traffic. If Port Type is set to Ports, enter a port number range. If Port Type is set to Address Book, find the required port address book and click **Select** in the Actions column.**Note:**
 
 -   You can select only one address book at a time. If you want to use multiple address books, click **Create Policy**.
 -   If you set Protocol to ICMP, the port configuration does not take effect. If you set Protocol to ANY, the destination ports you specify do not take effect in controlling ICMP traffic. |
 |**Application**|Valid values: ANY, HTTP, HTTPS, Memcache, MongoDB, MQTT, MySQL, RDP, Redis, SMTP, SMTPS, SSH, and VNC. If **Protocol** is set to TCP, the preceding protocols are supported. If Protocol is set to another value, you can select only ANY.
 
 **Note:** Cloud Firewall identifies applications based on packet characteristics, instead of port numbers. If Cloud Firewall fails to identify an application in a packet, it allows the packet. If you want to block traffic from unknown applications, we recommend that you enable the strict mode. For more information, see [Strict mode of the Internet firewall](/intl.en-US/Toolbox/Strict mode of the Internet firewall.md). |
-|**Policy Action**|Specifies whether the Internet firewall allows or denies the traffic. Valid values: -   **Allow**: If traffic meets the preceding conditions that you specify for the policy, the traffic is allowed.
+|**Policy Action**|Specifies whether the Internet firewall allows or denies the traffic. Set this parameter in the following way: -   **Allow**: If traffic meets the preceding conditions that you specify for the policy, the traffic is allowed.
 -   **Deny**: If traffic meets the preceding conditions that you specify for the policy, the traffic is denied, and no notifications are sent.
 -   **Monitor**: If traffic meets the preceding conditions that you specify for the policy, the traffic is recorded and allowed. After you observe the traffic for a period of time, you can change the policy action to **Allow** or **Deny**. |
 |**Description**|Enter a description to identify the policy.|
-|**Priority**|The priority of a policy, Valid values: -   **Lowest**: The policy takes effect in the last priority.
+|**Priority**|The priority of a policy, Set this parameter in the following way: -   **Lowest**: The policy takes effect in the last priority.
 -   **Highest**: The policy takes effect in the first priority.
 
 The default value is Lowest. |
