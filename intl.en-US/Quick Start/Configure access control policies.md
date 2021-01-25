@@ -1,32 +1,30 @@
-# Configure access control policies {#concept_c5d_1sh_cfb .concept}
+# Configure access control policies
 
-Cloud Firewall allows you to configure access control policies to specify the accessible ports on your assets and control the access from your assets to the Internet. You can use access control policies to control inbound and outbound traffic.
+Cloud Firewall allows you to configure policies to specify the ports exposed to the Internet and control access between your ECS instances and the Internet. You can configure access control policies for inbound, outbound, and internal traffic.
 
-You could add a group of IP addresses or ports to the Address Books. With this Address Book, you can quickly configure the control policy with multiple IP or addresses.
+## Procedure
 
-## Procedure {#section_gvh_pwh_cfb .section}
+1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext).
+2.  In the left-side navigation pane, choose **Security Policies** \> **Access Control**.
+3.  On the Internet Firewall tab, click **Create Policy**.
+4.  In the Create Outbound Policy dialog box that appears, [configure parameters](/intl.en-US/Access control/Access control for outbound and inbound traffic on the Internet firewall.md) to add a policy.
 
-1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext#/overview).
-2.  On the **Access Control** \> **Internet firewall** page of the console, click **Create Policy** to configure an access control policy.
+    -   Source Type: Select IP or Address Book.
+    -   Source: Specify the traffic source. If the source type is IP, enter an IP address or CIDR block in this field.
+    -   Destination Type: Specify the type of the traffic destination.
+    -   Destination: Specify the traffic destination.
+    -   Protocol: Select TCP, UDP, ICMP, or ANY.
+    -   Port Type: Select Ports or Address Book.
+    -   Ports: Specify the ports to which you want to apply this policy.
+    -   Application: Select an application to which this policy applies.
+    -   Policy Action: Select **Allow**, **Monitor**, or **Deny**.
+    -   Description: Enter a description that helps identify this policy.
+    -   Priority: Specify the priority of this policy, which defaults to Lowest.
+    You can add multiple IP addresses to an address book to simplify the policy configuration. In the upper-right corner of the Access Control page, click **Address Books** to add, modify, or delete address books used in access control policies.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21211/155639177537813_en-US.png)
+    On the Outbound Policies tab, you can modify, delete, or move a policy.
 
-    Configurations are as follows:
+    **Note:** We recommend that you set the policy actions of all outbound policies to **Deny** except for those required in necessary external connections.
 
-    -   Source Type: The data sender type. Select IP or Address book.
-    -   Source: The address of data sender. If you select IP for Source Type, you must enter an IP address or CIDR block in **Access Source**.
-    -   Destination Type: The type of the data's destination. You can select IP, Address Book or Domian Name.
-    -   Destination: The data's destination address.
-    -   Protocol: The protocol of the data. The supported protocols include TCP, UDP, and ICMP.
-    -   Port Type: The type of the port, including Ports and Address Book.
-    -   Destination Port: The port of the data's recipient.
-    -   Application: The application to which the access control policy applies in the specified protocol.
-    -   Policy Action: The action on the access traffic. You can select **Allow**, **Monitor** or **Deny**.
-    -   Description: The remarks on the access control policy.
-
-Click **Address books** on the **Internet Firewall** page, you can create new address books, or modify/delete existing address books.
-
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21211/155639177545653_en-US.png)
-
-**Note:** Except for certain necessary/safe external connection activities, we recommend that you select **Deny** for all the other outbound access to the Internet .
+5.  Click **OK**.
 
