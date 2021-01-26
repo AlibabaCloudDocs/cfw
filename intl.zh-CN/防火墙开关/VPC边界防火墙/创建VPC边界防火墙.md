@@ -4,20 +4,30 @@ VPC边界防火墙帮助您检测和管控两个VPC间的通信流量。如果�
 
 已购买了云企业网或高速通道实例，并且已使用云企业网或高速通道完成了两个VPC之间的网络互连。详细操作请参见[同账号VPC互连](/intl.zh-CN/专有网络对等连接（关闭新购）/同账号VPC互连.md)。
 
-云防火墙企业版、旗舰版支持VPC边界防火墙。VPC边界防火墙只能在已相互连接的VPC之间创建。两个VPC可通过[高速通道](/intl.zh-CN/产品简介/什么是高速通道？.md)或者[云企业网]()实现连接。
+。VPC边界防火墙支持在已相互连接的VPC之间创建，也支持通过VBR连接VPC和本地数据中心。两个VPC可通过[高速通道](/intl.zh-CN/产品简介/什么是高速通道？.md)或者[云企业网]()实现连接。VPC和本地数据中心之前通过VBR连接。
 
-## 云企业网创建VPC边界防火墙
+VPC边界防火墙支持防护以下流量：
+
+-   [为云企业网创建VPC边界防火墙](#section_p4h_qfd_4w7)
+-   [为高速通道创建VPC边界防火墙](#section_ies_ty6_nsz)
+-   使用VBR连接VPC和本地数据中心（IDC）[防护VPC和本地数据中心（IDC）间的流量](#section_h9x_vs7_u76)
+
+## 版本支持说明
+
+云防火墙企业版、旗舰版支持VPC边界防火墙，高级版不支持。高级版云防火墙控制台不展示VPC边界防火墙页面。
+
+## 为云企业网创建VPC边界防火墙
 
 云防火墙支持云企业网连通模式下跨账号VPC防护。跨账号是指当前云账号下云企业网中存在另一个账号开通的专有网络VPC，这两个分属于不同云账号的VPC通过云企业网连通。云企业网下存在跨账号开通的VPC时，需要先授权云防火墙访问这两个账号下的云资产。未完成授权的情况下，您将无法为该云企业网创建VPC边界防火墙，[云防火墙控制台](https://yundun.console.aliyun.com/?p=cfwnext)的**防火墙开关** \> **VPC防火墙** \> **云企业网**页面会提示**存在未授权的网络实例，不允许创建**。
 
-![未授权提示](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/0100129951/p127752.png)
+![未授权提示](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0100129951/p127752.png)
 
 您需要执行以下步骤完成授权操作：
 
 1.  使用未授权的账号登录[云防火墙控制台](https://yundun.console.aliyun.com/?p=cfwnext)。
 2.  在云防火墙欢迎页面完成新手引导。
 
-    ![云企业网授权](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/0100129951/p127753.png)
+    ![云企业网授权](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0100129951/p127753.png)
 
 3.  在云资产访问授权页面单击**同意授权**。
 
@@ -25,7 +35,7 @@ VPC边界防火墙帮助您检测和管控两个VPC间的通信流量。如果�
 
 -   VPC边界防火墙支持VPC跨地域、跨账号。跨账号VPC防护允许除当前操作账号外，其他的账号下VPC未开通云防火墙付费版（即高级版、企业版或旗舰版）。
 -   同一个云企业网同地域可开启VPC边界防火墙的VPC数量最大规格是10个，如需增加规格，请提交[工单](https://workorder-intl.console.aliyun.com/console.htm#/ticket/createIndex)。
--   VPC边界防火墙支持防护VPC和VPC互访、VPC和VBR互访、VPC和CCN互访流量，不支持防护VBR和VBR互访、CCN和CCN互访、CCN和VBR互访流量。
+-   VPC边界防火墙支持防护VPC和VPC互访、VPC和VBR互访（即VPC-IDC）、VPC和CCN互访流量，不支持防护VBR和VBR互访、CCN和CCN互访、CCN和VBR互访流量。
 
 如果您的VPC是通过云企业网连接，请参考以下步骤创建VPC边界防火墙。
 
@@ -33,7 +43,7 @@ VPC边界防火墙帮助您检测和管控两个VPC间的通信流量。如果�
 
 1.  登录[云防火墙控制台](https://yundun.console.aliyun.com/?p=cfwnext)。
 
-2.  在左侧导航栏单击**防火墙开关**。
+2.  在左侧导航栏，单击**防火墙开关**。
 
 3.  在防火墙开关页面，单击VPC边界防火墙页签。
 
@@ -43,7 +53,7 @@ VPC边界防火墙帮助您检测和管控两个VPC间的通信流量。如果�
 
     如果云企业网实例过多，您可以在列表上方使用地域、云企业网实例、网络实例、云防火墙配置状态过滤列表。例如，您可以将状态设置为**未配置**并单击**搜索**，查询所有未配置云防火墙的云企业网实例。
 
-    ![云企业网未配置](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1100129951/p72469.png)
+    ![云企业网未配置](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1100129951/p72469.png)
 
 6.  在创建VPC边界防火墙对话框，完成VPC边界防火墙配置。
 
@@ -67,23 +77,23 @@ VPC边界防火墙帮助您检测和管控两个VPC间的通信流量。如果�
 
     VPC边界防火墙创建完成。若您在VPC边界防火墙配置中选择开启VPC边界防火墙，则VPC边界防火墙在开启中，请耐心等待。当VPC边界防火墙的**防火墙状态**变更为**已开启**，则VPC边界防火墙正式生效。
 
-    ![云企业网已开启](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1100129951/p72475.png)
+    ![云企业网已开启](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1100129951/p72475.png)
 
 
 **说明：** 开启VPC边界防火墙后会自动添加名称为Cloud\_Firewall\_Security\_Group的安全组和放行策略，用于放行到VPC边界防火墙的流量，请不要删除和修改此安全组和策略。
 
-## 高速通道创建VPC边界防火墙
+## 为高速通道创建VPC边界防火墙
 
 高速通道连接VPC模式下，有以下注意事项：
 
 -   VPC边界防火墙支持防护同地域的VPC和VPC互访流量，不支持防护VPC跨地域、跨账号的互访流量。
--   VPC边界防火墙不支持防护VPC和VBR互访流量。
+-   VPC边界防火墙支持防护VPC和VBR互访流量。
 
 如果您的VPC是通过高速通道连接，请参考以下步骤创建VPC边界防火墙。
 
 1.  登录[云防火墙控制台](https://yundun.console.aliyun.com/?p=cfwnext)。
 
-2.  在左侧导航栏单击**防火墙开关**。
+2.  在左侧导航栏，单击**防火墙开关**。
 
 3.  在防火墙开关页面，单击**VPC边界防火墙**页签。
 
@@ -118,8 +128,16 @@ VPC边界防火墙帮助您检测和管控两个VPC间的通信流量。如果�
 
     VPC边界防火墙创建完成。若您在VPC边界防火墙配置中选择开启VPC边界防火墙，则VPC边界防火墙在开启中，请耐心等待。当VPC边界防火墙的**防火墙状态**变更为**已开启**，则VPC边界防火墙正式生效。
 
-    ![高速通道已开启](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1100129951/p72476.png)
+    ![高速通道已开启](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1100129951/p72476.png)
 
+
+## 防护VPC和本地数据中心（IDC）间的流量
+
+VPC边界防火墙支持对VPC和VBR之间的流量（即VPC到本地数据中心之间的流量）进行防护。使用云企业网VBR连接VPC和本地数据中心的情况下，该云企业网的VPC边界防火墙开启后，会自动对该VPC和VBR之间的流量开启防护，无需为云企业网VBR单独创建和开启VPC防火墙。
+
+登录[云防火墙控制台](https://yundun.console.aliyun.com/?p=cfwnext)后，打开**防火墙开关**页面，您可以在**VPC防火墙**页签的**云企业网**列表中，查看到云企业网VBR的防护信息。
+
+![VBR-VPC](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2923951161/p232154.png)
 
 VPC边界防火墙创建成功后，您可以根据需要执行以下操作：
 
