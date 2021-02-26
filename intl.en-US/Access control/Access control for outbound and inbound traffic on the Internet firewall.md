@@ -18,8 +18,6 @@ The Internet firewall allows you to configure **Outbound Policies** and **Inboun
 
 4.  On the Outbound Policies tab, click **Create Policy**.
 
-    ![Create a policy](../images/p183899.png)
-
 5.  In the Create Outbound Policy dialog box, perform the following operations to create an outbound access control policy.
 
     ![Create an access control outbound policy](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8856586851/p77609.png)
@@ -95,15 +93,15 @@ The Internet firewall allows you to configure **Outbound Policies** and **Inboun
 
 You can export inbound or outbound policies for the Internet firewall based on your business requirements.
 
-![Export policies](../images/p204925.png)
+![Export policies](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9389034161/p204925.png)
 
 ## Search for a specific policy based on the policy ID
 
 Each access control policy for the Internet firewall has a policy ID. You can use this policy ID to identify a specific access control policy. This gives you the ability to know the status of the policy and adjust the policy based on your business requirements.
 
-To view the ID of a policy, you can find the policy on the Internet Firewall tab and move the pointer over the ![Policy display icon](../images/p204923.png) icon in the **Description/Policy ID** column.
+To view the ID of a policy, you can find the policy on the Internet Firewall tab and move the pointer over the ![Policy display icon](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9389034161/p204923.png) icon in the **Description/Policy ID** column.
 
-![View the ID of a policy](../images/p204922.png)
+![View the ID of a policy](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9389034161/p204922.png)
 
 ## Check whether access traffic hits a control policy
 
@@ -111,7 +109,7 @@ By default, an access control policy takes effect immediately after it is create
 
 In the access control policy list, if the number in the **Hits** column is greater than 0 for an access control policy, access traffic hits the policy. The number in the **Hits** column indicates the number of times traffic hits the policy.
 
-![Hits](../images/p183926.png)
+![Hits](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9389034161/p183926.png)
 
 You can click the number to go to the Traffic Logs tab. On the **Traffic Logs** tab, the names of access control policies the traffic hits are displayed in the **Policy Name** column.
 
