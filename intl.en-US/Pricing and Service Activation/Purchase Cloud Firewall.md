@@ -4,7 +4,7 @@ Cloud Firewall supports only the subscription billing method. To purchase Cloud 
 
 ## Procedure
 
-1.  Log on to the [Cloud Firewall buy page](https://common-buy-intl.alibabacloud.com/?&commodityCode=cfw_pre_intl) with your Alibaba Cloud account.
+1.  Log on to the [Cloud Firewall buy page](https://common-buy-intl.alibabacloud.com/?spm=a2c63.p38356.879954.3.2af42ec3dQIvwL&commodityCode=cfw_pre_intl&accounttraceid=f4d664eff7974d589f1def63506a6d42ikmj) with your Alibaba Cloud account.
 
 2.  Configure the parameters for purchasing Cloud Firewall.
 
@@ -26,9 +26,9 @@ If the specification does not meet your business requirements, [submit a ticket]
 
     -   **Enterprise Edition**: 2 to 200
     -   **Ultimate Edition**: 5 to 500 |
-    |**Log Audit**|Specifies whether to enable the Log Audit \(Log Analysis\) feature.By default, Cloud Firewall retains logs of the last seven days. If you want to store logs of more than seven days or meet specific classified protection requirements, we recommend that you enable the Log Audit feature.
+    |**Log Analysis**|Specifies whether to enable the Log Analysis feature.By default, Cloud Firewall retains logs of the last seven days. If you want to store logs of more than seven days or meet specific classified protection requirements, we recommend that you enable the Log Analysis feature.
 
-The Log Audit feature allows Cloud Firewall to store logs of the last six months, which meets classified protection requirements. For more information, see [Overview](/intl.en-US/Logs/Log analysis/Overview.md). |
+The Log Analysis feature allows Cloud Firewall to store logs of the last six months, which meets classified protection requirements. For more information, see [Overview](/intl.en-US/Logs/Log analysis/Overview.md). |
     |**Log Storage**|The log storage capacity of the Log Audit feature. Unit: GB. Valid values for each edition:    -   **Premium Edition**: 1000 to 100000
     -   **Enterprise Edition**: 3000 to 100000
     -   **Ultimate Edition**: 5000 to 100000
@@ -49,8 +49,8 @@ For information about the billing rules of the Log Audit feature, see [Billing](
 
 |Operation|Description|Step|
 |---------|-----------|----|
-|**Renew**|Renew the subscription to prolong the validity period of the current Cloud Firewall edition.|Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext), click **Renew** in the upper-right corner of the **Overview** page, and then complete the renewal operation as prompted. For more information, see [Renew the subscription](/intl.en-US/Pricing and Service Activation/Renewal and upgrade.md). |
-|**Upgrade**|Upgrade to a more advanced edition.|Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext), click **Upgrade** in the upper-right corner of the **Overview** page, and then complete the upgrade operation as prompted. For more information, see [Upgrade the Cloud Firewall edition](/intl.en-US/Pricing and Service Activation/Renewal and upgrade.md). |
+|**Renew**|Renew the subscription to prolong the validity period of the current Cloud Firewall edition.|Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext), click **Renew** in the upper-right corner of the **Overview** page, and then complete the renewal operation as prompted. For more information, see [Renew subscription](/intl.en-US/Pricing and Service Activation/Renewal and upgrade.md). |
+|**Upgrade**|Upgrade to a more advanced edition.|Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext), click **Upgrade** in the upper-right corner of the **Overview** page, and then complete the upgrade operation as prompted. For more information, see [t21198.md\#section\_315\_4ir\_hxp](/intl.en-US/Pricing and Service Activation/Renewal and upgrade.md). |
 |**Downgrade**|Downgrade to a less advanced edition.|[submit a ticket](https://workorder-intl.console.aliyun.com/console.htm#/ticket/createIndex) to cancel the subscription and place a new order to buy the edition that you required. |
 |**Auto Renewal**|Allow automatic fee deduction and renewal nine days before Cloud Firewall expires.|Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext), click **Auto Renewal** in the upper-right corner of the **Overview** page, and then complete the renewal operation as prompted. For more information, see [Enable the auto-renewal feature](/intl.en-US/Pricing and Service Activation/Renewal and upgrade.md). |
 
