@@ -4,9 +4,9 @@
 
 Cloud Firewall can protect the following cloud assets or traffic:
 
--   Internet traffic: traffic from public IP addresses of Elastic Compute Service \(ECS\) instances, elastic IP addresses \(EIPs\) of Server Load Balancer \(SLB\) instances, highly available virtual IP addresses \(HAVIPs\), EIPs, EIPs of ECS instances, EIPs of Elastic Network Interfaces \(ENIs\), some public IP addresses of SLB instances, and EIPs of network address translation \(NAT\) gateways.
+-   Internet traffic: traffic of public IP addresses of Elastic Compute Service \(ECS\) instances, elastic IP addresses \(EIPs\) of Server Load Balancer \(SLB\) instances, High-Availability Virtual IP Addresses \(HAVIPs\), EIPs, EIPs of ECS instances, EIPs of Elastic Network Interfaces \(ENIs\), some public IP addresses of Server Load Balancer \(SLB\) instances, and EIPs of network address translation \(NAT\) gateways.
 
-    **Note:** Alibaba Cloud provides public and private SLB instances. Some public SLB instances cannot be protected by Cloud Firewall due to network architecture reasons. We recommend that you deploy private SLB instances and associate EIPs with the private SLB instances. For information about how to associate an EIP with an SLB instance, see [Associate an Elastic IP address with an SLB instance](/intl.en-US/Classic Load Balancer/User Guide/Instance/Associate an EIP with an SLB instance.md).
+    **Note:** Alibaba Cloud provides Internet-facing and internal-facing Server Load Balancer \(SLB\) instances. Some Internet-facing SLB instances cannot be protected by Cloud Firewall due to network architecture reasons. We recommend that you deploy internal-facing SLB instances and associate EIPs with internal-facing SLB instances. For information about how to associate an EIP with an SLB instance, see [Associate an EIP with an SLB instance](/intl.en-US/Classic Load Balancer/User Guide/Instance/Associate an EIP with an SLB instance.md).
 
 -   Traffic between VPCs: traffic between VPCs that are connected by using a CEN or Express Connect
 
@@ -16,11 +16,11 @@ The Internet firewall and intrusion prevention system \(IPS\) are applicable to 
 
 ## Is Cloud Firewall available in regions outside China?
 
-Yes, in addition to regions in mainland China and the China \(Hong Kong\) region, Cloud Firewall is available in Malaysia \(Kuala Lumpur\), Singapore \(Singapore\), Indonesia \(Jakarta\), and Germany \(Frankfurt\) regions. For more information, see [t2012355.md\#]().
+Yes, in addition to regions in mainland China and the China \(Hong Kong\) region, Cloud Firewall is available in Malaysia \(Kuala Lumpur\), Singapore \(Singapore\), Indonesia \(Jakarta\), and Germany \(Frankfurt\) regions. For more information, see [Regions that are supported by Cloud Firewall](/intl.en-US/Product Introduction/Regions that are supported by Cloud Firewall.md).
 
 ## Can Cloud Firewall protect public SLB instances?
 
-Alibaba Cloud provides public and private SLB instances. Some public SLB instances cannot be protected by Cloud Firewall due to network architecture reasons. We recommend that you deploy private SLB instances and associate EIPs with the private SLB instances. For information about how to associate an EIP with an SLB instance, see [Associate an Elastic IP address with an SLB instance](/intl.en-US/Classic Load Balancer/User Guide/Instance/Associate an EIP with an SLB instance.md).
+Alibaba Cloud provides public and private SLB instances. Some public SLB instances are protected by Cloud Firewall due to network architecture reasons. We recommend that you deploy private SLB instances and associate EIPs with the private SLB instances.
 
 **Note:** For a public SLB instance that is in use and is not protected by Cloud Firewall, we recommend that you do not change the network type of the instance by yourself. If you need any help, contact SLB technical support.
 
@@ -45,13 +45,13 @@ Yes, Cloud Firewall can protect traffic on Express Connect and Cloud Enterprise 
 -   Cloud Firewall can protect only traffic between VPCs that are connected by using Express Connect in the same region. It cannot protect traffic between a VPC and a Virtual Border Router \(VBR\) that are connected by using Express Connect.
 -   Cloud Firewall can protect traffic between two VPCs in different regions, as well as a VPC and a VBR, that are connected by using a CEN.
 
-**Note:** If you need Cloud Firewall to protect traffic between two VPCs in different regions, or between a VPC and a VBR, migrate the traffic of Express Connect to a CEN. For more information, see [t630439.md\#]().
+**Note:** If you need Cloud Firewall to protect traffic between two VPCs in different regions, or between a VPC and a VBR, migrate the traffic of Express Connect to a CEN. For more information, see [Migrate a VPC from a peering connection to a CEN instance]().
 
 ## Why does Cloud Firewall provide three types of firewalls?
 
 Cloud Firewall provides three types of firewalls: Internet firewall, VPC firewall, and internal firewall.
 
-The Internet firewall is deployed at the boundary of the Internet to manage public IP addresses. Internal firewalls works in the same way as security groups to manage communications between ECS instances. The following figure shows how the Internet firewall and internal firewalls work and where they are deployed in the network topology.
+The Internet firewall is deployed at the boundary of the Internet to manage public IP addresses. Internal firewalls work in the same way as security groups to manage communications between ECS instances. The following figure shows how the Internet firewall and internal firewalls work and where they are deployed in the network topology.
 
 ![Internet firewall and internal firewalls](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7681329951/p38798.png)
 
