@@ -1,16 +1,16 @@
-# 【虚拟补丁】Nexus Repository Manager 3远程代码执行（CVE-2019-7238）
+# \[Virtual Patches\] Remote code execution vulnerability in Nexus Repository Manager 3 \(CVE-2019-7238\)
 
-Nexus Repository Manager（简称NXRM）是由Sonatype公司研发的一款通用的软件包仓库管理服务，可以作为Maven的私服。
+Nexus Repository Manager \(NXRM\) is a software package repository management service developed by Sonatype. NXRM can be used as a private Maven server.
 
-部分版本的Nexus Repository Manager存在安全漏洞，受漏洞影响的软件版本存在控制措施缺失，未授权的用户可利用该缺陷构造特定请求在服务器上执行Java代码，从而达到远程代码执行的目的，影响系统安全。
+Vulnerabilities have been detected in some versions of Nexus Repository Manager, and no vulnerability fix is available. Unauthorized users can exploit this vulnerability to construct specific requests to remotely execute Java code on the NXRM server.
 
-漏洞描述请参见：[**CVE-2019-7238 Nexus Repository Manager 3 \(Missing Access Controls and Remote Code Execution\) - February 5th 2019**](https://support.sonatype.com/hc/en-us/articles/360017310793-CVE-2019-7238-Nexus-Repository-Manager-3-Missing-Access-Controls-and-Remote-Code-Execution-February-5th-2019)
+Vulnerability description: [**CVE-2019-7238 Nexus Repository Manager 3 \(Missing Access Controls and Remote Code Execution\) - February 5th 2019**](https://support.sonatype.com/hc/en-us/articles/360017310793-CVE-2019-7238-Nexus-Repository-Manager-3-Missing-Access-Controls-and-Remote-Code-Execution-February-5th-2019)
 
-漏洞影响范围：Nexus Repository Manager OSS/Pro 3.6.2~3.14.0版本
+Policy: Command execution
 
-漏洞危险等级：高危
+Risk level: High
 
-规则防护：云防火墙虚拟补丁已支持防护
+Impacted versions: Nexus Repository Manager OSS/Pro 3.6.2 to 3.14.0
 
-规则类型：命令执行
+Policy-based protection: Cloud Firewall provides virtual patches to fix this vulnerability. We recommend that you enable [Intrusion Prevention](/intl.en-US/Intrusion prevention/Intrusion prevention.md) to avoid this vulnerability.
 
