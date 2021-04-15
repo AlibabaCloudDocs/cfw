@@ -1,24 +1,28 @@
-# 【基础规则】通达OA远程文件上传
+# 【虚拟补丁】Windows SMBv3远程代码执行（CVE-2020-0796）
 
-通达OA（办公系统）在官方论坛披露了一起通达OA用户服务器遭受勒索病毒攻击的事件。攻击者通过构造恶意请求，可以上传Webshell等恶意文件，从而控制通达OA用户服务器。阿里云应急响应中心已捕获到该漏洞的利用方式，该漏洞真实存在。
+由于Microsoft Windows SMBv3协议中存在一处远程代码执行漏洞（漏洞CVE编号为CVE-2020-5405），微软安全中心在2020年3月12日23时发布了影响Windows系统的SMBv3远程代码执行漏洞的修复补丁。
+
+该漏洞发生在`srv2.sys`中。由于SMBv3没有正确处理压缩的数据包，解压数据包时使用了客户端传输的长度进行解压，并没有检查长度是否合法，最终导致整数溢出。这种情况下，未经身份验证的远程攻击者可以通过构造恶意请求在Windows Server服务器上执行命令。
 
 漏洞影响范围：
 
--   通达OA V11版
--   通达OA 2017版
--   通达OA 2016版
--   通达OA 2015版
--   通达OA 2013增强版
--   通达OA 2013版
+-   Windows Server, version 1909（Server Core installation）
+-   Windows Server, version 1903（Server Core installation）
+-   Windows 10 Version 1903 for 32-bit Systems
+-   Windows 10 Version 1903 for x64-based Systems
+-   Windows 10 Version 1903 for ARM64-based Systems
+-   Windows 10 Version 1909 for 32-bit Systems
+-   Windows 10 Version 1909 for x64-based Systems
+-   Windows 10 Version 1909 for ARM64-based Systems
 
 漏洞危险等级：高危
 
 规则防护：云防火墙虚拟补丁已支持防护
 
-规则类型：Web攻击
+规则类型：命令执行
 
-阿里云应急响应中心提醒通达OA用户尽快采取安全措施阻止漏洞攻击。通达OA用户可参考以下安全建议：
+安全建议：
 
--   通达OA官方已经发布了相应的安全加固程序，请根据您当前的通达OA版本，前往[通达用户社区](http://club.tongda2000.com/forum.php?mod=viewthread&tid=128377&extra=page%3D1)选择对应的加固程序进行安全更新。更新前请您先做好数据备份。
+-   您可以安装修复补丁，具体请参见[Windows官方说明](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796)。
 -   使用云防火墙的入侵防御功能进行安全防护。
 
