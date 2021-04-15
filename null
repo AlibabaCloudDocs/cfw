@@ -17,5 +17,5 @@
 安全建议：
 
 -   及时对该漏洞进行修复。修复说明请参见[微软安全公告](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2019-0708)。
--   使用云防火墙ACL对RDP协议进行限制（相关内容请参见[访问控制策略总览](/cn.zh-CN/访问控制/访问控制策略总览.md)），并建议仅放行白名单IP。
+-   使用云防火墙ACL对RDP协议进行限制（相关内容请参见[访问控制策略总览](/intl.zh-CN/访问控制/访问控制策略总览.md)），并建议仅放行白名单IP。
 
