@@ -1,14 +1,14 @@
-# 【威胁情报】Apache Dubbo反序列化漏洞（CVE-2019-17564）
+# \[Threat intelligence\] Apache Dubbo deserialization vulnerability \(CVE-2019-17564\)
 
-2020年2月11日，阿里云应急响应中心监测到Apache Dubbo反序列化漏洞（CVE编号：CVE-2019-17564）。
+On February 11, 2020, Alibaba Security Response Center \(ASRC\) detected an Apache Dubbo deserialization vulnerability \(CVE No.: CVE-2019-17564\).
 
-Apache Dubbo是一款应用广泛的Java RPC分布式服务框架，支持多种协议，官方推荐使用Dubbo协议。Dubbo支持使用HTTP协议进行远程过程调用，该协议采用Spring HttpInvoker实现，在处理输入流时将会进行反序列化操作。当Apache Dubbo启用HTTP协议之后，Apache Dubbo在接受远程调用请求的时候存在一个不安全的反序列化行为，最终导致了远程任意代码执行。
+Apache Dubbo is a Java-based, distributed remote procedure call \(RPC\) framework. It supports various protocols and is widely used. We recommend that you use the officially offered Dubbo protocol. Apache Dubbo allows you to use the HTTP protocol for RPC, which is implemented by using Spring HttpInvoker. Deserialization is performed when input streams are processed. When HTTP is enabled, Apache Dubbo performs insecure deserialization upon receiving a remote call request. This leads to the remote execution of arbitrary code.
 
-云防火墙已监测到利用此漏洞发起的攻击，并支持拦截此类攻击。
+Cloud Firewall has detected attacks that are initiated by using this vulnerability and blocks such attacks.
 
-漏洞影响范围：Apache Dubbo 2.7.5以下版本
+Affected versions: Apache Dubbo versions earlier than 2.7.5
 
-漏洞危险等级：高危
+Risk level: high
 
-安全建议：使用云防火墙的入侵防御功能进行安全防护。
+Suggestion: Use the Intrusion Prevention feature of Cloud Firewall.
 
