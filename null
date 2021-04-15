@@ -1,21 +1,16 @@
-# \[Basic rule\] Remote code execution vulnerability in e-cology
+# 【虚拟补丁】Nexus Repository Manager 2.x远程命令执行（CVE-2019-5475）
 
-Alibaba Cloud Cloud Firewall has created a solution to address the remote code execution vulnerability in e-cology.
+Sonatype Nexus Repository Manager（NXRM）是美国Sonatype公司的一款Maven仓库管理器。
 
-e-cology is a collaborative management software developed by Weaver.
+2019年9月6日，阿里云应急响应中心监测到Nexus Repository Manager 2.x版本存在远程命令执行漏洞，Nexus Repository Manager 2.x Capabilities可通过401认证登录，且可通过默认账号密码admin:admin123登录，登录成功后使用createrepo或mergerepo配置可实现远程系统命令注入。攻击者利用该漏洞可远程执行任意服务器命令，危害较大。
 
-On September 19, 2019, Alibaba Cloud emergency response center detected a remote code execution vulnerability in e-cology. Attackers can create specific HTTP requests to obtain operation permissions on the target server and then remotely execute commands without authorization.
+漏洞影响范围：Nexus Repository Manager OSS/Pro version 2.14.14以下版本
 
-Cause of the vulnerability: e-cology has a BeanShell component that allows unauthorized access. Attackers can call the BeanShell component API to execute commands on the target server.
+漏洞危险等级：高危
 
-Rule-based defense: Cloud Firewall has created a solution to address the vulnerability through basic rules.
+规则防护：云防火墙虚拟补丁已支持防护
 
-Rule type: command execution
+规则类型：命令执行
 
-Risk level: high
-
-Security suggestions:
-
--   Contact Alibaba Cloud to obtain a security upgrade solution.
--   Use the intrusion prevention feature of Cloud Firewall.
+安全建议：升级Nexus Repository Manager 2.x至最新版本2.14.14。
 
