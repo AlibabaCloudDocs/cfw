@@ -1,12 +1,12 @@
-# 【威胁情报】MongoDB数据库未授权访问漏洞
+# \[Threat notice\] Unauthorized access to MongoDB
 
-MongoDB数据库未授权访问漏洞危害严重，可能导致数据库数据泄露或被删除勒索，从而造成严重的生产事故。
+Unauthorized access to MongoDB could lead to data disclosure or deletion extortion, which could have grave consequences.
 
-2019年2月14日，国家互联网应急中心CNCERT[监测发现](http://www.cert.org.cn/publish/main/9/2019/20190222090901924149842/20190222090901924149842_.html)，我国境内部分MongoDB数据库暴露在互联网上导致重要信息泄露。
+For example, on February 14, 2019, the National Computer Network Emergency Response Technical Team/Coordination Center of China \(known as CNCERT or CNCERT/CC\) detected that some MongoDB databases in China were exposed on the Internet, leading to leaks of important information.
 
-漏洞危害：
+Hazards:
 
-MongoDB服务启动时，如果不修改数据库认证访问权限相关的默认配置，登录的用户无需权限验证即可通过默认端口（无需密码）本地或远程访问该数据库，并对数据库进行任意操作（增、删、改、查等高危操作）。
+By default, a MongoDB database requires no authentication if you do not set any parameters when activating the MongoDB service. Without any passwords, users who have logged on to the service can use the default port to remotely access the database and perform any operations \(including high-risk operations such as add, delete, edit, and query\) on the database.
 
-为保证您的业务和应用的安全，请参见[MongoDB数据库未授权访问漏洞防御最佳实践](/intl.zh-CN/最佳实践/MongoDB数据库未授权访问漏洞防御最佳实践.md)尽快修复该漏洞。
+To ensure the security of your business and applications, fix the vulnerability as soon as possible. For more information, see [Best practices for defense against unauthorized access to MongoDB](/intl.en-US/Best Practices/Best practices for defense against unauthorized access to MongoDB.md).
 
