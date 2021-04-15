@@ -1,10 +1,12 @@
-# 【虚拟补丁】Windows RDP远程命令执行（CVE-2019-0708）
+# \[Virtual Patches\] Remote code execution vulnerability \(CVE-2019-0708\) in Windows RDP
 
-2019年5月15日，微软官方紧急发布安全补丁，修复了一个Windows远程桌面服务的远程代码执行漏洞\(CVE-2019-0708\)，该漏洞影响了某些旧版本的Windows系统。
+On May 15, 2019, Microsoft released security updates to address a remote code execution vulnerability \(CVE-2019-0708\) in Remote Desktop Services. This vulnerability has negatively impacted some earlier Windows versions.
 
-该漏洞是预身份验证，无需用户交互。当未经身份验证的攻击者使用RDP（常见端口3389）连接到目标系统并发送特定请求时，可以在目标系统上执行任意命令，甚至传播恶意蠕虫病毒，感染内网其他机器。类似于2017年爆发的WannaCry等恶意勒索病毒。
+User authentication is not required in this vulnerability exploitation. Unauthenticated users may use RDP port 3389 to connect with the target server and send specially crafted requests. This enables the users to execute arbitrary commands on the target server or spread worms to infect other servers in the internal network.
 
-漏洞影响范围：
+On May 22, 2019, Cloud Firewall released a virtual patch to address this vulnerability. We recommend that you enable this virtual patch \(enabled by default when Cloud Firewall service is activated\) and traffic control mode for protection.
+
+Impacted versions:
 
 -   Windows 7
 -   Windows Server 2008 R2
@@ -12,16 +14,16 @@
 -   Windows 2003
 -   Windows XP
 
-漏洞危险等级：高危
+Policy: command execution
 
-规则防护：云防火墙虚拟补丁已支持防护
+Risk level: high
 
-规则类型：命令执行
+Policy-based protection: A virtual patch is available in the Cloud Firewall console to address this vulnerability.
 
-安全建议：
+## Security tips
 
--   如果您是Windows 7、Windows Server 2008、Windows Server 2008 R2系统用户，请及时安装[官方安全补丁](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-0708)。
--   如果您是Windows 2003、Windows XP系统用户，请及时更新系统版本或安装[官网补丁](https://support.microsoft.com/zh-cn/help/4500705/customer-guidance-for-cve-2019-0708)。
--   使用云防火墙的入侵防御功能进行安全防护。
--   在云防火墙新增访问控制策略仅对RDP可信访问源放行或通过区域禁封功能仅对远程访问的常见区域放行，对其他未知访问或来自未知区域的连接尝试全部拒绝。
+1.  We recommend that users of Windows 7, Windows Server 2008, and Windows Server 2008 R2 install the [Windows security patch](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-0708).
+2.  We recommend that users of Windows 2003 and Windows XP update the system or install the [Windows security patch](https://support.microsoft.com/zh-cn/help/4500705/customer-guidance-for-cve-2019-0708).
+3.  Log on to the Cloud Firewall console. Choose **Security Policies** \> **Intrusion Prevention**, and enable the [t21359.md\#](/intl.en-US/Intrusion prevention/Intrusion prevention.md) feature.
+4.  In the Cloud Firewall console, choose **Security Policies** \> **Access Control** \> **Internet Firewall** \> **Inbound Policies**. Create an access control policy that **allows** only trusted sources or **denies** all requests from regions except the trusted regions.
 
