@@ -1,16 +1,14 @@
-# \[Virtual patch\] Apache Tomcat AJP file read and inclusion vulnerability
+# 【威胁情报】Apache Dubbo反序列化漏洞（CVE-2019-17564）
 
-Apache Tomcat is a Servlet container developed by the Jakarta project, which is a part of the Apache Software Foundation. By default, Apache Tomcat uses AJP connectors to exchange data with other web servers.
+2020年2月11日，阿里云应急响应中心监测到Apache Dubbo反序列化漏洞（CVE编号：CVE-2019-17564）。
 
-Due to a defect in the AJP protocol, attackers can use AJP connectors to read or include all files in the webapp directory. If the target application allows for file uploads, attackers can upload malicious code and execute it remotely. Attackers can exploit this vulnerability if the AJP service is enabled and the service port is exposed. \(By default, Apache Tomcat enables the AJP service and binds the service port to 0.0.0.0.\)
+Apache Dubbo是一款应用广泛的Java RPC分布式服务框架，支持多种协议，官方推荐使用Dubbo协议。Dubbo支持使用HTTP协议进行远程过程调用，该协议采用Spring HttpInvoker实现，在处理输入流时将会进行反序列化操作。当Apache Dubbo启用HTTP协议之后，Apache Dubbo在接受远程调用请求的时候存在一个不安全的反序列化行为，最终导致了远程任意代码执行。
 
-Scope of impact: Tomcat 6.x.x, 7.x.x, 8.x.x, and 9.x.x with the AJP service enabled
+云防火墙已监测到利用此漏洞发起的攻击，并支持拦截此类攻击。
 
-Risk level: high
+漏洞影响范围：Apache Dubbo 2.7.5以下版本
 
-Rule-based defense: A virtual patch is available in Cloud Firewall to address this vulnerability.
+漏洞危险等级：高危
 
-Rule type: command execution
-
-Security suggestions: Upgrade Apache Tomcat or use the intrusion prevention function in Cloud Firewall to protect your servers.
+安全建议：使用云防火墙的入侵防御功能进行安全防护。
 
