@@ -1,38 +1,23 @@
-# \[Virtual patch\] Windows DNS server remote code execution vulnerability \(CVE-2020-1350\)
+# 【虚拟补丁】Apache Dubbo反序列化代码执行（CVE-2020-1948）
 
-On July 14, 2020, Alibaba Cloud emergency response center detected that Microsoft released a patch for a DNS server remote code execution vulnerability \(CVE-2020-1350\). This vulnerability is officially defined by Microsoft as a wormable high-risk vulnerability.
+2020年6月23日，阿里云应急响应中心监测到Apache Dubbo官方发布了Apache Dubbo远程代码执行的漏洞风险通告。
 
-Unauthenticated attackers can exploit this vulnerability to send specially constructed packets to the target DNS server for remote code execution. If the DNS service is provided by a domain controller, the attackers can exploit this vulnerability to gain system privileges on the domain controller. We recommend that Windows users take security measures as soon as possible to prevent this vulnerability.
+Apache Dubbo是一种基于Java的高性能RPC框架。Apache Dubbo官方披露在`Dubbo Provider`中存在一个反序列化远程代码执行漏洞（CVE-2020-1948），攻击者可以构造并发送带有恶意参数负载的RPC请求，当恶意参数被反序列化时将导致远程代码执行。
 
-Scope of impact:
+漏洞影响范围：
 
--   Windows Server 2008 for 32-bit Systems Service Pack 2
--   Windows Server 2008 for 32-bit Systems Service Pack 2 \(Server Core\)
--   Windows Server 2008 for x64-based Systems Service Pack 2
--   Windows Server 2008 for x64-based Systems Service Pack 2 \(Server Core\)
--   Windows Server 2008 R2 for x64-based Systems Service Pack 1
--   Windows Server 2008 R2 for x64-based Systems Service Pack 1 \(Server Core\)
--   Windows Server 2012
--   Windows Server 2012 \(Server Core\)
--   Windows Server 2012 R2
--   Windows Server 2012 R2 \(Server Core\)
--   Windows Server 2016
--   Windows Server 2016 \(Server Core\)
--   Windows Server 2019
--   Windows Server 2019 \(Server Core\)
--   Windows Server, version 1903 \(Server Core\)
--   Windows Server, version 1909 \(Server Core\)
--   Windows Server, version 2004 \(Server Core\)
+-   Apache Dubbo 2.7.0~2.7.6
+-   Apache Dubbo 2.6.0~2.6.7
+-   Apache Dubbo 2.5.x系列所有版本（官方不再提供支持）
 
-Risk level: high
+漏洞危险等级：高危
 
-Rule-based defense: A virtual patch is available in the Cloud Firewall console to defend against this vulnerability.
+规则防护：云防火墙虚拟补丁已支持防护
 
-Rule type: command execution
+规则类型：命令执行
 
-Security suggestions:
+安全建议：
 
--   Temporary solution: Change the value of `TcpReceivePacketSize` to `0xFF00` in HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\DNS\\Parameters, and restart the DNS service.
--   Go to the [Microsoft official website](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1350) to download the security patch and install the patch.
--   Enable the Intrusion Prevention feature of Cloud Firewall.
+-   Apache Dubbo官方已发布该漏洞的修复版本，请您升级至Apache Dubbo 2.7.7版本或更高版本。该漏洞修复版本的[下载地址](https://github.com/apache/dubbo/releases/tag/dubbo-2.7.7)。
+-   使用云防火墙的入侵防御功能进行安全防护。
 
