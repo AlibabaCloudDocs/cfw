@@ -1,12 +1,12 @@
-# \[Virtual patch\] WebLogic wls9-async deserialization remote command execution
+# 【威胁情报】MongoDB数据库未授权访问漏洞
 
-On April 17, 2019, Yundun emergency response center of Alibaba Cloud detected the vulnerability named as "Oracle WebLogic wls9-async deserialization remote command execution vulnerability" disclosed by China National Vulnerability Database \(CNVD\). Attackers can exploit this vulnerability to remotely execute commands without authorization.
+MongoDB数据库未授权访问漏洞危害严重，可能导致数据库数据泄露或被删除勒索，从而造成严重的生产事故。
 
-The default wls9\_async\_response package in some WebLogic versions provides asynchronous communication services for WebLogic Server. Because the War package has a defect in deserializd information processing, attackers can send specially crafted malicious HTTP requests to obtain the permissions of the target server and remotely execute commands without authorization.
+2019年2月14日，国家互联网应急中心CNCERT[监测发现](http://www.cert.org.cn/publish/main/9/2019/20190222090901924149842/20190222090901924149842_.html)，我国境内部分MongoDB数据库暴露在互联网上导致重要信息泄露。
 
-Scope of impact: Oracle WebLogic 10. X and Oracle WebLogic 12.1.3
+漏洞危害：
 
-Risk level: High risk
+MongoDB服务启动时，如果不修改数据库认证访问权限相关的默认配置，登录的用户无需权限验证即可通过默认端口（无需密码）本地或远程访问该数据库，并对数据库进行任意操作（增、删、改、查等高危操作）。
 
-Policy-based protection: Cloud Firewall provides virtual patches to fix this vulnerability. We recommend that you enable the Virtual Patches in [Intrusion Prevention](/intl.en-US/Intrusion prevention/Intrusion prevention.md) to defend against this vulnerability.
+为保证您的业务和应用的安全，请参见[MongoDB数据库未授权访问漏洞防御最佳实践](/cn.zh-CN/最佳实践/MongoDB数据库未授权访问漏洞防御最佳实践.md)尽快修复该漏洞。
 
