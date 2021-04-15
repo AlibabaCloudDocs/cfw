@@ -1,14 +1,14 @@
-# 【威胁情报】多个僵尸网络开始使用ThinkPHP v5漏洞
+# \[Threat intelligence\] Multiple botnets exploit the ThinkPHP v5 vulnerability
 
-阿里云云防火墙可防御多个僵尸网络开始使用ThinkPHP v5漏洞。
+Alibaba Cloud's Cloud Firewall has been able to defend against the attacks from multiple botnets that exploit the ThinkPHP v5 vulnerability.
 
-近日，阿里云应急响应中心监控到以BuleHero和Sefa为代表的两个挖矿僵尸网络开始利用ThinkPHP框架的5.x远程命令执行漏洞进行传播。BuleHero是一个利用多种安全漏洞入侵和传播，进而控制服务器进行挖矿的僵尸网络，对正常业务构成重大安全威胁。存在ThinkPHP v5漏洞的系统易被感染，一旦感染BuleHero或Sefa，蠕虫会进行内网传播，对企业内网造成损失，还可控制服务器进行挖矿，影响业务正常运行。
+Recently, Alibaba Cloud Security team detected that several cryptocurrency miner botnets have begun to exploit the new ThinkPHP vulnerability to propagate themselves. BuleHero is a botnet that exploits multiple security vulnerabilities and controls Windows servers to mine cryptocurrency, posing critical security threats to business. Systems with the ThinkPHP v5 vulnerability are prone to infection by BuleHero and Sefa. Once a system is infected, worms are spread on internal networks, posing critical security threats to enterprises' internal networks. BuleHero and Sefa can also control servers to mine cryptocurrency, affecting the normal running of business.
 
-部分下载URL及详情参见[威胁预警-多个挖矿僵尸网络开始使用ThinkPHP v5漏洞](https://yq.aliyun.com/articles/682146)。
+For more information about the threat and the malicious links, see [Threat Alert: Multiple Cryptocurrency Miner Botnets Start to Exploit the New ThinkPHP Vulnerability](https://yq.aliyun.com/articles/682146).
 
-漏洞危险等级：高危
+Rule type: Worm attack
 
-规则防护：云防火墙虚拟补丁已支持防护
+Risk level: High
 
-规则类型：蠕虫攻击
+Cloud Firewall has been able to defend against such attacks. We recommend that you enable [intrusion prevention policies](/intl.en-US/Intrusion prevention/Intrusion prevention.md) in the Cloud Firewall console.
 
