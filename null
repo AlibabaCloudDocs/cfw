@@ -1,19 +1,19 @@
-# 【虚拟补丁】FusionAuth远程命令执行（CVE-2020-7799）
+# \[Virtual patch\] Remote command execution vulnerability \(CVE-2020-7799\) in FusionAuth
 
-FusionAuth是一款访问管理开源应用程序，可以与多种技术和平台集成。您可以通过管理仪表板以多种方式配置和自定义FusionAuth，为任何应用程序提供身份验证、授权和用户管理。
+FusionAuth is an open-source access management application that can be integrated with various technologies and platforms. You can configure and customize FusionAuth in a variety of ways by managing dashboards. FusionAuth can provide identity authentication, authorization, and user management for any applications.
 
-FusionAuth 1.11之前版本，由于使用Apache FreeMarker模板引擎，且未对用户输入数据进行过滤。登录用户在进行电子邮件模板编辑时，可利用Apache FreeMarker模板引擎，调用freemarker.template.utility.Execute在底层操作系统上执行任意命令。
+In FusionAuth versions earlier than 1.11, the Apache FreeMarker template engine is used and user input is not filtered. When a user edits an email template, the user can use the Apache FreeMarker template engine to call freemarker.template.utility.Execute and execute any commands in the underlying operating system.
 
-漏洞影响范围：FusionAuth 1.10.1版本及以下版本
+Scope of impact: FusionAuth 1.10.1 and earlier
 
-漏洞危险等级：高危
+Rule-based defense: Cloud Firewall has created a solution to address the vulnerability through basic rules.
 
-规则防护：云防火墙基础规则已支持防护
+Rule type: command execution
 
-规则类型：命令执行
+Risk level: high
 
-安全建议：
+Security suggestions:
 
--   升级FusionAuth版本到1.10.1以上。
--   使用云防火墙的入侵防御功能进行安全防护。
+-   Upgrade FusionAuth.
+-   Use the Intrusion Prevention feature of Cloud Firewall.
 
