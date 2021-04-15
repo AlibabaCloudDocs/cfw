@@ -1,21 +1,21 @@
-# 【虚拟补丁】WebLogic任意文件上传漏洞（CVE-2018-2894）
+# \[Virtual patch\] Arbitrary file upload vulnerability of WebLogic \(CVE-2018-2894\)
 
-阿里云云防火墙支持防护WebLogic任意文件上传漏洞。
+Alibaba Cloud's Cloud Firewall has been able to defend against the arbitrary file upload vulnerability of WebLogic.
 
-WebLogic是由美国Oracle公司推出的application server，是基于JAVAEE架构的中间件。WebLogic是用于开发、集成、部署和管理大型分布式Web应用、网络应用和数据库应用的Java应用服务器。
+WebLogic is an application server launched by Oracle Corporation, which is a piece of middleware based on the Java EE architecture. The WebLogic Java application server is used to develop, integrate, deploy, and manage large distributed web applications, network applications, and database applications.
 
-ws\_utc为WebLogic Web服务测试客户端，其配置页面存在未授权访问的问题，路径为 /ws\_utc/config.do。攻击者可通过访问此配置页面，用有效的WebLogic Web路径替换存储JKS Keystores的文件目录，然后上传恶意的JSP脚本木马文件。
+The configuration page of ws\_utc, a WebLogic web service test client, has an issue of unauthorized access. The path to the configuration page is /ws\_utc/config.do. Attackers can access this configuration page, use a valid WebLogic web path to replace the JKS Keystores file path, and upload malicious JSP Trojan files.
 
-影响范围：
+Rule-based defense: Cloud Firewall has been able to defend against this vulnerability.
+
+Scope of impact:
 
 -   WebLogic 10.3.6.0
 -   WebLogic 12.1.3.0
 -   WebLogic 12.2.1.2
 -   WebLogic 12.2.1.3
 
-漏洞危险等级：高危
+Rule type: Command execution
 
-规则防护：云防火墙虚拟补丁已支持防护
-
-规则类型：命令执行
+Risk level: High
 
