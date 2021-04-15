@@ -1,21 +1,14 @@
-# \[Threat intelligence\] Remote code execution vulnerability \(CVE-2019-0708\) in Windows RDP
+# 【虚拟补丁】Redis 4.x~5.x远程命令漏洞
 
-On September 6, 2019, Alibaba Cloud emergency response center detected that Metasploit released an exploit module for BlueKeep \(CVE-2019-0708\). The Alibaba Cloud security team has confirmed that the exploit module can be successfully executed. With the EXP code, attackers can execute any commands on the target system and spread worms to infect other hosts on the internal network. The BlueKeep vulnerability is similar to ransomware such as WannaCry in 2017 and causes high risks.
+2019年7月9日，阿里云应急响应中心监测到Redis存在远程命令执行漏洞。经过测试发现，Redis 4.0及5.0以上版本均受漏洞影响。漏洞产生的原因是在Reids 4.0版本之后Redis新增了模块功能，且在4.0以上版本默认支持。通过外部拓展，可以在Redis中实现一个新的Redis命令，并通过C语言编译出的.so文件执行系统命令，风险极高。
 
-The public release of the exploit module greatly lowers the vulnerability exploitation threshold and makes hosts with the BlueKeep vulnerability prone to intrusion. Alibaba Cloud reminds Windows users to check for vulnerabilities and fix them in a timely manner.
+影响范围：Redis 4.0及5.0以上版本
 
-Scope of impact:
+漏洞危险等级：高危
 
--   Windows 7
--   Windows Server 2008 R2
--   Windows Server 2008
--   Windows 2003
--   Windows XP
+规则防护：云防火墙虚拟补丁已支持防护
 
-Risk level: high
+规则类型：命令执行
 
-Security suggestions:
-
-1.  Fix vulnerabilities in a timely manner. For more information about fixing the vulnerabilities, see [Microsoft security announcement](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2019-0708).
-2.  Use Cloud Firewall ACL to restrict RDP. For more information, see [Overview of access control policies](/intl.en-US/Access control/Overview of access control policies.md). We recommend that you use an IP address whitelist to allow access to resources.
+安全建议：使用云防火墙的入侵防御功能进行安全防护。
 
