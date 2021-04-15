@@ -1,16 +1,14 @@
-# \[Virtual patch\] WebLogic T3 deserialization vulnerability
+# 【威胁情报】Redis未授权访问攻击信息
 
-In April, 2018, Oracle officially released a Critical Patch Update, which is a collection of patches for multiple security vulnerabilities including the high-risk WebLogic T3 deserialization vulnerability \(CVE-2018-2628\). Attackers can exploit this vulnerability to execute code remotely without authorization. This vulnerability brings high security risks. Oracle officially released the latest patch in a timely manner to fix the vulnerability. You are advised to perform a self-check and upgrade immediately.
+2018年9月12日监控到大量利用Redis未授权访问的蠕虫传播事件，攻击源为被蠕虫感染的主机。
 
-The WebLogic T3 protocol deserialization vulnerability on Oracle WebLogic Server 10.3.6.0, 12.1.3.0, 12.2.1.2, and 12.2.1.13 may lead to remote code execution. A malicious attacker can remotely execute commands by constructing malicious request packets to obtain system privileges, which brings serious security risks.
+中控IP：104.20.208.21
 
-CVE code: CVE-2018-2628
+受控后会访问恶意源hxxps://pastebin.com/raw/5bjpjvLP下载恶意文件，并会利用受控端接收攻击IP段后继续传播。
 
-Rule-based defense: Cloud Firewall has been able to defend against remote command execution caused by this vulnerability.
+恶意IP：104.20.208.21
 
-Scope of impact: WebLogic 10.3.6.0, 12.1.3.0, 12.2.1.2, and 12.2.1.3
+漏洞危险等级：高危
 
-Rule type: Command execution
-
-Risk level: High
+事件：Redis蠕虫中控
 
