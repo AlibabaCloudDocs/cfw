@@ -1,14 +1,19 @@
-# \[Basic rule\] Remote command execution through Microsoft SQL Server xp\_cmdshell
+# 【虚拟补丁】Nginx安全问题易导致DoS攻击
 
-SQL Server is a relational database management system introduced by Microsoft Corporation. The extended stored procedure xp\_cmdshell of SQL Server is used to run system commands. The xp\_cmdshell option enables system administrators to control whether to spawn a Windows command shell and pass it in a string for execution. Any output is returned as rows of text.
+近日Nginx被爆出存在安全问题，可能会导致1400多万台服务器遭受DoS攻击。导致安全问题的漏洞存在于HTTP/2和MP4模块中。
 
-Malicious users sometimes attempt to elevate their privileges by using xp\_cmdshell to run system commands.
+Nginx HTTP/2实现中发现了两个安全漏洞。如果在配置文件中使用listen指令的http2选项，会影响使用ngx\_http\_v2\_module编译的Nginx（默认情况下不编译），可能导致过多的内存消耗（CVE-2018-16843）和CPU使用率（CVE-2018-16844）。具体请参见[Nginx 安全问题致使 1400 多万台服务器易遭受 DoS 攻击](https://yq.aliyun.com/articles/666605)。
 
-Rule-based defense: Cloud Firewall has been able to defend against remote command execution through SQL Server xp\_cmdshell.
+为了利用上述两个漏洞，攻击者可以发送特制的HTTP/2 请求，这将导致过多的CPU使用和内存使用，最终触发DoS状态。所有运行未打上补丁的Nginx服务器都容易受到DoS攻击。
 
-Scope of impact: Microsoft SQL Server
+漏洞影响范围：
 
-Rule type: Command execution
+-   CVE-2018-16843和CVE-2018-16844影响的版本：Mainline version 1.9.5~1.15.5
+-   CVE-2018-16845影响的版本：Mainline version 1.1.3+、1.0.7+
 
-Risk level: High
+漏洞危险等级：高危
+
+规则防护：云防火墙虚拟补丁已支持防护
+
+规则类型：DoS攻击
 
