@@ -1,14 +1,19 @@
-# \[Threat intelligence\] Apache Dubbo deserialization vulnerability \(CVE-2019-17564\)
+# 【虚拟补丁】FusionAuth远程命令执行（CVE-2020-7799）
 
-On February 11, 2020, Alibaba Security Response Center \(ASRC\) detected an Apache Dubbo deserialization vulnerability \(CVE No.: CVE-2019-17564\).
+FusionAuth是一款访问管理开源应用程序，可以与多种技术和平台集成。您可以通过管理仪表板以多种方式配置和自定义FusionAuth，为任何应用程序提供身份验证、授权和用户管理。
 
-Apache Dubbo is a Java-based, distributed remote procedure call \(RPC\) framework. It supports various protocols and is widely used. We recommend that you use the officially offered Dubbo protocol. Apache Dubbo allows you to use the HTTP protocol for RPC, which is implemented by using Spring HttpInvoker. Deserialization is performed when input streams are processed. When HTTP is enabled, Apache Dubbo performs insecure deserialization upon receiving a remote call request. This leads to the remote execution of arbitrary code.
+FusionAuth 1.11之前版本，由于使用Apache FreeMarker模板引擎，且未对用户输入数据进行过滤。登录用户在进行电子邮件模板编辑时，可利用Apache FreeMarker模板引擎，调用freemarker.template.utility.Execute在底层操作系统上执行任意命令。
 
-Cloud Firewall has detected attacks that are initiated by using this vulnerability and blocks such attacks.
+漏洞影响范围：FusionAuth 1.10.1版本及以下版本
 
-Affected versions: Apache Dubbo versions earlier than 2.7.5
+漏洞危险等级：高危
 
-Risk level: high
+规则防护：云防火墙基础规则已支持防护
 
-Suggestion: Use the Intrusion Prevention feature of Cloud Firewall.
+规则类型：命令执行
+
+安全建议：
+
+-   升级FusionAuth版本到1.10.1以上。
+-   使用云防火墙的入侵防御功能进行安全防护。
 
