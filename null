@@ -1,28 +1,28 @@
-# 【虚拟补丁】Windows SMBv3远程代码执行（CVE-2020-0796）
+# \[Virtual patch\] Remote code execution vulnerability \(CVE-2020-0796\) in Windows SMBv3
 
-由于Microsoft Windows SMBv3协议中存在一处远程代码执行漏洞（漏洞CVE编号为CVE-2020-5405），微软安全中心在2020年3月12日23时发布了影响Windows系统的SMBv3远程代码执行漏洞的修复补丁。
+At 23:00 on March 12, 2020, Microsoft Security Center released a patch to fix the remote code execution vulnerability CVE-2020-5405, which affects Windows SMBv3.
 
-该漏洞发生在`srv2.sys`中。由于SMBv3没有正确处理压缩的数据包，解压数据包时使用了客户端传输的长度进行解压，并没有检查长度是否合法，最终导致整数溢出。这种情况下，未经身份验证的远程攻击者可以通过构造恶意请求在Windows Server服务器上执行命令。
+The vulnerability occurred in `srv2.sys` because SMBv3 does not correctly handle compressed data packets. SMBv3 decompresses the data packets based on the length supported by the client, but does not check whether the length is valid. This results in integer overflow. If integer overflow occurs, an unauthenticated attacker can remotely construct malicious requests and execute commands on hosts that run specific Windows operating systems.
 
-漏洞影响范围：
+Risk level: high
 
--   Windows Server, version 1909（Server Core installation）
--   Windows Server, version 1903（Server Core installation）
--   Windows 10 Version 1903 for 32-bit Systems
--   Windows 10 Version 1903 for x64-based Systems
--   Windows 10 Version 1903 for ARM64-based Systems
--   Windows 10 Version 1909 for 32-bit Systems
--   Windows 10 Version 1909 for x64-based Systems
--   Windows 10 Version 1909 for ARM64-based Systems
+Scope of impact:
 
-漏洞危险等级：高危
+-   Windows Server, version 1909 \(Server Core installation\)
+-   Windows Server, version 1903 \(Server Core installation\)
+-   Windows 10, version 1903 for 32-bit systems
+-   Windows 10, version 1903 for x64-based systems
+-   Windows 10, version 1903 for ARM64-based systems
+-   Windows 10, version 1909 for 32-bit systems
+-   Windows 10, version 1909 for x64-based systems
+-   Windows 10, version 1909 for ARM64-based systems
 
-规则防护：云防火墙虚拟补丁已支持防护
+Rule-based defense: A virtual patch is available in the Cloud Firewall console to address this vulnerability.
 
-规则类型：命令执行
+Rule type: command execution
 
-安全建议：
+Security suggestions:
 
--   您可以安装修复补丁，具体请参见[Windows官方说明](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796)。
--   使用云防火墙的入侵防御功能进行安全防护。
+-   Install the patch issued by Microsoft. For more information, see [Description of CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796).
+-   Use the intrusion prevention feature of Cloud Firewall.
 
