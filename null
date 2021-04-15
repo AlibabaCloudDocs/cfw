@@ -1,14 +1,14 @@
-# 【虚拟补丁】Redis 4.x~5.x远程命令漏洞
+# \[Virtual Patches\] Remote code execution vulnerability in Redis 4.0 and Redis 5.x
 
-2019年7月9日，阿里云应急响应中心监测到Redis存在远程命令执行漏洞。经过测试发现，Redis 4.0及5.0以上版本均受漏洞影响。漏洞产生的原因是在Reids 4.0版本之后Redis新增了模块功能，且在4.0以上版本默认支持。通过外部拓展，可以在Redis中实现一个新的Redis命令，并通过C语言编译出的.so文件执行系统命令，风险极高。
+On July 9, 2019, Alibaba Cloud Security detected a remote code execution vulnerability in Redis 4.0 and 5.x versions. A new function module was added to Redis 4.0, and is enabled by default in later versions. Users can use C language to compile a .so file to execute system commands, which brings high risks.
 
-影响范围：Redis 4.0及5.0以上版本
+On July 9, 2019, Cloud Firewall released a virtual patch for this vulnerability. We recommend that Redis users enable this virtual patch.
 
-漏洞危险等级：高危
+Impacted versions: Redis 4.0, Redis 5.0 and later
 
-规则防护：云防火墙虚拟补丁已支持防护
+Policy: command execution
 
-规则类型：命令执行
+Risk level: high
 
-安全建议：使用云防火墙的入侵防御功能进行安全防护。
+Policy-based protection: A virtual patch is available in the Cloud Firewall console to defend against this vulnerability.
 
