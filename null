@@ -1,14 +1,14 @@
-# \[Basic rule\] Malicious file writing vulnerability of PostgreSQL
+# 【威胁情报】多个僵尸网络开始使用ThinkPHP v5漏洞
 
-Alibaba Cloud's Cloud Firewall has been able to defend against the malicious file writing vulnerability of PostgreSQL.
+阿里云云防火墙可防御多个僵尸网络开始使用ThinkPHP v5漏洞。
 
-PostgreSQL is a powerful, open-source object-relational database that runs on multiple operating systems. The PostgreSQL function `Lo_export` can be called to export large objects to a file. Once an attacker obtains PostgreSQL database privileges, the attacker can use the `Lo_import` and `Lo_export` functions to import malicious library files and execute system commands.
+近日，阿里云应急响应中心监控到以BuleHero和Sefa为代表的两个挖矿僵尸网络开始利用ThinkPHP框架的5.x远程命令执行漏洞进行传播。BuleHero是一个利用多种安全漏洞入侵和传播，进而控制服务器进行挖矿的僵尸网络，对正常业务构成重大安全威胁。存在ThinkPHP v5漏洞的系统易被感染，一旦感染BuleHero或Sefa，蠕虫会进行内网传播，对企业内网造成损失，还可控制服务器进行挖矿，影响业务正常运行。
 
-Rule type: Command execution
+部分下载URL及详情参见[威胁预警-多个挖矿僵尸网络开始使用ThinkPHP v5漏洞](https://yq.aliyun.com/articles/682146)。
 
-Risk level: High
+漏洞危险等级：高危
 
-Scope of impact: PostgreSQL databases
+规则防护：云防火墙虚拟补丁已支持防护
 
-Rule-based defense: Cloud Firewall has been able to defend against this vulnerability. We recommend that you enable [intrusion prevention policies](/intl.en-US/Intrusion prevention/Intrusion prevention.md) in the Cloud Firewall console.
+规则类型：蠕虫攻击
 
