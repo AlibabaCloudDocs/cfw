@@ -1,20 +1,14 @@
-# \[Threat intelligence\] DDG mining botnet attack
+# 【基础规则】MySQL恶意UDF命令执行
 
-DDG is a Monero-mining botnet that targets Redis servers through brute-force attacks against SSH and unauthorized access vulnerability. The latest DDG version is 3014.
+MySQL提供用户自定义函数功能，这种由用户自行添加的MySQL函数就称为UDF（User Define Function）。但此过程经常被攻击者利用，当攻击者拿到MySQL的数据库权限后，就可以通过导入恶意库文件，进行自定义UDF，进而执行系统命令。
 
-Recently, Alibaba Cloud Security team detects an increase in the number of DDG mining botnet attacks. Once an attack succeeds, DDG executes the crontab command on the controlled servers to perform regularly update and run. Update source: hxxp://149.56.106.215:8000/i.sh
+漏洞危害主要影响MySQL应用对外开放的应用服务器，存在高安全风险。可造成服务器被控制、数据泄漏、勒索、虚拟货币挖矿、对外DDoS等。
 
-Download URLs:
+漏洞影响范围：MySQL 数据库
 
--   hxxp://149.56.106.215:8000/i.sh
--   hxxp://149.56.106.215:8000/static/3014/ddgs.i686
--   hxxp://149.56.106.215:8000/static/3014/ddgs.x86\_64
+漏洞危险等级：高危
 
-Malicious IP address: 149.56.106.215
+规则防护：云防火墙虚拟补丁已支持防护
 
-Event: DDG worm from a command-and-control server
-
-Risk level: High
-
-Cloud Firewall has been able to defend against such attacks. We recommend that you enable [intrusion prevention policies](/intl.en-US/Best Practices/Best practices for defending against CNC worms.md) in the Cloud Firewall console.
+规则类型：命令执行
 
