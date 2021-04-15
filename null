@@ -1,22 +1,16 @@
-# 【虚拟补丁】Apache Tomcat AJP协议文件读取与包含漏洞
+# \[Virtual patch\] Apache Tomcat AJP file read and inclusion vulnerability
 
-Apache Tomcat是由Apache软件基金会下Jakarta项目开发的Servlet容器。默认情况下，Apache Tomcat会开启AJP连接器，方便与其他Web服务器通过AJP协议进行数据传输。
+Apache Tomcat is a Servlet container developed by the Jakarta project, which is a part of the Apache Software Foundation. By default, Apache Tomcat uses AJP connectors to exchange data with other web servers.
 
-由于Apache Tomcat AJP协议的缺陷，攻击者通过Tomcat AJP Connector可以读取Apache Tomcat上所有webapp目录下的任意文件。攻击者读取webapp配置文件或源代码，在目标应用支持文件上传功能的情况下，配置文件中的应用还可以达到远程代码执行的危害。攻击者利用AJP服务端口的漏洞实行攻击，如果您未对外网开启AJP服务，则不受影响（Tomcat默认开启AJP服务并将其绑定至0.0.0.0）。
+Due to a defect in the AJP protocol, attackers can use AJP connectors to read or include all files in the webapp directory. If the target application allows for file uploads, attackers can upload malicious code and execute it remotely. Attackers can exploit this vulnerability if the AJP service is enabled and the service port is exposed. \(By default, Apache Tomcat enables the AJP service and binds the service port to 0.0.0.0.\)
 
-漏洞影响范围：Tomcat 6、7、8、9全版本默认配置下都会受到该漏洞影响
+Scope of impact: Tomcat 6.x.x, 7.x.x, 8.x.x, and 9.x.x with the AJP service enabled
 
-漏洞危险等级：高危
+Risk level: high
 
-规则防护：云防火墙虚拟补丁已支持防护
+Rule-based defense: A virtual patch is available in Cloud Firewall to address this vulnerability.
 
-规则类型：命令执行
+Rule type: command execution
 
-安全建议：
-
--   将Apache Tomcat版本升级到以下版本以上（包含以下版本）：
-    -   Apache Tomcat 7.0.100
-    -   Apache Tomcat 8.5.51
-    -   Apache Tomcat 9.0.31
--   使用云防火墙的入侵防御功能进行安全防护。
+Security suggestions: Upgrade Apache Tomcat or use the intrusion prevention function in Cloud Firewall to protect your servers.
 
