@@ -1,29 +1,12 @@
-# \[Virtual Patches\] Remote code execution vulnerability \(CVE-2019-0708\) in Windows RDP
+# 【虚拟补丁】WebLogic wls9-async反序列化远程命令执行
 
-On May 15, 2019, Microsoft released security updates to address a remote code execution vulnerability \(CVE-2019-0708\) in Remote Desktop Services. This vulnerability has negatively impacted some earlier Windows versions.
+2019年4月17日，阿里云云盾应急响应中心监测到国家信息安全漏洞共享平台（CNVD）披露的“Oracle WebLogic wls9-async反序列化远程命令执行漏洞”。攻击者利用该漏洞可在未经授权的情况下远程执行命令。
 
-User authentication is not required in this vulnerability exploitation. Unauthenticated users may use RDP port 3389 to connect with the target server and send specially crafted requests. This enables the users to execute arbitrary commands on the target server or spread worms to infect other servers in the internal network.
+WebLogic部分版本中默认包含的wls9\_async\_response包，为WebLogic Server提供异步通讯服务。由于该War包在反序列化处理输入信息时存在缺陷，攻击者可以发送精心构造的恶意HTTP请求，获得目标服务器的权限，在未经授权的情况下远程执行命令。
 
-On May 22, 2019, Cloud Firewall released a virtual patch to address this vulnerability. We recommend that you enable this virtual patch \(enabled by default when Cloud Firewall service is activated\) and traffic control mode for protection.
+漏洞影响范围：Oracle WebLogic 10.X和Oracle WebLogic 12.1.3
 
-Impacted versions:
+漏洞危险等级：高危
 
--   Windows 7
--   Windows Server 2008 R2
--   Windows Server 2008
--   Windows 2003
--   Windows XP
-
-Policy: command execution
-
-Risk level: high
-
-Policy-based protection: A virtual patch is available in the Cloud Firewall console to address this vulnerability.
-
-## Security tips
-
-1.  We recommend that users of Windows 7, Windows Server 2008, and Windows Server 2008 R2 install the [Windows security patch](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-0708).
-2.  We recommend that users of Windows 2003 and Windows XP update the system or install the [Windows security patch](https://support.microsoft.com/zh-cn/help/4500705/customer-guidance-for-cve-2019-0708).
-3.  Log on to the Cloud Firewall console. Choose **Security Policies** \> **Intrusion Prevention**, and enable the [t21359.md\#](/intl.en-US/Intrusion prevention/Intrusion prevention.md) feature.
-4.  In the Cloud Firewall console, choose **Security Policies** \> **Access Control** \> **Internet Firewall** \> **Inbound Policies**. Create an access control policy that **allows** only trusted sources or **denies** all requests from regions except the trusted regions.
+规则防护：云防火墙虚拟补丁已支持防护
 
