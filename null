@@ -1,14 +1,18 @@
-# \[Threat intelligence\] QBotVariant attack
+# 【威胁情报】DDG僵尸网络攻击情报
 
-In May 2018, the Alibaba Cloud Security team detected worm samples written based on the QBot open-source code. Further investigation revealed that this was indeed a new QBot family member, which the team named QBotVariant. QBotVariant is capable of performing DDoS attacks, leveraging backdoors and downloaders, and conducting brute-force cracking. Infected servers become part of the QBotVariant botnet. QBotVariant can spread widely on the Internet and cause great harm.
+DDG是一个主要通过SSH爆破、Redis未授权访问等漏洞进行传播，并攫取服务器算力挖矿（门罗币）进行牟利的僵尸网络。目前最新版本为3014。近日阿里云安全监控到来自此僵尸网络的攻击事件有增多趋势，攻击成功后，通过受控主机的crontab进行定期更新、运行。更新源：hxxp://149.56.106.215:8000/i.sh。
 
-QBotVariant exploits the REST API unauthorized access vulnerability of Hadoop YARN and uses hard-coded weak passwords to perform brute-force cracking. Once a server is infected, it becomes a botnet member that attacks other servers, and its bandwidth is consumed by its new "master." Furthermore, this infection may result in consequences such as data leakage and data loss.
+下载URL：
 
-Event: Worm attack
+-   hxxp://149.56.106.215:8000/i.sh
+-   hxxp://149.56.106.215:8000/static/3014/ddgs.i686
+-   hxxp://149.56.106.215:8000/static/3014/ddgs.x86\_64
 
-Risk level: High
+云防火墙可防御此类攻击，建议您[开启云防火墙入侵防御能力](/cn.zh-CN/最佳实践/云防火墙中控蠕虫防御最佳实践.md)。
 
-Cloud Firewall has been able to defend against such attacks. We recommend that you enable [intrusion prevention policies](/intl.en-US/Intrusion prevention/Intrusion prevention.md) in the Cloud Firewall console.
+恶意IP：149.56.106.215
 
-For more information, see [Some malicious URLs and QBotVariant details](https://yq.aliyun.com/articles/667970).
+事件：DDG蠕虫中控
+
+威胁等级：高危
 
