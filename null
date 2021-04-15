@@ -1,10 +1,10 @@
-# 【威胁情报】Windows RDP远程代码执行漏洞（CVE-2019-0708）
+# \[Threat intelligence\] Remote code execution vulnerability \(CVE-2019-0708\) in Windows RDP
 
-2019年9月6日，阿里云应急响应中心监测到安全工具metasploit释放了针对“BlueKeep（CVE-2019-0708）”的漏洞利用模块，阿里云已确认该利用程序可成功执行。利用此EXP代码，可以在目标系统上执行任意命令，甚至传播恶意蠕虫病毒感染内网其他机器。类似于2017年爆发的WannaCry等恶意勒索软件病毒，风险极高。
+On September 6, 2019, Alibaba Cloud emergency response center detected that Metasploit released an exploit module for BlueKeep \(CVE-2019-0708\). The Alibaba Cloud security team has confirmed that the exploit module can be successfully executed. With the EXP code, attackers can execute any commands on the target system and spread worms to infect other hosts on the internal network. The BlueKeep vulnerability is similar to ransomware such as WannaCry in 2017 and causes high risks.
 
-随着该漏洞利用程序的公开，漏洞利用门槛会大幅度降低，存在漏洞的主机极易被入侵。阿里云云防火墙提醒Windows相关用户注意漏洞资产排查，及时修复漏洞。
+The public release of the exploit module greatly lowers the vulnerability exploitation threshold and makes hosts with the BlueKeep vulnerability prone to intrusion. Alibaba Cloud reminds Windows users to check for vulnerabilities and fix them in a timely manner.
 
-漏洞影响范围：
+Scope of impact:
 
 -   Windows 7
 -   Windows Server 2008 R2
@@ -12,10 +12,10 @@
 -   Windows 2003
 -   Windows XP
 
-漏洞危险等级：高危
+Risk level: high
 
-安全建议：
+Security suggestions:
 
--   及时对该漏洞进行修复。修复说明请参见[微软安全公告](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2019-0708)。
--   使用云防火墙ACL对RDP协议进行限制（相关内容请参见[访问控制策略总览](/intl.zh-CN/访问控制/访问控制策略总览.md)），并建议仅放行白名单IP。
+1.  Fix vulnerabilities in a timely manner. For more information about fixing the vulnerabilities, see [Microsoft security announcement](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2019-0708).
+2.  Use Cloud Firewall ACL to restrict RDP. For more information, see [Overview of access control policies](/intl.en-US/Access control/Overview of access control policies.md). We recommend that you use an IP address whitelist to allow access to resources.
 
