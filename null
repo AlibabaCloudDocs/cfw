@@ -1,16 +1,21 @@
-# \[Virtual patch\] Remote command execution vulnerability \(CVE-2019-5475\) in Nexus Repository Manager 2.x
+# 【威胁情报】Windows RDP远程代码执行漏洞（CVE-2019-0708）
 
-Sonatype Nexus Repository Manager \(NXRM\) is a Maven repository manager developed by Sonatype.
+2019年9月6日，阿里云应急响应中心监测到安全工具metasploit释放了针对“BlueKeep（CVE-2019-0708）”的漏洞利用模块，阿里云已确认该利用程序可成功执行。利用此EXP代码，可以在目标系统上执行任意命令，甚至传播恶意蠕虫病毒感染内网其他机器。类似于2017年爆发的WannaCry等恶意勒索软件病毒，风险极高。
 
-On September 6, 2019, Alibaba Cloud emergency response center detected a remote command execution vulnerability in Nexus Repository Manager 2.x. Attackers can log on to Nexus Repository Manager 2.x Capabilities through HTTP Basic Authentication and by using the default account and password: admin:admin123. After logon, attackers can run the createrepo or mergerepo command to implement remote system command injection. Attackers can exploit this vulnerability to remotely execute server commands, causing great risks.
+随着该漏洞利用程序的公开，漏洞利用门槛会大幅度降低，存在漏洞的主机极易被入侵。阿里云云防火墙提醒Windows相关用户注意漏洞资产排查，及时修复漏洞。
 
-Scope of impact: Nexus Repository Manager OSS and Nexus Repository Manager Pro in versions earlier than 2.14.14
+漏洞影响范围：
 
-Rule-based defense: A virtual patch is available in the Cloud Firewall console to address this vulnerability.
+-   Windows 7
+-   Windows Server 2008 R2
+-   Windows Server 2008
+-   Windows 2003
+-   Windows XP
 
-Rule type: command execution
+漏洞危险等级：高危
 
-Risk level: high
+安全建议：
 
-Security suggestions: Upgrade Nexus Repository Manager 2.x to version 2.14.14.
+-   及时对该漏洞进行修复。修复说明请参见[微软安全公告](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2019-0708)。
+-   使用云防火墙ACL对RDP协议进行限制（相关内容请参见[访问控制策略总览](/cn.zh-CN/访问控制/访问控制策略总览.md)），并建议仅放行白名单IP。
 
