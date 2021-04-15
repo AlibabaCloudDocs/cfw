@@ -1,21 +1,21 @@
-# 【虚拟补丁】Kubernetes用户权限提升（CVE-2018-1002105）
+# \[Virtual patch\] User privilege escalation vulnerability in Kubernetes \(CVE-2018-1002105\)
 
-Kubernetes（简称K8s），是用8代替8个字符“ubernete”而成的缩写。K8s是一个开源的、用于管理云平台中多个主机上的容器化的应用。
+Kubernetes is commonly stylized as K8s, which is an abbreviation derived by replacing the eight letters "ubernete" with an 8. K8s is an open-source system for managing containerized applications across multiple hosts deployed on the cloud platform.
 
-通过伪造请求，K8s普通用户可以在已建立的API Server连接上提升访问后端服务的权限，实现提升从K8s普通用户到K8s API server的权限。这里的普通用户至少需要有一个pod的exec/attach/portforward等权限。连接建立后，攻击者就可以通过网络连接直接向后端服务发送任意请求，实现对K8s集群中所有节点机器的所有控制操作，包括ROOT权限。
+With a specially crafted request, a normal K8s user who has established a connection through the K8s API server to a backend server can perform privilege escalation. To do so, the normal user must have the exec/attach/portforward permissions on at least one pod. The attacker can then send arbitrary requests over the established connection directly to that backend server to gain full admin privileges \(including root privileges\) on all nodes in a K8s cluster.
 
-部署受影响版本的服务器存在高危入侵风险，建议开启云防火墙进行拦截，具体请参见[入侵防御能力](/intl.zh-CN/入侵防御/入侵防御开关.md)。
+Servers using affected K8s versions are at high risk of intrusions. We recommend that you enable [intrusion prevention policies](/intl.en-US/Intrusion prevention/Intrusion prevention.md) in the Cloud Firewall console.
 
-漏洞影响范围：
+Rule type: Command execution
 
--   Kubernetes v1.0.x~1.9.x
--   Kubernetes v1.10.0~1.10.10 \(fixed in v1.10.11\)
--   Kubernetes v1.11.0~1.11.4 \(fixed in v1.11.5\)
--   Kubernetes v1.12.0~1.12.2 \(fixed in v1.12.3\)
+Risk level: High
 
-漏洞危险等级：高危
+Scope of impact:
 
-规则防护：云防火墙虚拟补丁已支持防护
+-   Kubernetes v1.0.x to 1.9.x
+-   Kubernetes v1.10.0 to 1.10.10 \(fixed in v1.10.11\)
+-   Kubernetes v1.11.0 to 1.11.4 \(fixed in v1.11.5\)
+-   Kubernetes v1.12.0 to 1.12.2 \(fixed in v1.12.3\)
 
-规则类型：命令执行
+Rule-based defense: A virtual patch is available in the Cloud Firewall console to defend against this vulnerability.
 
