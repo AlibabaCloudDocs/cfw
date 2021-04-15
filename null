@@ -1,17 +1,14 @@
-# 【虚拟补丁】致远OA办公系统远程代码执行
+# \[Virtual Patches\] Remote command execution vulnerability in Seeyon OA system
 
-2019年6月26日，阿里云应急响应中心监测到有社区媒体披露了致远OA办公系统远程代码执行漏洞。该漏洞是由于致远OA htmlofficeservlet HTTP接口在处理特定请求时存在缺陷，攻击者通过构造特定的HTTP请求，触发后可在目标服务器上执行任意命令。漏洞真实存在且风险极高。阿里云已捕获该0 day漏洞利用方式。
+On June 26, 2019, Alibaba Cloud Security detected a remote command execution vulnerability in Seeyon office automation \(OA\) system. The htmlofficeservlet interface of Seeyon OA system has a vulnerability in processing specific requests. Attackers may send specially crafted HTTP requests to exploit the vulnerability and execute arbitrary commands on the target server. This is a high-risk vulnerability. Alibaba Cloud Security has figured out how this 0-day vulnerability is exploited.
 
-漏洞影响范围：致远OA办公系统
+On June 27, 2019, Cloud Firewall released a virtual patch to address this vulnerability. We recommend that you enable virtual patches \(enabled by default when the Cloud Firewall service is activated\) and traffic control mode for protection. Seeyon has released an official security patch. Users can contact Seeyon for system updates.
 
-漏洞危险等级：高危
+Impacted system: Seeyon OA system
 
-规则防护：云防火墙虚拟补丁已支持防护
+Policy: command execution
 
-规则类型：命令执行
+Risk level: high
 
-安全建议：
-
--   目前致远OA办公系统已发布官方安全补丁，您可从致远官方渠道获取安全补丁进行升级。
--   使用云防火墙的入侵防御功能进行安全防护。
+Policy-based protection: A virtual patch is available in the Cloud Firewall console to address this vulnerability.
 
