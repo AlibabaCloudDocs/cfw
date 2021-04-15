@@ -1,20 +1,21 @@
-# \[Basic Policies\] Remote code execution vulnerability in Jenkins \(CVE-2019-1003000\)
+# 【虚拟补丁】Kubernetes用户权限提升（CVE-2018-1002105）
 
-Jenkins is an open-source program written in Java. It can be used as a continuous integration server. The Script Security and Pipeline plug-in is a security plug-in of Jenkins and can be integrated into various functional plug-ins of Jenkins.
+Kubernetes（简称K8s），是用8代替8个字符“ubernete”而成的缩写。K8s是一个开源的、用于管理云平台中多个主机上的容器化的应用。
 
-Alibaba Cloud Security has discovered that the exploitation methods of the remote code execution vulnerability in Jenkins Script Security and Pipeline \(CVE-2019-1003000\) have been revealed on the Internet. Users with overall or read permissions can bypass sandbox protections and execute arbitrary code in Jenkins.
+通过伪造请求，K8s普通用户可以在已建立的API Server连接上提升访问后端服务的权限，实现提升从K8s普通用户到K8s API server的权限。这里的普通用户至少需要有一个pod的exec/attach/portforward等权限。连接建立后，攻击者就可以通过网络连接直接向后端服务发送任意请求，实现对K8s集群中所有节点机器的所有控制操作，包括ROOT权限。
 
-Vulnerability description: [**Jenkins Security Advisory 2019-01-08**](https://jenkins.io/security/advisory/2019-01-08/)
+部署受影响版本的服务器存在高危入侵风险，建议开启云防火墙进行拦截，具体请参见[入侵防御能力](/intl.zh-CN/入侵防御/入侵防御开关.md)。
 
-Policy: Command execution
+漏洞影响范围：
 
-Risk level: High
+-   Kubernetes v1.0.x~1.9.x
+-   Kubernetes v1.10.0~1.10.10 \(fixed in v1.10.11\)
+-   Kubernetes v1.11.0~1.11.4 \(fixed in v1.11.5\)
+-   Kubernetes v1.12.0~1.12.2 \(fixed in v1.12.3\)
 
-Impacted plug-ins:
+漏洞危险等级：高危
 
--   Declarative Plug-in versions earlier than 1.3.4.1
--   Groovy Plug-in versions earlier than 2.61.1
--   Script Security Plug-in versions earlier than 1.5.0
+规则防护：云防火墙虚拟补丁已支持防护
 
-Policy-based protection: Cloud Firewall provides basic firewall policies to fix this vulnerability. We recommend that you enable [Intrusion Prevention](/intl.en-US/Intrusion prevention/Intrusion prevention.md) to use the basic policies.
+规则类型：命令执行
 
