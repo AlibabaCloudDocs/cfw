@@ -1,10 +1,10 @@
-# 【虚拟补丁】Windows Server DNS Server远程代码执行（CVE-2020-1350）
+# \[Virtual patch\] Windows DNS server remote code execution vulnerability \(CVE-2020-1350\)
 
-2020年7月14日，阿里云应急响应中心监测到微软官方发布补丁修复了一个标注为远程代码执行的DNS Server漏洞（CVE-2020-1350），该漏洞被微软官方定义为“可蠕虫级”高危漏洞。
+On July 14, 2020, Alibaba Cloud emergency response center detected that Microsoft released a patch for a DNS server remote code execution vulnerability \(CVE-2020-1350\). This vulnerability is officially defined by Microsoft as a wormable high-risk vulnerability.
 
-未经身份验证的攻击者可以利用此漏洞发送特殊构造的数据包到目标DNS Server，达到远程代码执行的效果。如果域控制器上存在DNS服务，攻击者可利用此漏洞获取到域控制器的系统权限。建议Windows用户尽快采取安全措施防止此漏洞攻击。
+Unauthenticated attackers can exploit this vulnerability to send specially constructed packets to the target DNS server for remote code execution. If the DNS service is provided by a domain controller, the attackers can exploit this vulnerability to gain system privileges on the domain controller. We recommend that Windows users take security measures as soon as possible to prevent this vulnerability.
 
-漏洞影响范围：
+Scope of impact:
 
 -   Windows Server 2008 for 32-bit Systems Service Pack 2
 -   Windows Server 2008 for 32-bit Systems Service Pack 2 \(Server Core\)
@@ -24,15 +24,15 @@
 -   Windows Server, version 1909 \(Server Core\)
 -   Windows Server, version 2004 \(Server Core\)
 
-漏洞危险等级：高危
+Risk level: high
 
-规则防护：云防火墙虚拟补丁已支持防护
+Rule-based defense: A virtual patch is available in the Cloud Firewall console to defend against this vulnerability.
 
-规则类型：命令执行
+Rule type: command execution
 
-安全建议：
+Security suggestions:
 
--   临时方案：修改HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\DNS\\Parameters中`TcpReceivePacketSize`的值为`0xFF00`，并重启DNS Service。
--   请您前往[微软官方网站](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1350)选择安全补丁进行更新。
--   使用云防火墙的入侵防御功能进行安全防护。
+-   Temporary solution: Change the value of `TcpReceivePacketSize` to `0xFF00` in HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\DNS\\Parameters, and restart the DNS service.
+-   Go to the [Microsoft official website](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1350) to download the security patch and install the patch.
+-   Enable the Intrusion Prevention feature of Cloud Firewall.
 
