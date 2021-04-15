@@ -1,19 +1,19 @@
-# 【虚拟补丁】Apache Shiro 1.6.0以下版本权限绕过漏洞（CVE-2020-13933）
+# \[Virtual patch\] Authentication bypass vulnerability in Apache Shiro versions earlier than 1.6.0 \(CVE-2020-13933\)
 
-2020年8月17日，阿里云应急响应中心监测到Apache Shiro官方发布了安全更新，修复了一个最新的权限绕过漏洞。攻击者利用该漏洞可以绕过身份验证访问到Shiro后台，风险较高。
+On August 17, 2020, Alibaba Cloud emergency response center detected that Apache Shiro had officially released a security update that fixed the latest authentication bypass vulnerability. Attackers can exploit this vulnerability to access the Shiro server after bypassing the authentication process.
 
-Apache Shiro是一个应用广泛的关于权限管理的用户认证与授权框架。近日，Apache Shiro被爆出存在绕过身份验证的漏洞（CVE-2020-11989）。攻击者可以使用包含payload的恶意请求绕过Shiro的身份验证，漏洞已经在1.5.3版本进行了修复。经过测试发现，本次修复并不彻底，由于Shiro在处理URL时与Spring框架仍然存在差异，Shiro的最新版本仍然存在绕过身份验证的漏洞。2020年8月17日，Apache Shiro官方发布1.6.0版本修复该漏洞。云防火墙已上线针对该漏洞的虚拟补丁。
+Apache Shiro is a widely used framework for permission management and user authentication and authorization. The authentication bypass vulnerability \(CVE-2020-11989\) allows attackers to send malicious requests that contain payloads to bypass the authentication process. In Apache Shiro 1.5.3, some measures have been taken to fix this vulnerability. However, the vulnerability still exists in later versions because Apache Shiro and Spring frameworks process URL requests in different ways. On August 17, 2020, Apache Shiro released version 1.6.0. In this version, the vulnerability is fixed. Cloud Firewall has released a virtual patch to fix this vulnerability.
 
-漏洞影响范围：Apache Shiro 1.6.0以下版本
+Impact scope: Apache Shiro versions earlier than 1.6.0
 
-漏洞危险等级：高危
+Risk level: high
 
-规则防护：云防火墙虚拟补丁已支持防护
+Rule-based defense: A virtual patch is available in the Cloud Firewall console to defend against this vulnerability.
 
-规则类型：其他
+Rule type: others
 
-安全建议：
+Security suggestions:
 
--   请将Apache Shiro升级至1.6.0及以上的安全版本。
--   使用云防火墙的入侵防御功能进行安全防护。
+-   Upgrade Apache Shiro to 1.6.0 or later.
+-   Enable the Intrusion Prevention feature of Cloud Firewall.
 
