@@ -1,14 +1,14 @@
-# 【威胁情报】Redis未授权访问攻击信息
+# \[Threat intelligence\] Redis unauthorized access vulnerability
 
-2018年9月12日监控到大量利用Redis未授权访问的蠕虫传播事件，攻击源为被蠕虫感染的主机。
+On September 12, 2018, the Alibaba Cloud Security team detected a large number of worm propagation incidents exploiting the authorized access vulnerability of Redis. Servers infected by worms launched the attacks.
 
-中控IP：104.20.208.21
+Command-and-control server IP address: 104.20.208.21
 
-受控后会访问恶意源hxxps://pastebin.com/raw/5bjpjvLP下载恶意文件，并会利用受控端接收攻击IP段后继续传播。
+The controlled servers access hxxps://pastebin.com/raw/5bjpjvLP to download malicious files and spread the worm to recipients.
 
-恶意IP：104.20.208.21
+Malicious IP address: 104.20.208.21
 
-漏洞危险等级：高危
+Event: Redis worm from a command-and-control server
 
-事件：Redis蠕虫中控
+Risk level: High
 
