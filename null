@@ -1,19 +1,19 @@
-# \[Virtual patch\] Remote command execution vulnerability \(CVE-2020-7799\) in FusionAuth
+# 【基础规则】泛微E-cology OA系统远程代码执行漏洞
 
-FusionAuth is an open-source access management application that can be integrated with various technologies and platforms. You can configure and customize FusionAuth in a variety of ways by managing dashboards. FusionAuth can provide identity authentication, authorization, and user management for any applications.
+泛微OA产品E-cology是一款协同管理软件。阿里云云防火墙已支持防护泛微E-cology OA系统远程代码执行漏洞。
 
-In FusionAuth versions earlier than 1.11, the Apache FreeMarker template engine is used and user input is not filtered. When a user edits an email template, the user can use the Apache FreeMarker template engine to call freemarker.template.utility.Execute and execute any commands in the underlying operating system.
+2019年9月19日，阿里云应急响应中心监测到泛微E-cology OA系统存在远程代码执行漏洞，即攻击者可通过构造特定的HTTP请求，获取目标服务器的操作权限，从而可未经授权进行远程执行命令。
 
-Scope of impact: FusionAuth 1.10.1 and earlier
+漏洞出现原因：由于泛微E-cology OA系统自带BeanShell组件且开放未授权访问，导致攻击者可通过调用BeanShell组件接口直接在目标服务器上执行任意命令。
 
-Rule-based defense: Cloud Firewall has created a solution to address the vulnerability through basic rules.
+漏洞危险等级：高危
 
-Rule type: command execution
+规则防护：云防火墙基础规则已支持防护
 
-Risk level: high
+规则类型：命令执行
 
-Security suggestions:
+安全建议：
 
--   Upgrade FusionAuth.
--   Use the Intrusion Prevention feature of Cloud Firewall.
+-   从官方渠道获取泛微E-cology OA安全升级方案。
+-   使用云防火墙的入侵防御功能进行安全防护。
 
