@@ -1,12 +1,16 @@
-# 【虚拟补丁】WebLogic T3协议反序列化漏洞
+# \[Virtual patch\] WebLogic T3 deserialization vulnerability
 
-Oracle官方发布了4月份的关键补丁更新CPU（Critical Patch Update），其中包含一个高危的WebLogic T3协议反序列化漏洞（CVE-2018-2628），通过该漏洞攻击者可以在未授权的情况下构造恶意请求报文远程执行命令获取系统权限，带来严重的安全风险。Oracle官方及时发布了最新补丁修复了该漏洞，阿里云安全团队建议您尽快自查并升级。
+In April, 2018, Oracle officially released a Critical Patch Update, which is a collection of patches for multiple security vulnerabilities including the high-risk WebLogic T3 deserialization vulnerability \(CVE-2018-2628\). Attackers can exploit this vulnerability to execute code remotely without authorization. This vulnerability brings high security risks. Oracle officially released the latest patch in a timely manner to fix the vulnerability. You are advised to perform a self-check and upgrade immediately.
 
-漏洞影响范围：WebLogic 10.3.6.0、WebLogic 12.1.3.0、WebLogic 12.2.1.2、WebLogic 12.2.1.3
+The WebLogic T3 protocol deserialization vulnerability on Oracle WebLogic Server 10.3.6.0, 12.1.3.0, 12.2.1.2, and 12.2.1.13 may lead to remote code execution. A malicious attacker can remotely execute commands by constructing malicious request packets to obtain system privileges, which brings serious security risks.
 
-漏洞危险等级：高危
+CVE code: CVE-2018-2628
 
-规则防护：防护漏洞导致的远程命令执行
+Rule-based defense: Cloud Firewall has been able to defend against remote command execution caused by this vulnerability.
 
-规则类型：命令执行
+Scope of impact: WebLogic 10.3.6.0, 12.1.3.0, 12.2.1.2, and 12.2.1.3
+
+Rule type: Command execution
+
+Risk level: High
 
