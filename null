@@ -1,23 +1,23 @@
-# 【虚拟补丁】Apache Dubbo反序列化代码执行（CVE-2020-1948）
+# \[Virtual patch\] Apache Dubbo remote code execution vulnerability \(CVE-2020-1948\)
 
-2020年6月23日，阿里云应急响应中心监测到Apache Dubbo官方发布了Apache Dubbo远程代码执行的漏洞风险通告。
+On June 23, 2020, Alibaba Cloud emergency response center detected that Apache Dubbo announced a remote code execution vulnerability.
 
-Apache Dubbo是一种基于Java的高性能RPC框架。Apache Dubbo官方披露在`Dubbo Provider`中存在一个反序列化远程代码执行漏洞（CVE-2020-1948），攻击者可以构造并发送带有恶意参数负载的RPC请求，当恶意参数被反序列化时将导致远程代码执行。
+Apache Dubbo is a high-performance Java-based RPC framework. Apache Dubbo announced that `Dubbo Provider` has a remote code execution vulnerability \(CVE-2020-1948\) resulting from deserialization. Attackers can create and send RPC requests with malicious parameter payloads. The deserialization of malicious parameters will cause remote code execution.
 
-漏洞影响范围：
+Scope of impact:
 
--   Apache Dubbo 2.7.0~2.7.6
--   Apache Dubbo 2.6.0~2.6.7
--   Apache Dubbo 2.5.x系列所有版本（官方不再提供支持）
+-   Apache Dubbo 2.7.0-2.7.6
+-   Apache Dubbo 2.6.0-2.6.7
+-   Apache Dubbo 2.5.x. Apache Dubbo will no longer provide technical support for these versions.
 
-漏洞危险等级：高危
+Risk level: high
 
-规则防护：云防火墙虚拟补丁已支持防护
+Rule-based defense: A virtual patch is available in the Cloud Firewall console to defend against this vulnerability.
 
-规则类型：命令执行
+Rule type: command execution
 
-安全建议：
+Security suggestions:
 
--   Apache Dubbo官方已发布该漏洞的修复版本，请您升级至Apache Dubbo 2.7.7版本或更高版本。该漏洞修复版本的[下载地址](https://github.com/apache/dubbo/releases/tag/dubbo-2.7.7)。
--   使用云防火墙的入侵防御功能进行安全防护。
+-   Apache Dubbo has released a new version 2.7.7 to fix this vulnerability. You can upgrade your Apache Dubbo version to 2.7.7 or later. Download URL for Apache Dubbo 2.7.7: [Download URL](https://github.com/apache/dubbo/releases/tag/dubbo-2.7.7)
+-   Enable the Intrusion Prevention feature of Cloud Firewall.
 
