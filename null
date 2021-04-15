@@ -1,21 +1,15 @@
-# \[Virtual patch\] Nginx security issues cause servers' vulnerability to DoS attacks
+# 【威胁情报】QBotVariant蠕虫网络攻击情报
 
-Nginx has been experiencing security issues recently, which may cause more than 14 million servers to be vulnerable to DoS attacks. The vulnerabilities that cause the security issues are in the HTTP/2 and MP4 modules.
+阿里云安全在今年5月份监测到了一种改写自互联网公开渠道源码的蠕虫样本，我们将该类样本命名为QBotVariant。QBotVariant具有DDoS攻击、后门、下载器和破解等功能，一旦感染此类蠕虫，不仅会占用主机计算资源消耗带宽流量，成为攻击其他主机的肉鸡，还可能造成数据泄露、数据丢失等后果。QBotVariant可在互联网上广泛传播并造成极大的危害。
 
-Two security vulnerabilities were identified in Nginx HTTP/2 implementation. Nginx compiled with the ngx\_http\_v2\_module \(not compiled by default\) is affected if the http2 option of the listen directive is used in a configuration file.This may cause excessive memory consumption \(CVE-2018-16843\) and CPU usage \(CVE-2018-16844\).
+QBotVariant传播的方式有以下两种：
 
-To take advantage of these two vulnerabilities, an attacker can send a specially crafted HTTP/2 request, which results in excessive CPU usage and memory usage, eventually triggering a DoS status. All Nginx servers that are running unpatched versions are vulnerable to DoS attacks.
+-   利用Hadoop Yarn资源管理系统的REST API未授权访问漏洞进行入侵。
+-   通过硬编码的弱密码进行SSH暴力破解。
 
-Scope of impact:
+漏洞危险等级：高危
 
--   CVE-2018-16843 and CVE-2018-16844: Mainline versions 1.9.5 - 1.15.5
--   CVE-2018-16845: Mainline versions 1.1.3+ and 1.0.7+
+规则防护：云防火墙虚拟补丁已支持防护
 
-Rule type: DoS attack
-
-Risk level: High
-
-Rule-based defense: Cloud Firewall has been able to use the virtual patch feature to defend against such attacks. For more information about the virtual patch feature, see [Virtual patching](/intl.en-US/Intrusion prevention/Intrusion prevention.md).
-
-For more information about the alert, see [Nginx security issues cause over 14 million servers to be vulnerable to DoS attacks](https://yq.aliyun.com/articles/666605).
+事件：蠕虫攻击
 
