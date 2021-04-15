@@ -1,12 +1,12 @@
-# \[Basic rule\] Update of Bash reverse shell detection rules
+# 【基础规则】矿池通信检测类规则更新
 
-Cloud Firewall has updated the Bash reverse shell detection rules.
+阿里云云防火墙已更新挖矿通信检测类规则。
 
-A lot of cyberattacks are launched by exploiting reverse shells. Such attacks often occur during the maintenance stage. Once an attacker obtains certain system command execution privileges, the attacker can use a reverse shell to open an interactive command execution window and then intrude into the system to steal data. When Cloud Firewall detects a reverse shell attack to your server, indicating that your server is at risk of intrusion, it blocks the reverse shell creation and command execution. This helps reduce the risks that the attack may bring.
+随着以比特币为主的虚拟货币的兴起，受挖矿带来的直接经济收益的驱动，以挖矿为目的的安全事件日益猖獗，越来越多的服务器被入侵、进行虚拟货币挖矿。计算机一旦被挖矿木马感染，就会成为黑客的盈利工具，同时计算机的资源也会被耗尽，对正常业务造成严重的影响。近日，云防火墙已更新挖矿通信检测类规则，可检测服务器是否存在虚拟货币挖矿行为。
 
-Rule type: Reverse shell
+漏洞危险等级：高危
 
-Risk level: High
+规则防护：云防火墙虚拟补丁已支持防护
 
-Rule-based defense: Cloud Firewall has been able to defend against such attacks. We recommend that you enable [intrusion prevention policies](/intl.en-US/Intrusion prevention/Intrusion prevention.md) in the Cloud Firewall console.
+规则类型：挖矿行为
 
