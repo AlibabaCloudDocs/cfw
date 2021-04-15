@@ -1,19 +1,38 @@
-# \[Virtual patch\] Authentication bypass vulnerability in Apache Shiro versions earlier than 1.6.0 \(CVE-2020-13933\)
+# 【虚拟补丁】Windows Server DNS Server远程代码执行（CVE-2020-1350）
 
-On August 17, 2020, Alibaba Cloud emergency response center detected that Apache Shiro had officially released a security update that fixed the latest authentication bypass vulnerability. Attackers can exploit this vulnerability to access the Shiro server after bypassing the authentication process.
+2020年7月14日，阿里云应急响应中心监测到微软官方发布补丁修复了一个标注为远程代码执行的DNS Server漏洞（CVE-2020-1350），该漏洞被微软官方定义为“可蠕虫级”高危漏洞。
 
-Apache Shiro is a widely used framework for permission management and user authentication and authorization. The authentication bypass vulnerability \(CVE-2020-11989\) allows attackers to send malicious requests that contain payloads to bypass the authentication process. In Apache Shiro 1.5.3, some measures have been taken to fix this vulnerability. However, the vulnerability still exists in later versions because Apache Shiro and Spring frameworks process URL requests in different ways. On August 17, 2020, Apache Shiro released version 1.6.0. In this version, the vulnerability is fixed. Cloud Firewall has released a virtual patch to fix this vulnerability.
+未经身份验证的攻击者可以利用此漏洞发送特殊构造的数据包到目标DNS Server，达到远程代码执行的效果。如果域控制器上存在DNS服务，攻击者可利用此漏洞获取到域控制器的系统权限。建议Windows用户尽快采取安全措施防止此漏洞攻击。
 
-Impact scope: Apache Shiro versions earlier than 1.6.0
+漏洞影响范围：
 
-Risk level: high
+-   Windows Server 2008 for 32-bit Systems Service Pack 2
+-   Windows Server 2008 for 32-bit Systems Service Pack 2 \(Server Core\)
+-   Windows Server 2008 for x64-based Systems Service Pack 2
+-   Windows Server 2008 for x64-based Systems Service Pack 2 \(Server Core\)
+-   Windows Server 2008 R2 for x64-based Systems Service Pack 1
+-   Windows Server 2008 R2 for x64-based Systems Service Pack 1 \(Server Core\)
+-   Windows Server 2012
+-   Windows Server 2012 \(Server Core\)
+-   Windows Server 2012 R2
+-   Windows Server 2012 R2 \(Server Core\)
+-   Windows Server 2016
+-   Windows Server 2016 \(Server Core\)
+-   Windows Server 2019
+-   Windows Server 2019 \(Server Core\)
+-   Windows Server, version 1903 \(Server Core\)
+-   Windows Server, version 1909 \(Server Core\)
+-   Windows Server, version 2004 \(Server Core\)
 
-Rule-based defense: A virtual patch is available in the Cloud Firewall console to defend against this vulnerability.
+漏洞危险等级：高危
 
-Rule type: others
+规则防护：云防火墙虚拟补丁已支持防护
 
-Security suggestions:
+规则类型：命令执行
 
--   Upgrade Apache Shiro to 1.6.0 or later.
--   Enable the Intrusion Prevention feature of Cloud Firewall.
+安全建议：
+
+-   临时方案：修改HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\DNS\\Parameters中`TcpReceivePacketSize`的值为`0xFF00`，并重启DNS Service。
+-   请您前往[微软官方网站](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1350)选择安全补丁进行更新。
+-   使用云防火墙的入侵防御功能进行安全防护。
 
