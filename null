@@ -1,14 +1,17 @@
-# \[Virtual Patches\] Remote code execution vulnerability in Redis 4.0 and Redis 5.x
+# 【虚拟补丁】致远OA办公系统远程代码执行
 
-On July 9, 2019, Alibaba Cloud Security detected a remote code execution vulnerability in Redis 4.0 and 5.x versions. A new function module was added to Redis 4.0, and is enabled by default in later versions. Users can use C language to compile a .so file to execute system commands, which brings high risks.
+2019年6月26日，阿里云应急响应中心监测到有社区媒体披露了致远OA办公系统远程代码执行漏洞。该漏洞是由于致远OA htmlofficeservlet HTTP接口在处理特定请求时存在缺陷，攻击者通过构造特定的HTTP请求，触发后可在目标服务器上执行任意命令。漏洞真实存在且风险极高。阿里云已捕获该0 day漏洞利用方式。
 
-On July 9, 2019, Cloud Firewall released a virtual patch for this vulnerability. We recommend that Redis users enable this virtual patch.
+漏洞影响范围：致远OA办公系统
 
-Impacted versions: Redis 4.0, Redis 5.0 and later
+漏洞危险等级：高危
 
-Policy: command execution
+规则防护：云防火墙虚拟补丁已支持防护
 
-Risk level: high
+规则类型：命令执行
 
-Policy-based protection: A virtual patch is available in the Cloud Firewall console to defend against this vulnerability.
+安全建议：
+
+-   目前致远OA办公系统已发布官方安全补丁，您可从致远官方渠道获取安全补丁进行升级。
+-   使用云防火墙的入侵防御功能进行安全防护。
 
