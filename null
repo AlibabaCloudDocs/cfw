@@ -1,23 +1,24 @@
-# \[Virtual patch\] Apache Dubbo remote code execution vulnerability \(CVE-2020-1948\)
+# 【基础规则】通达OA远程文件上传
 
-On June 23, 2020, Alibaba Cloud emergency response center detected that Apache Dubbo announced a remote code execution vulnerability.
+通达OA（办公系统）在官方论坛披露了一起通达OA用户服务器遭受勒索病毒攻击的事件。攻击者通过构造恶意请求，可以上传Webshell等恶意文件，从而控制通达OA用户服务器。阿里云应急响应中心已捕获到该漏洞的利用方式，该漏洞真实存在。
 
-Apache Dubbo is a high-performance Java-based RPC framework. Apache Dubbo announced that `Dubbo Provider` has a remote code execution vulnerability \(CVE-2020-1948\) resulting from deserialization. Attackers can create and send RPC requests with malicious parameter payloads. The deserialization of malicious parameters will cause remote code execution.
+漏洞影响范围：
 
-Scope of impact:
+-   通达OA V11版
+-   通达OA 2017版
+-   通达OA 2016版
+-   通达OA 2015版
+-   通达OA 2013增强版
+-   通达OA 2013版
 
--   Apache Dubbo 2.7.0-2.7.6
--   Apache Dubbo 2.6.0-2.6.7
--   Apache Dubbo 2.5.x. Apache Dubbo will no longer provide technical support for these versions.
+漏洞危险等级：高危
 
-Risk level: high
+规则防护：云防火墙虚拟补丁已支持防护
 
-Rule-based defense: A virtual patch is available in the Cloud Firewall console to defend against this vulnerability.
+规则类型：Web攻击
 
-Rule type: command execution
+阿里云应急响应中心提醒通达OA用户尽快采取安全措施阻止漏洞攻击。通达OA用户可参考以下安全建议：
 
-Security suggestions:
-
--   Apache Dubbo has released a new version 2.7.7 to fix this vulnerability. You can upgrade your Apache Dubbo version to 2.7.7 or later. Download URL for Apache Dubbo 2.7.7: [Download URL](https://github.com/apache/dubbo/releases/tag/dubbo-2.7.7)
--   Enable the Intrusion Prevention feature of Cloud Firewall.
+-   通达OA官方已经发布了相应的安全加固程序，请根据您当前的通达OA版本，前往[通达用户社区](http://club.tongda2000.com/forum.php?mod=viewthread&tid=128377&extra=page%3D1)选择对应的加固程序进行安全更新。更新前请您先做好数据备份。
+-   使用云防火墙的入侵防御功能进行安全防护。
 
