@@ -1,14 +1,14 @@
-# 【基础规则】Phpcms2008代码注入漏洞（CVE-2018-19127）
+# \[Basic rule\] PHPCMS 2008 code injection vulnerability \(CVE-2018-19127\)
 
-Phpcms网站内容管理系统是中国主流CMS系统之一，同时也是一个开源的PHP开发框架。由于Phpcms稳定、灵活、开源的特性，时至今日，Phpcms 2008版本仍被许多网站所使用。Phpcms 2008存在代码注入漏洞，漏洞编号为CVE-2018-19127。攻击者可向网站上路径可控的缓存文件写入任意内容，从而可能获取webshell并执行任意指令。
+PHPCMS is a mainstream content management system used in China. It is an open-source PHP development framework. PHPCMS was first released in 2008, and the latest version is v9.6.3. Many websites are still using PHPCMS 2008 for it's stable, flexible, and open-source. However, PHPCMS 2008 is prone to a code injection vulnerability \(CVE-2018-19127\). This vulnerability allows attackers to write arbitrary content to a website cache file with a controllable filename, leading to arbitrary code execution.
 
-阿里云安全近日已捕获到Phpcms 2008代码注入漏洞的多个利用样本。
+Recently, Alibaba Cloud Security team detected multiple samples of the PHPCMS 2008 code injection vulnerability.
 
-漏洞影响范围：Phpcms 2008
+Rule-based defense: Cloud Firewall has been able to defend against this vulnerability. We recommend that you enable intrusion prevention policies in the Cloud Firewall console.
 
-漏洞危险等级：高危
+Scope of impact: PHPCMS 2008
 
-规则防护：云防火墙虚拟补丁已支持防护
+Rule type: Command execution
 
-规则类型：命令执行
+Risk level: High
 
