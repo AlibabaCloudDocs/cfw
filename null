@@ -1,14 +1,12 @@
-# \[Basic rule\] PHPCMS 2008 code injection vulnerability \(CVE-2018-19127\)
+# 【虚拟补丁】WebLogic T3协议反序列化漏洞
 
-PHPCMS is a mainstream content management system used in China. It is an open-source PHP development framework. PHPCMS was first released in 2008, and the latest version is v9.6.3. Many websites are still using PHPCMS 2008 for it's stable, flexible, and open-source. However, PHPCMS 2008 is prone to a code injection vulnerability \(CVE-2018-19127\). This vulnerability allows attackers to write arbitrary content to a website cache file with a controllable filename, leading to arbitrary code execution.
+Oracle官方发布了4月份的关键补丁更新CPU（Critical Patch Update），其中包含一个高危的WebLogic T3协议反序列化漏洞（CVE-2018-2628），通过该漏洞攻击者可以在未授权的情况下构造恶意请求报文远程执行命令获取系统权限，带来严重的安全风险。Oracle官方及时发布了最新补丁修复了该漏洞，阿里云安全团队建议您尽快自查并升级。
 
-Recently, Alibaba Cloud Security team detected multiple samples of the PHPCMS 2008 code injection vulnerability.
+漏洞影响范围：WebLogic 10.3.6.0、WebLogic 12.1.3.0、WebLogic 12.2.1.2、WebLogic 12.2.1.3
 
-Rule-based defense: Cloud Firewall has been able to defend against this vulnerability. We recommend that you enable intrusion prevention policies in the Cloud Firewall console.
+漏洞危险等级：高危
 
-Scope of impact: PHPCMS 2008
+规则防护：防护漏洞导致的远程命令执行
 
-Rule type: Command execution
-
-Risk level: High
+规则类型：命令执行
 
