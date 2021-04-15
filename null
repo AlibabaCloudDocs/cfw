@@ -1,26 +1,26 @@
-# 【基础规则】Oracle Coherence远程代码执行漏洞（CVE-2020-2555）
+# \[Basic rule\] Oracle Coherence remote code execution vulnerability \(CVE-2020-2555\)
 
-2020年3月6日，阿里云应急响应中心监测到Oracle Coherence反序列化远程代码执行漏洞（CVE编号：CVE-2020-2555）的细节已被公开。
+On March 6, 2020, Alibaba Cloud emergency response center detected that details of a remote code execution vulnerability \(CVE No.: CVE-2020-2555\) in Oracle Coherence deserialization had been disclosed.
 
-Oracle Coherence是Oracle融合中间件中的产品，在WebLogic 12c及以上版本中默认集成到WebLogic安装包中。未经授权的攻击者可通过构造T3协议请求，绕过WebLoig的反序列化黑名单，从而通过反序列化代码执行命令控制WebLogic服务器。
+Oracle Coherence is a product of Oracle Fusion Middleware. By default, it is integrated into the WebLogic Server installation package in Oracle WebLogic Server 12c and later. This vulnerability allows an unauthenticated attacker to bypass a deserialization blacklist of the WebLogic Server and launch attacks by using a crafted T3 request. This way, the attacker can execute deserialization code on the WebLogic Server.
 
-云防火墙已监测到利用此漏洞发起的攻击，并且已支持拦截此类攻击。
+Cloud Firewall has detected and blocked attacks that are initiated by using this vulnerability.
 
-漏洞影响范围：
+Scope of impact:
 
 -   Oracle Coherence 3.7.1.17
 -   Oracle Coherence 12.1.3.0.0
 -   Oracle Coherence 12.2.1.3.0
 -   Oracle Coherence 12.2.1.4.0
 
-漏洞危险等级：高危
+Risk level: high
 
-规则防护：云防火墙基础规则已支持防护
+Rule-based defense: Cloud Firewall has been able to defend against this vulnerability.
 
-规则类型：命令执行
+Rule type: command execution
 
-安全建议：
+Security suggestions:
 
--   进行版本升级或禁用WebLogic T3协议。
--   使用云防火墙的入侵防御功能进行安全防护。
+-   Upgrade the version of Oracle WebLogic Server or disable the WebLogic T3 protocol.
+-   Enable the Intrusion Prevention feature of Cloud Firewall.
 
