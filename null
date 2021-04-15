@@ -1,10 +1,16 @@
-# \[Threat Intelligence\] Attacks on Jenkins
+# 【虚拟补丁】Nexus Repository Manager 3远程代码执行（CVE-2019-7238）
 
-On February 28, 2019, Alibaba Cloud Security discovered that many methods of exploiting Jenkins vulnerabilities were revealed online, and most of the vulnerabilities were high-risk RCE vulnerabilities. Attackers use various types of worms to increase the number of Jenkins RCE vulnerabilities.
+Nexus Repository Manager（简称NXRM）是由Sonatype公司研发的一款通用的软件包仓库管理服务，可以作为Maven的私服。
 
-The following vulnerabilities have been exploited frequently: CVE-2019-1003000, CVE-2019-1003001, CVE-2015-5323, CVE-2015-1814, CVE-2016-0792, and CVE-2017-1000353. These vulnerabilities exist in multiple Jenkins versions and plug-ins.
+部分版本的Nexus Repository Manager存在安全漏洞，受漏洞影响的软件版本存在控制措施缺失，未授权的用户可利用该缺陷构造特定请求在服务器上执行Java代码，从而达到远程代码执行的目的，影响系统安全。
 
-Risk level: High
+漏洞描述请参见：[**CVE-2019-7238 Nexus Repository Manager 3 \(Missing Access Controls and Remote Code Execution\) - February 5th 2019**](https://support.sonatype.com/hc/en-us/articles/360017310793-CVE-2019-7238-Nexus-Repository-Manager-3-Missing-Access-Controls-and-Remote-Code-Execution-February-5th-2019)
 
-Policy-based protection: Cloud Firewall provides virtual patches to fix this vulnerability. We recommend that you enable the Virtual Patches in [Intrusion Prevention](/intl.en-US/Intrusion prevention/Intrusion prevention.md) to defend against this vulnerability.
+漏洞影响范围：Nexus Repository Manager OSS/Pro 3.6.2~3.14.0版本
+
+漏洞危险等级：高危
+
+规则防护：云防火墙虚拟补丁已支持防护
+
+规则类型：命令执行
 
