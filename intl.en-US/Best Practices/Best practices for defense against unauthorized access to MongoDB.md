@@ -1,4 +1,4 @@
-# Best practices for defense against unauthorized access to MongoDB {#concept_cpt_f2t_2hb .task}
+# Best practices for defense against unauthorized access to MongoDB
 
 Unauthorized access to MongoDB could lead to data disclosure or deletion extortion.
 
@@ -6,51 +6,52 @@ To ensure the security of your business and applications, Cloud Firewall provide
 
 By default, a MongoDB database requires no authentication if you do not set any parameters when activating the MongoDB service. Without any passwords, users who have logged on to the service can use the default port to remotely access the database and perform any operations \(including high-risk operations such as add, delete, edit, and query\) on the database.
 
-## Solution {#section_woe_65x_p4s .section}
+## Solution
 
-1.  **Configure an access control policy in Cloud Firewall.** 
-    1.  **Qualified MongoDB service only provides services to intranet servers** 
+1.  **Configure an access control policy in Cloud Firewall.**
+
+    1.  **Qualified MongoDB service only provides services to intranet servers**
 
         Log on to the Cloud Firewall console. Choose **Network Traffic Analysis** \> **Internet Access Activities** \> **Open Applications**. On the Open Applications tab, check the public IP address of the MongoDB service. If the MongoDB service provides services only for intranet servers, we recommend that you disable the MongoDB service from being open to the Internet.
 
-        ![MongoDB](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156698372641436_en-US.png)
+        ![MongoDB](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/149039/156698372741436_en-US.png)
 
         Bind the MongoDB service to a specified IP address so that the MongoDB service provides services only for intranet servers. \(In this example, the MongoDB instance listens only on the requests sent from intranet IP address 1.2.3.4.\)
 
-        ``` {#codeblock_rnz_e2y_r78}
+        ```
         mongod --bind_ip 1.2.3.4
         ```
 
-    2.  **Configure an access control policy for MongoDB in Cloud Firewall to allow only trusted IP addresses to access the MongoDB service.** 
+    2.  **Configure an access control policy for MongoDB in Cloud Firewall to allow only trusted IP addresses to access the MongoDB service.**
 
-        Log on to the Cloud Firewall console. Choose **Security Policy** \> **Access Control** \> **Internet Border Firewall** \> **Internet-to-Intranet**In the dialog box that appears, configure an access control policy to allow only the MongoDB servers to access the MongoDB service.
+        Log on to the Cloud Firewall console. Choose **Security Policy** \> **Access Control** \> **Internet Border Firewall** \> **Internet-to-Intranet**. In the dialog box that appears, configure an access control policy to allow only the MongoDB servers to access the MongoDB service.
 
         1.  Add all trusted IP addresses that are allowed to access the MongoDB service to an IP address book.
 
-            ![IP address book](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156698372641444_en-US.png)
+            ![IP address book](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/149039/156698372741444_en-US.png)
 
         2.  Allow trusted IP addresses to access the MongoDB service.
 
-            ![Allow trusted IP addresses to access the MongoDB service](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156698372641446_en-US.png)
+            ![Allow trusted IP addresses to access the MongoDB service](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/149039/156698372741446_en-US.png)
 
             -   **Source**: The address box in which you have configured all trusted IP addresses that are allowed to access the MongoDB service.
             -   **Destination**: The IP address of the MongoDB service.
             -   **Protocol Type**: Select TCP, which indicates that this policy applies to access traffic from the Internet.
             -   **Port**: Set this parameter to 0/0, which indicates that this policy applies to all ports corresponding to trusted IP addresses.
-    3.  **Disallow non-trusted IP addresses to access the MongoDB service.** 
+    3.  **Disallow non-trusted IP addresses to access the MongoDB service.**
 
-        ![Disallow non-trusted IP addresses to access the MongoDB service](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149039/156698372641455_en-US.png)
+        ![Disallow non-trusted IP addresses to access the MongoDB service](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/149039/156698372741455_en-US.png)
 
         -   **Source**: Set this parameter to Any, which indicates that this policy applies to all non-trusted access IP addresses.
         -   **Destination**: The public IP address of the MongoDB service.
         -   **Protocol Type**: Select TCP, which indicates that this policy applies to access traffic from the Internet.
         -   **Port**: Set this parameter to 0/0, which indicates that this policy applies to all ports corresponding to non-trusted IP addresses.
-2.  **Enable role-based logon authentication.** 
+2.  **Enable role-based logon authentication.**
 
     1.  Create a user in the admin database.
     2.  Log on to the database with authentication disabled.
 
-        ``` {#codeblock_huv_nvd_uea}
+        ```
         [mongodbrac3 bin]$ ./mongo 127.0.0.1:27028 // The default port is changed.
         MongoDB shell version: 2.0.1
         connecting to: 127.0.0.1:27028/test
@@ -58,7 +59,7 @@ By default, a MongoDB database requires no authentication if you do not set any 
 
     3.  Switch to the admin database.
 
-        ``` {#codeblock_cfy_gtx_w49}
+        ```
         > use admin
         switched to db admin
         ```
@@ -67,7 +68,7 @@ By default, a MongoDB database requires no authentication if you do not set any 
 
         **Note:** In MongoDB V3 and later, the addUser method is no longer used. You can run the db.createUser command instead to create users.
 
-        ``` {#codeblock_tzs_kna_yv7}
+        ```
         > db.addUser("supper", "supWDxsf67%H") or
         { "n" : 0, "connectionId" : 4, "err" : null, "ok" : 1 }
         > db.createUser({user:"****",pwd:"***********",roles:["root"]})
@@ -86,7 +87,7 @@ By default, a MongoDB database requires no authentication if you do not set any 
 
     5.  Verify that the user has been created.
 
-        ``` {#codeblock_dd6_07q_g17}
+        ```
         # Terminate the process and restart the MongoDB service.
         > db.auth("user","password")
         > exit
@@ -94,7 +95,7 @@ By default, a MongoDB database requires no authentication if you do not set any 
         ./mongod --dbpath=/path/mongodb --bind_ip=10.0.0.1 --port=27028 --fork=true logpath=/path/mongod.log &
         ```
 
-    **Note:** 
+    **Note:**
 
     -   The admin.system.users collection has the super privilege. It stores the information of users who have higher user privileges than users in other databases. That is, users created in the admin database can perform operations on data in other databases in MongoDB.
     -   In the MongoDB system, a database is created by a super user. A database may contain multiple users, but a single user may only exist in one database at a time. Users in different databases may share the same name, however.
@@ -103,7 +104,7 @@ By default, a MongoDB database requires no authentication if you do not set any 
     -   Users created in the admin database have the super privilege, and can perform operations on any data object in any database in the MongoDB system.
     -   You can use the db.auth \(\) method to validate users in the database. If the validation is successful, a value of 1 is returned. Otherwise, a value of 0 is returned. The db.auth\(\) method can only validate the user information in the database to which the user belongs, and cannot validate user information in other databases.
 
-## Check for intrusion risks {#section_ol7_989_huv .section}
+## Check for intrusion risks
 
 If you are a MongoDB administrator, you can take the following measures to check for further intrusion:
 
