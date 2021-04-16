@@ -13,7 +13,7 @@ After you enable the Cloud Firewall log analysis function, the log analysis func
 
 2.  Click the **Status** switch on the right side to enable the log collector function.
 
-    ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154097/156825174843199_en-US.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/154097/156825174843199_en-US.png)
 
     |Default configuration item|Description|
     |:-------------------------|:----------|
@@ -45,5 +45,5 @@ After you enable the Cloud Firewall log analysis function, the log analysis func
         **Note:** When your Log Service is overdue, the Cloud Firewall log collector function is suspended until you pay the bills.
 
     -   Do not delete or modify the configurations of the default project, Logstore, index, and dashboards created by Log Service. Log Service will update the Cloud Firewall log analysis function. The index of the dedicated Logstore and the default report are also updated.
-    -   If you want to use the Cloud Firewall log analysis function with a RAM user account, you must grant the required Log Service permissions to the RAM user account. For more information, see[Ram user log analysis authorization](/intl.en-US/Logs/Log analysis/Authorize RAM user accounts with Log Analysis function.md).
+    -   If you want to use the Cloud Firewall log analysis function with a RAM user account, you must grant the required Log Service permissions to the RAM user account. For more information, see [Ram user log analysis authorization](/intl.en-US/Logs/Log analysis/Authorize RAM user accounts with Log Analysis function.md).
 
