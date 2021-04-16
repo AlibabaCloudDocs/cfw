@@ -1,70 +1,70 @@
-# Log analysis {#concept_udn_nhn_hhb .task}
+# Log analysis
 
 Could Firewall console supports the Log Analysis function.
 
-## Overview {#section_8kg_c9q_lyz .section}
+## Overview
 
 After you enable the Log Analysis function in Cloud Firewall console, you can perform real-time log search and analysis, view or edit dashboards, and set up monitoring and alerts on the Log Analysis page.
 
-## Procedure {#section_zdf_5c2_j2b .section}
+## Procedure
 
-1.  Log on to the [Cloud Firewall console](https://partners-intl.console.aliyun.com/#/waf).
+1.  Log on to the [Cloud Firewall console](https://yundunnext.console.aliyun.com/?p=cfwnext).
 2.  In the left-side navigation pane, select **Logs** \> **Log Analysis**.
 3.  Click the **Status** switch on the right side to enable the Log Analysis function.
 
-    ![状态](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765338143216_en-US.png)
+    ![状态](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/154148/156825180043216_en-US.png)
 
 4.  Enter a search and analysis statement, select a time range, and click **Search & Analysis**.
 
-    ![查询分析](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765338143218_en-US.png)
+    ![查询分析](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/154148/156825180043218_en-US.png)
 
 
-## More actions {#section_xgc_bsn_qfb .section}
+## More actions
 
 On the **Log Analysis** page, you can perform the following actions to handle the returned search results:
 
--   **Customize search and analysis** 
+-   **Customize search and analysis**
 
-    The log analysis function provides the search and analysis statements for you to search and analyze log entries in different scenarios. For more information, see [Customize search and analysis](#).
+    The log analysis function provides the search and analysis statements for you to search and analyze log entries in different scenarios. For more information, see [Customize search and analysis](#section_ncn_mvt_j2b).
 
--   **View the distribution of log entries by time** 
+-   **View the distribution of log entries by time**
 
     The histogram under the search box shows the distribution of log entries that are filtered by time and search statement. The horizontal axis indicates the time period, and the vertical axis indicates the number of log entries. The total number of the log entries returned is also displayed.
 
     **Note:** You can drag the mouse pointer in the histogram to narrow down the time period. The `time picker` automatically updates the time period, and the search results are also updated accordingly.
 
-    ![时间分布](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765338143220_en-US.png)
+    ![时间分布](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/154148/156825180043220_en-US.png)
 
--   **View raw logs** 
+-   **View raw logs**
 
     On the **Raw Logs** tab page, each log entry is detailed on an individual page, which includes the time when the log is generated, the content, and the columns in the log entry. You can click **Display Content Column** to set the display mode for the long strings in the content column. The display modes include **Full Line** and **New Line**. You can click **Column Settings** to customize the columns to be displayed, or click the Download icon to download the search results.
 
-    ![原始日志](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765338143221_en-US.png)
+    ![原始日志](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/154148/156825180043221_en-US.png)
 
     Additionally, you can click a value or a property name in the content column to add a search condition to the search box. For example, if you click `log_service` in the `__source__: log_service` field, the following search statement is added to the search box:
 
-    ``` {#codeblock_pfd_jvk_4jh}
+    ```
     "Former Search Statement" and source: log_service
     ```
 
--   **View analysis graphs** 
+-   **View analysis graphs**
 
-    The log analysis function enables you to show the analysis results in graphs. You can select the graph type as needed on the Graph tab page. For more information, see [Analysis graphs](reseller.en-US/Index and query/Query and visualization/Analysis graph/Graph description.md#section_pn5_ymv_tdb).
+    The log analysis function enables you to show the analysis results in graphs. You can select the graph type as needed on the Graph tab page. For more information, see [Analysis graphs](/intl.en-US/Query and visualization/Analysis graph/Overview.md).
 
-    ![统计图表](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765338143222_en-US.png)
+    ![统计图表](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/154148/156825180143222_en-US.png)
 
--   **Quick analysis** 
+-   **Quick analysis**
 
-    The quick analysis function on the Raw Logs tab provides you with a quick interactive search function. You can view the distribution of a property within a specific time period. This function can reduce the time used for indexing key data. For more information, see [Quick analysis](reseller.en-US/Index and query/Query/Quick analysis.md#section_lly_xvj_5cb).
+    The quick analysis function on the Raw Logs tab provides you with a quick interactive search function. You can view the distribution of a property within a specific time period. This function can reduce the time used for indexing key data. For more information, see [Quick analysis](/intl.en-US/Index and query/Query/Quick analysis.md).
 
-    ![快速分析](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765338143223_en-US.png)
+    ![快速分析](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/154148/156825180143223_en-US.png)
 
 
-## Customize search and analysis {#section_ncn_mvt_j2b .section}
+## Customize search and analysis
 
 The log analysis function provides the search and analysis statements. Separate the search and analysis statements with a vertical bar \(`|`\):
 
-``` {#codeblock_r6o_bia_79e}
+```
 $Search | $Analytics
 ```
 
@@ -82,107 +82,107 @@ $Search | $Analytics
 
 The search statements of Log Service support **full text search** and **field search**. You can set the New Line mode, syntax highlighting, and other functions in the search box.
 
--   **Full text search** 
+-   **Full text search**
 
     You can enter keywords without specifying fields to perform the search. You can enter a keyword enclosed in quotation marks \("\) to query log entries that contain the entire keyword. You can also use spaces or `and` to separate multiple keywords.
 
-    **Examples** 
+    **Examples**
 
-    -   **Search by keyword** 
+    -   **Search by keyword**
 
         The following statements can be used to search for log entries that contain `www.aliyun.com` and `error`.
 
         `www.aliyun.com error` or `www.aliyun.com and error`.
 
-    -   **Search by condition** 
+    -   **Search by condition**
 
         The following statement can be used to search for log entries that contain `www.aliyun.com`, `error`, or `404`.
 
-        ``` {#codeblock_rnt_kwh_z2o}
+        ```
         www.aliyun.com and (error or 404)
         ```
 
-    -   **Search by prefix** 
+    -   **Search by prefix**
 
         The following statement can be used to search for log entries that contain `www.aliyun.com` and start with `failed_`.
 
-        ``` {#codeblock_xep_7io_x0g}
+        ```
         www.aliyun.com and failed_*
         ```
 
         **Note:** The wildcard character \(`*`\) can only be added as a suffix. The wildcard character \(`*`\) cannot be added as a prefix. For example, the statement cannot be `*_error`.
 
--   **Search by field** 
+-   **Search by field**
 
     To narrow down the search results, you can search by field.
 
     You can specify numeric fields. The format is `field name: value` or `field name>=value`. Moreover, you can use both the `and` and `or` operators in full text search.
 
-    **Note:** The Cloud Firewall log analysis function supports searching by field. For more information about the definition, type, format, and other information of each field, see [Cloud Firewall log field descriptions](reseller.en-US/User Guide/Real-time log query and analysis/Fields in the log entry.md#).
+    **Note:** The Cloud Firewall log analysis function supports searching by field. For more information about the definition, type, format, and other information of each field, see [Cloud Firewall log field descriptions](/intl.en-US/Log Management/Log service/Log fields.md).
 
-    **Examples** 
+    **Examples**
 
-    -   **Search by specifying multiple fields** 
+    -   **Search by specifying multiple fields**
 
         If you want to search for log entries about client `1.2.3.4` accessing IP address `1.1.1.1`, set the following search conditions:
 
-        ``` {#codeblock_mt0_r3o_q2p}
+        ```
         src_ip: 1.2.3.4 and dst_ip: 1.1.1.1
         ```
 
         **Note:** In this example, the `src_ip` field and `dst_ip` field are log fields created by Cloud Firewall.
 
-    -   **Search by specifying numeric fields** 
+    -   **Search by specifying numeric fields**
 
         The following statement can be used to search log entries where the response time exceeds five seconds.
 
-        ``` {#codeblock_5s4_an0_85b}
+        ```
         request_time_msec > 5000
         ```
 
         Searching by time period is also supported. For example, you can search for log entries where the response time exceeds five seconds and is no greater than ten seconds.
 
-        ``` {#codeblock_768_hr1_5ry}
+        ```
         request_time_msec in (5000 10000]
         ```
 
         **Note:** You can get the same result by using the following search statement:
 
-        ``` {#codeblock_emt_trk_jtt}
+        ```
         request_time_msec > 5000 and request_time_msec <= 10000
         ```
 
-    -   **Field search** 
+    -   **Field search**
 
         You can search whether a field exists as follows:
 
         -   Search for log entries that include the `total_pps` field.
 
-            ``` {#codeblock_3xf_c0j_zxy}
+            ```
             total_pps :*
             ```
 
-        -   Search for log entries that include the `ua_browser`field .
+        -   Search for log entries that include the `ua_browser` field .
 
-            ``` {#codeblock_sz6_vlw_gon}
+            ```
             not total_pps :*
             ```
 
 
-For more information about the search statements supported by Log Service, see [Indexes and search](reseller.en-US/Index and query/Overview.md).
+For more information about the search statements supported by Log Service, see [Indexes and search](/intl.en-US/Index and query/Overview.md).
 
 **Analysis statements**
 
 You can use the SQL/92 statements for log analysis and statistics.
 
-For more information about the statements and functions supported by Log Service, see [Real-time analysis](../../../../reseller.en-US/Index and query/Syntax description.md#).
+For more information about the statements and functions supported by Log Service, see [Real-time analysis](/intl.en-US/Index and query/Real-time log analysis.md).
 
-**Note:** 
+**Note:**
 
 -   The `from table name` part \(the `from log` part\) in the standard SQL statements can be omitted.
--   The first 100 log entries are returned by default. You can modify the number of the returned log entries by using the [LIMIT statement](../../../../reseller.en-US/Index and query/Analysis grammar/LIMIT syntax.md#).
+-   The first 100 log entries are returned by default. You can modify the number of the returned log entries by using the [LIMIT statement](/intl.en-US/Index and query/Analysis grammar/LIMIT syntax.md).
 
-## Examples of search and analysis {#section_syk_r14_qfb .section}
+## Examples of search and analysis
 
 **Time-based log search and analysis**
 
@@ -192,12 +192,12 @@ Meanwhile, each log has a built-in field `__time__`, This field also indicates t
 
 -   **Select and display the time**
 -   **Calculate the time**
--   **Statistical analysis by group based on a specific time** 
+-   **Statistical analysis by group based on a specific time**
 
     **Note:** You can also display the results with a line graph.
 
-    ![折线](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/154148/156765338143231_en-US.png)
+    ![折线](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3317436851/p43231.png)
 
 
-The `date_parse` and `date_format` functions are used to convert the time format. For more information about the functions that can be used to parse the time field, see [Date and time functions](../../../../reseller.en-US/Index and query/Analysis grammar/Date and time functions.md#).
+The `date_parse` and `date_format` functions are used to convert the time format. For more information about the functions that can be used to parse the time field, see [Date and time functions](/intl.en-US/Index and query/Analysis grammar/Date and time functions.md).
 
