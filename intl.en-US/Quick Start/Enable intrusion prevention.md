@@ -8,13 +8,11 @@ Cloud Firewall provides an intrusion prevention system \(IPS\) to defend against
 
 1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext).
 
-2.  In the left-side navigation pane, choose **Security Policies** \> **Intrusion Prevention**.
-
-3.  In the **Threat Engine Settings** section, make the following configurations:
+2.  In the **Threat Engine Settings** section, make the following configurations:
 
     -   Select **Traffic Control Mode** to block malicious traffic.
 
-        **Note:** By default, **Monitoring Mode** is selected. **TAG**In this mode, Cloud Firewall only monitors malicious traffic and reports alarms, but does not block the traffic.
+        **Note:** By default, **Monitoring Mode** is selected. In this mode, Cloud Firewall only monitors malicious traffic and reports alarms, but does not block the traffic.
 
     -   Enable **Threat Intelligence** to receive real-time threat intelligence from the entire network.
     -   In the **Basic Protection** section, click **Customize** to configure basic protection policies against different attacks such as password cracking and unauthorized command execution.
