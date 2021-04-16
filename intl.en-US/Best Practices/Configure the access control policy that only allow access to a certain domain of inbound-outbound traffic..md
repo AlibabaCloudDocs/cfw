@@ -1,14 +1,14 @@
-# Configure the access control policy that only allow access to a certain domain of inbound-outbound traffic. {#concept_opl_cyc_kgb .concept}
+# Configure the access control policy that only allow access to a certain domain of inbound-outbound traffic.
 
 The outbound-inbound traffic and inbound-outbound traffic of Alibaba cloud firewall refer to Internet-oriented traffic, known as north-south traffic. You can customize the access control policy for north-south traffic via Alibaba cloud firewall access control feature, to precisely control the access traffic and to protect your network security.
 
-## Background information {#section_ijt_qvb_kgb .section}
+## Background information
 
 For example, an ECS \(host\) IP address is 10.1.1.1, and the EIP is 200.2.2.2, you shall set inbound-outbound traffic so that the host can only access the domain of www.abc.com.
 
-**Note:** Elastic IP Address \(EIP\) is a public IP address resource that can be independently purchased and owned. For more information of EIP, refer to [What are Elastic IP Addresses](../../../../reseller.en-US/Product Introduction/What are Elastic IP Addresses.md#).
+**Note:** Elastic IP Address \(EIP\) is a public IP address resource that can be independently purchased and owned. For more information of EIP, refer to [What is an EIP?](/intl.en-US/.md).
 
-## Steps {#section_f4z_qvb_kgb .section}
+## Steps
 
 1.  On Alibaba cloud firewall console, position to **Inbound-outbound traffic** tab in **Access control** tab.
 2.  Configure inbound-outbound traffic so that the host can only access www.abc.com.
@@ -22,7 +22,7 @@ For example, an ECS \(host\) IP address is 10.1.1.1, and the EIP is 200.2.2.2, y
     -   For **Action**, select **Release**.
     -   Enter **description information**. We recommend that you enter a description of the policy and its purpose.
 3.  Configure inbound-outbound traffic to release DNS resolution.
-    -   In the new inbound-outbound policy, for **Origin type**, select **IP**and for **Access origin**, enter `200.2.2.2/32`.
+    -   In the new inbound-outbound policy, for **Origin type**, select **IP** and for **Access origin**, enter `200.2.2.2/32`.
     -   For **Destination type**, select **IP**, and for **Destination**, enter 0.0.0.0/0.
     -   For **Protocol type**, select **UDP**.
     -   For **Destination port**, enter`53/53`.
@@ -39,12 +39,12 @@ For example, an ECS \(host\) IP address is 10.1.1.1, and the EIP is 200.2.2.2, y
     -   Enter **description information**. We recommend that you enter a description of the policy and its purpose.
 5.  After the policy configuration is complete, confirm that priorities of the first **release www.abc.com domain** policy and the second **release DNS** policy are higher than the third **Reject all traffic** policy.
 
-    **Note:** To adjust priority of the policy, refer to [Set or modify the priority of an access control policy](../../../../reseller.en-US/Security Policy/Set or modify the priority of an access control policy.md#).
+    **Note:** To adjust priority of the policy, refer to [Change the priority of an access control policy](/intl.en-US/Access control/Change the priority of an access control policy.md).
 
 
-## What to do next {#section_qlc_41c_kgb .section}
+## What to do next
 
 Once the access control policy configuration is complete, you can use the number of hits in **Access control** page to observe the condition of hits. In **Traffic log** page, you can view hits done by the policy.
 
-![traffic log](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/93164/156868598760753_en-US.png)
+![traffic log](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/93164/156868598860753_en-US.png)
 
