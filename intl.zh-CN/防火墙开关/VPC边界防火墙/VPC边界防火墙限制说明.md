@@ -4,8 +4,10 @@
 
 |限制项|描述|处理建议|
 |---|--|----|
-|VPC数量限制|在云企业网（同地域下）中开启VPC边界防火墙，默认支持15个VPC， 最多可扩展到20个VPC。|无。|
-|每个地域最多支持19个VPC实例和1个云防火墙VPC边界防火墙（即VPC边界防火墙会占用1个配额）。开启VPC边界防火墙后，每个地域会自动新增一个VPC（您可以前往[专有网络管理控制台](https://vpcnext.console.aliyun.com/vpc)专有网络页面查看实例名称为Cloud\_Firewall\_VPC的新增VPC）。VPC配额不足的情况下，您将无法开启VPC边界防火墙。|如果配额已满，您需要前往[专有网络管理控制台](https://vpcnext.console.aliyun.com/vpc)配额管理页面修改VPC配额的上限。如果VPC配额上限已无法修改，请提交[工单](https://workorder-intl.console.aliyun.com/console.htm#/ticket/createIndex)或咨询钉钉群售后人员。|
+|VPC数量限制|在云企业网中开启VPC边界防火墙时，云企业网TR（转发路由器）基础版支持添加的VPC（必须与云企业网同一个地域）数量为15个， 云企业TR网企业版支持添加的VPC（必须与云企业网同一个地域）数量为100个。**说明：** TR基础版和企业版支持添加的VPC中，包含了开启VPC防火墙时自动新增的VPC（即您在[专有网络管理控制台](https://vpcnext.console.aliyun.com/vpc)专有网络页面，查看到的实例名称为Cloud\_Firewall\_VPC的新增VPC）。
+
+|无。|
+|每个地域最多支持19个VPC实例和1个云防火墙VPC边界防火墙（即VPC边界防火墙会占用1个配额）。开启VPC边界防火墙后，每个地域会自动新增一个VPC（即您在[专有网络管理控制台](https://vpcnext.console.aliyun.com/vpc)专有网络页面，查看到的实例名称为Cloud\_Firewall\_VPC的新增VPC）。VPC配额不足的情况下，您将无法开启VPC边界防火墙。|如果配额已满，您需要前往[专有网络管理控制台](https://vpcnext.console.aliyun.com/vpc)配额管理页面修改VPC配额的上限。如果VPC配额上限已无法修改，请提交[工单](https://workorder-intl.console.aliyun.com/console.htm#/ticket/createIndex)或咨询钉钉群售后人员。|
 |已开启VPC边界防火墙的VPC数量和地域数量的总和小于等于32个（未开启VPC边界防火墙不影响）。|无|
 |VPC自定义路由条目限制|开启VPC防火墙会为用户添加自定义路由，由于每个用户VPC路由表中自定义路由的数量存在限制，VPC自定义路由数量为最大值时，您无法再开启VPC边界防火墙。|增加VPC的配额。 您可以前往[专有网络管理控制台](https://vpcnext.console.aliyun.com/vpc)配额管理页面，修改当前账号下VPC路由表的自定义路由配额。
 
@@ -13,6 +15,10 @@
 |云企业网（CEN）相关|云企业网下存在跨账号开通的VPC时，如果跨账号开通的VPC未获得云防火墙的授权，将无法为该云企业网创建VPC边界防火墙。|您需要用对应账号登录云防火墙完成授权后，再开启VPC边界防火墙。有关授权的详细操作请参见[为云企业网创建VPC边界防火墙](/intl.zh-CN/防火墙开关/VPC边界防火墙/创建VPC边界防火墙.md)。|
 |云企业网中的所有地域都需要是VPC防火墙支持的地域，否则会导致无法开启该云企业网的VPC边界防火墙。|无。|
 |VPC防火墙用户在云企业网中不可以发布32位网段的路由。如果有32位网段的路由，开启VPC边界防火墙后，会导致对此网段的网络访问中断。|建议您先将网段掩码长度修改为小于等于30后，再开启VPC边界防火墙。|
+|云企业网TR企业版存在如下限制：-   如果已创建的VPC边界防火墙使用的是**自动模式**， 创建VPC防火墙后，需要联系售后服务人员将自动新增的VPC（名称是Cloud\_Firewall\_VPC）加入白名单之后，才能开启VPC边界防火墙。
+-   如果已创建的VPC边界防火墙使用的是**手动模式**，需要联系售后服务将该VPC加入白名单之后，才能开启VPC边界防火墙。
+
+|将VPC加入白名单请提交[工单](https://workorder-intl.console.aliyun.com/console.htm#/ticket/createIndex)。或联系产品钉钉群售后人员。|
 |非VPC间流量|以下非VPC间互访流量不经过云防火墙，因此无法受到云防火墙的防护：-   VBR互访流量
 -   CCN互访流量
 -   VBR与CCN
