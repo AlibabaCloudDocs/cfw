@@ -38,11 +38,13 @@
 
  **说明：** 支持的应用类型取值与协议类型（Proto）取值存在依赖关系。Proto为TCP协议时，ApplicationName支持选择以上所有应用类型中的任意一种；Proto为UDP、ICMP或ANY协议类型时，ApplicationName仅支持选择ANY。 |
 |Description|String|是|放行所有TCP流量。|访问控制策略的描述信息。 |
-|Destination|String|是|1.2.3.4/24|访问控制策略中的目的地址。取值：
+|Destination|String|是|1.2.X.0/24|访问控制策略中的目的地址段。
+
+ 取值：
 
  -   当DestinationType为net时，Destination为目的CIDR。
 
-例如：1.2.3.4/24
+例如：1.2.X.0/24
 
 -   当DestinationType为group时，Destination为目的地址簿名称。
 
@@ -74,11 +76,11 @@
 -   **TCP**
 -   **UDP**
 -   **ICMP** |
-|Source|String|是|1.2.3.0/24|访问控制策略中的源地址。取值：
+|Source|String|是|1.1.X.0/24|访问控制策略中的源地址。取值：
 
  -   当SourceType为net时，Source为源CIDR地址。
 
-例如：1.2.3.0/24
+例如：1.1.X.0/24
 
 -   当SourceType为group时，Source为源地址簿名称。
 
@@ -92,7 +94,7 @@
  -   **net**：源网段（CIDR）
 -   **group**：源地址簿
 -   **location**：源区域 |
-|SourceIp|String|否|1.2.3.5|访问者源IP地址。 |
+|SourceIp|String|否|1.1.X.X|访问者源IP地址。 |
 |Lang|String|否|zh|请求和接收消息的语言类型。取值：
 
  -   **zh**：中文
@@ -121,6 +123,12 @@
 
  -   **true**：启用访问控制策略
 -   **false**：不启用访问控制策略 |
+|IpVersion|String|否|6|支持的IP地址版本。
+
+ 取值：
+
+ -   **4**：代表IPv4地址
+-   **6**：代表IPv6地址 |
 
 地区编号如下：
 
@@ -157,8 +165,8 @@
 -   宁夏回族自治区：NX64
 -   新疆维吾尔自治区：XJ65
 -   台湾省：TW
--   香港特别行政区：HK
--   澳门特别行政区：MO
+-   中国香港特别行政区：HK
+-   中国澳门特别行政区：MO
 -   海外：ZB
 -   亚洲（中国内地除外）：ZC
 -   欧洲：EU
@@ -184,19 +192,19 @@ http(s)://[Endpoint]/?Action=AddControlPolicy
 &AclAction=accept
 &ApplicationName=ANY
 &Description=demo_rule_1
-&Destination=1.2.3.4/24
+&Destination=1.2.X.0/24
 &DestinationType=net
 &Direction=in
 &NewOrder=-1
 &Proto=TCP
-&Source=1.2.3.0/24
+&Source=1.1.X.X/24
 &SourceType=net
 &<公共请求参数>
 ```
 
 正常返回示例
 
-`XML` 格式
+`XML`格式
 
 ```
 <AddControlPolicyResponse>
@@ -205,7 +213,7 @@ http(s)://[Endpoint]/?Action=AddControlPolicy
 </AddControlPolicyResponse>
 ```
 
-`JSON` 格式
+`JSON`格式
 
 ```
 {
