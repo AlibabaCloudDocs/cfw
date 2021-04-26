@@ -10,10 +10,13 @@ After you enable the Clouf Firewall, the following issues may occur:
 
 ## Troubleshoot the Internet firewall
 
--   Verify the Internet firewall is enabled for your asset. If it is disabled, skip this step.![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9681329951/p38808.png)
--   Check the access records on the **Logs** \> **Access Log** tab page.![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9681329951/p38809.png)
+-   Verify the Internet firewall is enabled for your asset. If it is disabled, skip this step.
+
+    ![firewall disabled](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2977149161/p268298.png)
+
+-   Check the access records on the **Log Audit** tab page.
     -   If no relevant record is found, this means that the request is dropped before it reaches the firewall.
-    -   If you find the record of the request and the action is **Discard**, this means that the request is blocked by the internal firewall. Find the relevant event on the **Logs** \> **Event Log** tab page, and then confirm the module that performs the **Discard** action according to the information in the **Criterion** column.![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9681329951/p38810.png)
+    -   If you find the record of the request and the action is **Discard**, this means that the request is blocked by the internal firewall. Find the relevant event on the **Logs** \> **Event Log** tab page, and then confirm the module that performs the **Discard** action according to the information in the **Criterion** column.
         -   If the **Criterion** shows **Access Control**, then you must check the configuration of the relevant access control policy.
         -   If the column shows **Basic Protection**, **Virtual Patches**, or **Threat Intelligence**, then you must go to the **Security Policies** \> **Intrusion Prevention** tab page to disable the relevant module.
     -   If you find the record of the request and the action is **Allow** or **Monitor**, this means that the request is not blocked by the Internet firewall. You must troubleshoot the internal firewall and security groups.
