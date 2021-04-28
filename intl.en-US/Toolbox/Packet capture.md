@@ -4,7 +4,7 @@ This topic describes how to create a packet capture task. You can enable the pac
 
 ## Limits
 
-Enterprise Edition and Ultimate Edition of Cloud Firewall support the packet capture feature. The free trial edition and Premium Edition do not support this feature. Each Alibaba Cloud account has a quota of 200 packet captures per day.
+Enterprise Edition and Ultimate Edition of Cloud Firewall support the packet capture feature. The free trial edition and Premium Edition do not support this feature.
 
 ## Procedure
 
@@ -14,15 +14,15 @@ Enterprise Edition and Ultimate Edition of Cloud Firewall support the packet cap
 
 3.  On the Toolbox page, click **Capture Now** in the Packet Capture section.
 
-    ![Packet Capture](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7179531061/p142816.png)
+    ![Packet Capture](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7179531061/p142816.png)
 
 4.  On the Packet Capture page, click **Create Packet Capture Task**.
 
-    ![Packet capture](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7179531061/p142822.png)
+    ![Packet capture](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7179531061/p142822.png)
 
 5.  In the Create Packet Capture Task dialog box, configure the required parameters and click **OK**.
 
-    ![Create a packet capture task](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3893068951/p63542.png)
+    ![Create a packet capture task](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3893068951/p63542.png)
 
     |Parameter|Description|
     |---------|-----------|
