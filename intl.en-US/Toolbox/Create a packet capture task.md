@@ -21,7 +21,7 @@ Enterprise Edition and Ultimate Edition of Cloud Firewall support the packet cap
 
 5.  On the Packet Capture page, click **Create Packet Capture Task**.
 
-    ![Create a packet capture task](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3728479161/p269088.png)
+    ![Create a packet capture task](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6011460261/p269088.png)
 
 6.  In the Create Packet Capture Task dialog box, configure the parameters and click **OK**.
 
