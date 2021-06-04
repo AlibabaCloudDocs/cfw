@@ -1,30 +1,31 @@
 # Configure access control policies
 
-Cloud Firewall allows you to configure policies to specify the ports exposed to the Internet and control access between your ECS instances and the Internet. You can configure access control policies for inbound, outbound, and internal traffic.
+Cloud Firewall allows you to configure access control policies for inbound, outbound, and internal traffic. This can reduce the risk of intrusion into your assets.
 
 ## Procedure
 
 1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext).
-2.  In the left-side navigation pane, choose **Security Policies** \> **Access Control**.
-3.  On the Internet Firewall tab, click **Create Policy**.
-4.  In the Create Outbound Policy dialog box that appears, [configure parameters](/intl.en-US/Access control/Access control for outbound and inbound traffic on the Internet firewall.md) to add a policy.
+2.  In the left-side navigation pane, click **Access Control**.
+3.  On the **Access Control** page, configure access control policies for the Internet firewall, an internal firewall, or a VPC firewall.
 
-    -   Source Type: Select IP or Address Book.
-    -   Source: Specify the traffic source. If the source type is IP, enter an IP address or CIDR block in this field.
-    -   Destination Type: Specify the type of the traffic destination.
-    -   Destination: Specify the traffic destination.
-    -   Protocol: Select TCP, UDP, ICMP, or ANY.
-    -   Port Type: Select Ports or Address Book.
-    -   Ports: Specify the ports to which you want to apply this policy.
-    -   Application: Select an application to which this policy applies.
-    -   Policy Action: Select **Allow**, **Monitor**, or **Deny**.
-    -   Description: Enter a description that helps identify this policy.
-    -   Priority: Specify the priority of this policy, which defaults to Lowest.
-    You can add multiple IP addresses to an address book to simplify the policy configuration. In the upper-right corner of the Access Control page, click **Address Books** to add, modify, or delete address books used in access control policies.
+    You can add multiple IP addresses to an address book. This simplifies the procedure to configure access control policies. You can also click **Address Books** to add, modify, or delete IP addresses. For more information about address book management, see [Manage address books](/intl.en-US/Access control/Manage address books.md).
 
-    On the Outbound Policies tab, you can modify, delete, or move a policy.
+    -   If you want to control outbound traffic, click the **Internet Firewall** tab to create **outbound policies**.
 
-    **Note:** We recommend that you set the policy actions of all outbound policies to **Deny** except for those required in necessary external connections.
+        **Note:**
 
-5.  Click **OK**.
+        -   We recommend that you configure the actions of outbound policies to **Deny**. This does not apply if the policies are used to allow necessary outbound connections.
+        -   If the source addresses in outbound policies are internal IP addresses, you must configure a secure forward proxy. Otherwise, the outbound policies do not take effect. For more information about how to configure a secure forward proxy, see [Use secure forward proxies](/intl.en-US/Firewall Settings/Use secure forward proxies.md).
+        ![Outbound Policies](../images/p263065.png)
+
+    -   If you want to control inbound traffic, click the **Internet Firewall** tab to create **inbound policies**.
+
+        ![Inbound Policies](../images/p263069.png)
+
+    -   If you want to control traffic between VPCs, click the **VPC Firewall** tab to create **VPC firewall** policies.
+
+        **Note:** The VPC Firewall feature is supported only for Cloud Firewall Enterprise Edition and Ultimate Edition.
+
+        ![VPC Firewall tab](../images/p263071.png)
+
 
