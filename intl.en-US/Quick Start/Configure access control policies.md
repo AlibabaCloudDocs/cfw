@@ -16,16 +16,9 @@ Cloud Firewall allows you to configure access control policies for inbound, outb
 
         -   We recommend that you configure the actions of outbound policies to **Deny**. This does not apply if the policies are used to allow necessary outbound connections.
         -   If the source addresses in outbound policies are internal IP addresses, you must configure a secure forward proxy. Otherwise, the outbound policies do not take effect. For more information about how to configure a secure forward proxy, see [Use secure forward proxies](/intl.en-US/Firewall Settings/Use secure forward proxies.md).
-        ![Outbound Policies](../images/p263065.png)
-
     -   If you want to control inbound traffic, click the **Internet Firewall** tab to create **inbound policies**.
-
-        ![Inbound Policies](../images/p263069.png)
-
     -   If you want to control traffic between VPCs, click the **VPC Firewall** tab to create **VPC firewall** policies.
 
         **Note:** The VPC Firewall feature is supported only for Cloud Firewall Enterprise Edition and Ultimate Edition.
-
-        ![VPC Firewall tab](../images/p263071.png)
 
 
