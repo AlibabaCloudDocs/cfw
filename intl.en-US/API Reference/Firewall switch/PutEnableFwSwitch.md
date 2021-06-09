@@ -20,10 +20,10 @@ Set the value to PutEnableFwSwitch. |
 -   **en**: English |
 |IpaddrList.N|RepeatList|No|\["1.2.X.X","5.6.X.X"\]|The list of IP addresses.
 
-**Note:** You must configure at least one of the IpaddrList， RegionList， ResourceTypeList parameters. |
+**Note:** You must configure at least one of the IpaddrList, RegionList, ResourceTypeList parameters. |
 |RegionList.N|RepeatList|No|\["cn-hangzhou","cn-shanghai"\]|The list of regions.
 
-**Note:** You must configure at least one of the IpaddrList， RegionList， ResourceTypeList parameters. |
+**Note:** You must configure at least one of the IpaddrList, RegionList, ResourceTypeList parameters. |
 |ResourceTypeList.N|RepeatList|No|\["EcsPublicIp","NatEip"\]|The list of asset types.
 
 Valid values:
@@ -39,7 +39,7 @@ Valid values:
 -   NatPublicIP: the public IP address of a NAT gateway
 -   HAVIP: the HA VIP
 
-**Note:** You must configure at least one of the IpaddrList， RegionList， ResourceTypeList parameters. |
+**Note:** You must configure at least one of the IpaddrList, RegionList, ResourceTypeList parameters. |
 
 ## Response parameters
 
