@@ -41,9 +41,9 @@ The following table describes the differences between the two policy groups.
 
 ## Create a policy group
 
-1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext)[Cloud Firewall console](https://partners-yundun.console.aliyun.com/?p=cfwnext).
+1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext).
 
-2.  In the left-side navigation pane, click **Access Control**.
+2.  In the left-side navigation pane, click **Access Control** \> **Access Control**.
 
 3.  On the Access Control page, click the Internal Firewall tab.
 
@@ -87,7 +87,7 @@ The following table describes the differences between the two policy groups.
 
 After you create a policy group, you must configure a policy for the policy group.
 
-1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext)[Cloud Firewall console](https://partners-yundun.console.aliyun.com/?p=cfwnext).
+1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext).
 
 2.  In the left-side navigation pane, click **Access Control**.
 
@@ -98,8 +98,6 @@ After you create a policy group, you must configure a policy for the policy grou
 5.  In the upper-right corner of the Configure Policy page, click **Create Policy**.
 
 6.  In the Create Policy dialog box, configure the following parameters.
-
-    ![Create Policy dialog box](../images/p184097.png)
 
     |Parameter|Description|
     |---------|-----------|
@@ -155,7 +153,7 @@ If you select this type, you must select a policy group. Traffic destined for al
 
 To apply a created policy, you must publish the policy. Then, the policy can control inbound or outbound traffic.
 
-1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext)[Cloud Firewall console](https://partners-yundun.console.aliyun.com/?p=cfwnext).
+1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext).
 
 2.  In the left-side navigation pane, click **Access Control**.
 
@@ -172,15 +170,9 @@ To apply a created policy, you must publish the policy. Then, the policy can con
     ![ECS security groups](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0447249851/p77670.png)
 
 
-## 主机边界防火墙配置视频教程
-
-
-
 ## References
 
 [Why does Cloud Firewall provide three types of firewalls?](/intl.en-US/FAQ/Protection scope of Cloud Firewall.md)
 
 [What are the differences between Cloud Firewall and ECS security groups?](/intl.en-US/FAQ/What are the differences between Cloud Firewall and ECS security groups?.md)
-
-[t275154.md\#]()
 
