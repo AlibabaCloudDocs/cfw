@@ -2,7 +2,7 @@
 
 The log analysis feature allows you to export log query results to your local disk. You can download logs on a specific page as a CSV file or download all logs as a TXT file. This topic describes how to export logs in the Cloud Firewall console.
 
-1.  Log on to the [Cloud Firewall console](https://partners-intl.console.aliyun.com/#/cfwnext).
+1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext).
 
 2.  In the left-side navigation pane, choose **Logs** \> **Log Analysis**.
 
