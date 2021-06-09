@@ -12,13 +12,15 @@ The Internet firewall allows you to configure **Outbound Policies** and **Inboun
 
 1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext).
 
-2.  In the left-side navigation pane, choose **Security Policies** \> **Access Control**.
+2.  In the left-side navigation pane, click **Access Control**.
 
-3.  On the Internet Firewall page, click the Outbound Policies tab.
+3.  In the left-side navigation pane, click**Access Control** \> **Access Control** .
 
-4.  On the Outbound Policies tab, click **Create Policy**.
+4.  On the Internet Firewall page, click the Outbound Policies tab.
 
-5.  In the Create Outbound Policy dialog box, perform the following operations to create an outbound access control policy.
+5.  On the Outbound Policies tab, click **Create Policy**.
+
+6.  In the Create Outbound Policy dialog box, perform the following operations to create an outbound access control policy.
 
     ![Create an access control outbound policy](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8856586851/p77609.png)
 
@@ -70,7 +72,7 @@ The Internet firewall allows you to configure **Outbound Policies** and **Inboun
 
 1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext).
 
-2.  In the left-side navigation pane, choose **Security Policies** \> **Access Control**.
+2.  In the left-side navigation pane, click **Access Control**.
 
 3.  On the **Internet Firewall** tab, click the **Inbound Policies** tab. Then, click **Create Policy**.
 
