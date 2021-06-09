@@ -4,7 +4,7 @@ The log analysis feature allows you to export log query results to your local di
 
 1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext).
 
-2.  In the left-side navigation pane, choose **Logs** \> **Log Analysis**.
+2.  In the left-side navigation pane, choose **Log Analysis** \> **Log Analysis**.
 
 3.  Click **Logs** and **Raw Logs**. In the upper right corner, click ![Download icon](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3936009851/p13508.png).
 
