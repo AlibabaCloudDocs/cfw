@@ -70,7 +70,7 @@ The Internet firewall allows you to configure **Outbound Policies** and **Inboun
 
 1.  Log on to the [Cloud Firewall console](https://yundun.console.aliyun.com/?p=cfwnext).
 
-2.  In the left-side navigation pane, click **Access Control**.
+2.  In the left-side navigation pane, click**Access Control** \> **Access Control** .
 
 3.  On the **Internet Firewall** tab, click the **Inbound Policies** tab. Then, click **Create Policy**.
 
