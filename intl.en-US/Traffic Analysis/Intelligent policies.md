@@ -59,7 +59,11 @@ Worm attacks control your host by using malicious code and cause it to send requ
 
         The following figure shows that the host has sent many requests to malicious destinations.
 
+        ![inoutcelue](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1637424261/p285165.png)
+
     -   Choose **Deliver Policy** \> **Submit**. The recommended policy takes effect immediately. You can view delivered policies by choosing **Security Policies** \> **Access Control** \> **Internet Firewall** \> **Outbound Policies**.
+
+        ![checkinout](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1637424261/p285175.png)
 
         **Note:** Before you click **Deliver Policy** to deliver a recommended policy, make sure that you understand its content and possible service impacts.
 
