@@ -4,11 +4,11 @@ This topic describes the differences between Cloud Firewall editions and support
 
 ## Differences in features and billing between Cloud Firewall editions
 
-|Feature or billing item|Basic Edition|Premium Edition|Enterprise Edition|Ultimate Edition|Description|
-|-----------------------|-------------|---------------|------------------|----------------|-----------|
+|Feature or billable item|Basic Edition|Premium Edition|Enterprise Edition|Ultimate Edition|Description|
+|------------------------|-------------|---------------|------------------|----------------|-----------|
 |Basic price|Free of charge|USD 420 per month.|USD 1,450 per month.|USD 3,900 per month.|None.|
-|Peak Internet bandwidth of protected traffic|Not supported|Valid values: 10 to 2,000. Unit: Mbit/s.|Valid values: 50 to 5,000. Unit: Mbit/s.|Valid values: 200 to 5,000. Unit: Mbit/s.|Extra fee:USD 7 per month for each increase of 1 Mbit/s of bandwidth.|
-|Number of protected public IP addresses|Not supported.|Valid values: 20 to 1,000.|Valid values: 50 to 2,000.|Valid values: 400 to 4,000.|Extra fee: USD 7 per month for each additional public IP address that you want to protect.|
+|Peak Internet bandwidth of protected traffic|Not supported|Valid values: 10 to 2,000. Unit: Mbit/s.|Valid values: 50 to 5,000. Unit: Mbit/s.|Valid values: 200 to 5,000. Unit: Mbit/s.|Extra fee: USD 7 per month for each increase of 1 Mbit/s of bandwidth.|
+|Number of protected public IP addresses|Not supported|Valid values: 20 to 1,000.|Valid values: 50 to 2,000.|Valid values: 400 to 4,000.|Extra fee: USD 7 per month for each additional public IP address that you want to protect.|
 |Maximum number of access control policies|Not supported|Access control policies for the Internet firewall: 4,000.|-   Access control policies for the Internet firewall: 10,000.
 -   Access control policies for VPC firewalls: 10,000.
 
@@ -23,7 +23,7 @@ This topic describes the differences between Cloud Firewall editions and support
 |Visualization of security group traffic|Not supported|Not supported.|Supported.|Supported.|None.|
 |Synchronization of security group policies|Supported|Not supported.|Supported.|Supported.|None.|
 |Isolation between VPCs|Not supported|Not supported.|Supported.|Supported.|None.|
-|Number of protected VPCs|Not supported|Not supported.|Valid values: 2 to 200.|Valid values: 5 to 500.|Extra fee:USD 300 per month for each additional VPC that you want to protect.|
+|Number of protected VPCs|Not supported|Not supported.|Valid values: 2 to 200.|Valid values: 5 to 500.|Extra fee: USD 300 per month for each additional VPC that you want to protect.|
 |Maximum traffic between VPCs that can be protected|Not supported|Not supported.|100 Mbit/s.|1 Gbit/s.|None.|
 |Unified VPC protection across Alibaba Cloud accounts \(with Cloud Enterprise Network enabled\)|Not supported|Not supported.|Not supported.|Supported.|None.|
 |Log audit \(Logs are stored for seven days by default.\)|Not supported|Provides 5-tuple logs. **Note:** A 5-tuple log contains the information of a source IP address, a source port, a destination IP address, a destination port, and a transport layer protocol.
