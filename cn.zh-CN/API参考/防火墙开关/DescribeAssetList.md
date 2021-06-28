@@ -1,6 +1,6 @@
 # DescribeAssetList
 
-调用DescribeAssetList查询云防火墙资产列表。
+调用DescribeAssetList接口，查询云防火墙防护的资产的信息。
 
 ## 调试
 
@@ -27,7 +27,7 @@
 -   **opening**：保护开启中
 -   **closed**：保护未开启
 -   **closing**：保护关闭中 |
-|SearchItem|String|否|1.1.1.1|搜索项目的IP或者实例ID。 |
+|SearchItem|String|否|1.1.XX.XX|搜索项目的IP或者实例ID。 |
 |Type|String|否|eip|本参数已废弃。 |
 |ResourceType|String|否|EcsEIP|资产类型列表。取值：
 
@@ -42,11 +42,18 @@
 -   **SlbPublicIP**：SLB公网IP
 -   **NatPublicIP**：NAT公网IP
 -   **HAVIP**：高可用虚拟IP |
-|SgStatus|String|否|open|安全组策略状态。取值：
+|SgStatus|String|否|pass|安全组策略状态。取值：
 
  -   **pass**：已下发
 -   **block**：未下发
 -   **unsupport**：不支持 |
+|IpVersion|String|否|6|云防火墙防护的资产的IP版本。
+
+ 取值：
+
+ -   4：IpV4
+-   6：IpV6 |
+|MemberUid|Long|否|1111222233334444|防火墙成员账号的UID。 |
 
 ## 返回数据
 
@@ -56,8 +63,15 @@
 |AliUid|Long|1234123412341234|阿里云UID。 |
 |BindInstanceId|String|i-8vbdrjrxzt78\*\*\*\*|绑定资产实例ID。 |
 |BindInstanceName|String|instance01|绑定资产实例名称。 |
-|InternetAddress|String|1.1.1.1|服务器公网IP。 |
+|InternetAddress|String|1.1.XX.XX|服务器公网IP。 |
 |IntranetAddress|String|192.168.XX.XX|服务器内网IP。 |
+|IpVersion|Integer|6|云防火墙防护的资产的IP地址版本。
+
+ 取值：
+
+ -   4：代表IPv4地址
+-   6：代表IPv6地址 |
+|MemberUid|Long|1111222233334444|云防火墙成员账号的UID。 |
 |Name|String|instance01|云防火墙防护的云资产的实例名称。 |
 |Note|String|REGION\_NOT\_SUPPORT|备注信息列表。取值：
 
@@ -123,8 +137,10 @@ http(s)://[Endpoint]/?Action=DescribeAssetList
   <RequestId>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</RequestId>
   <Assets>
         <BindInstanceId>i-8vbdrjrxzt78****</BindInstanceId>
-        <InternetAddress>1.1.1.1</InternetAddress>
+        <InternetAddress>1.1.XX.XX</InternetAddress>
+        <MemberUid>1111222233334444</MemberUid>
         <RegionStatus>enable</RegionStatus>
+        <IpVersion>6</IpVersion>
         <SgStatusTime>1615082937</SgStatusTime>
         <SyncStatus>enable</SyncStatus>
         <ResourceType>EcsPublicIP</ResourceType>
@@ -146,28 +162,28 @@ http(s)://[Endpoint]/?Action=DescribeAssetList
 
 ```
 {
-	"TotalCount": "12",
-	"RequestId": "CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D",
-	"Assets": [
-		{
-			"BindInstanceId": "i-8vbdrjrxzt78****",
-			"InternetAddress": "1.1.1.1",
-			"RegionStatus": "enable",
-			"SgStatusTime": "1615082937",
-			"SyncStatus": "enable",
-			"ResourceType": "EcsPublicIP",
-			"Name": "instance01",
-			"SgStatus": "block",
-			"IntranetAddress": "192.168.XX.XX",
-			"Type": "eip",
-			"Note": "REGION_NOT_SUPPORT",
-			"BindInstanceName": "instance01",
-			"ProtectStatus": "open",
-			"RegionID": "cn-hangzhou",
-			"ResourceInstanceId": "i-8vbdrjrxzt78****",
-			"AliUid": "1234123412341234"
-		}
-	]
+    "TotalCount": 12,
+    "RequestId": "CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D",
+    "Assets": {
+        "BindInstanceId": "i-8vbdrjrxzt78****",
+        "InternetAddress": "1.1.XX.XX",
+        "MemberUid": 1111222233334444,
+        "RegionStatus": "enable",
+        "IpVersion": 6,
+        "SgStatusTime": 1615082937,
+        "SyncStatus": "enable",
+        "ResourceType": "EcsPublicIP",
+        "Name": "instance01",
+        "SgStatus": "block",
+        "IntranetAddress": "192.168.XX.XX",
+        "Type": "eip",
+        "Note": "REGION_NOT_SUPPORT",
+        "BindInstanceName": "instance01",
+        "ProtectStatus": "open",
+        "RegionID": "cn-hangzhou",
+        "ResourceInstanceId": "i-8vbdrjrxzt78****",
+        "AliUid": 1234123412341234
+    }
 }
 ```
 
