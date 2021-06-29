@@ -30,7 +30,7 @@ This topic describes the billing methods of Cloud Firewall. Cloud Firewall has a
 
 |Provides 5-tuple logs.|Provides 5-tuple logs.|If you enable the [log analysis](/intl.en-US/Logs/Log analysis/Overview.md) feature, Cloud Firewall stores the logs generated in the last six months and allows you to export the logs.|
 |Expert Service|Not supported|Supported.|Supported.|Supported.|None.|
-|Cluster deployment|Not supported|Uses shared resources.|Uses shared resources.|Uses dedicated resources.You can submit a [ticket](https://workorder-intl.console.aliyun.com/#/ticket/add/?productId=80) to change the resource specifications.|None.|
+|Cluster deployment|Not supported|Uses shared resources.|Uses shared resources.|Uses dedicated resources. You can submit a [ticket](https://workorder-intl.console.aliyun.com/#/ticket/add/?productId=80) to change the resource specifications.|None.|
 |Subscription mode|Free of charge|Shortest subscription period: six months.|Monthly subscription supported.|Monthly subscription supported.|None.|
 
 **Note:** Cloud Firewall protects only Alibaba Cloud assets. The assets include Elastic Compute Service \(ECS\) instances, elastic IP addresses \(EIPs\), Server Load Balancer \(SLB\) instances, and bastion hosts.
