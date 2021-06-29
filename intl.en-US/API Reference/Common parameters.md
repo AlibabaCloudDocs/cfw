@@ -6,7 +6,7 @@ This topic describes the common parameters for API operations provided by Cloud 
 
 |Parameter|Type|Required|Description|
 |---------|----|--------|-----------|
-|Region|String|Yes|The region where the Cloud Firewall instance resides.Set the value to Singapore.|
+|Region|String|Yes|The region where the Cloud Firewall instance resides. Set the value to Singapore.|
 |Format|String|No|The format in which to return the response. Valid values: -   `JSON`: This is the default value.
 -   `XML.` |
 |Version|String|Yes|The version number of the API. Specify the version number in the YYYY-MM-DD format. Set the value to `2017-12-07`.|
