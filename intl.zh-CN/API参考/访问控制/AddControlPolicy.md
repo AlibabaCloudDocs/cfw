@@ -222,7 +222,3 @@ http(s)://[Endpoint]/?Action=AddControlPolicy
 }
 ```
 
-## 错误码
-
-访问[错误中心](https://error-center.alibabacloud.com/status/product/Cloudfw)查看更多错误码。
-
