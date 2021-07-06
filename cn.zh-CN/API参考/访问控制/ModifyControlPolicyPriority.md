@@ -49,10 +49,6 @@ http(s)://[Endpoint]/?Action=ModifyControlPolicyPriority
 }
 ```
 
-## 错误码
-
-访问[错误中心](https://error-center.aliyun.com/status/product/Cloudfw)查看更多错误码。
-
 ## 相关文档
 
 [DescribeControlPolicy](~~138866~~)：查询访问控制策略的信息（包括优先级）。
