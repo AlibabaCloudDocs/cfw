@@ -74,7 +74,3 @@ http(s)://[Endpoint]/?Action=PutEnableFwSwitch&IpaddrList=["1.2.X.X","5.6.X.X."]
 }
 ```
 
-## 错误码
-
-访问[错误中心](https://error-center.aliyun.com/status/product/Cloudfw)查看更多错误码。
-
