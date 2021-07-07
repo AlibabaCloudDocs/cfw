@@ -11,11 +11,6 @@
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
 |Action|String|是|AddInstanceMembers|系统规定参数。取值：**AddInstanceMembers**。 |
-|SourceIp|String|否|1.1.X.X|访问者源IP地址。 |
-|Lang|String|否|zh|请求和接收消息的语言类型。取值：
-
- -   **zh**：中文
--   **en**：英文 |
 |Members.N.MemberUid|Long|否|1234123412341234|云防火墙成员账号的UID。 |
 |Members.N.MemberDesc|String|否|renewal|云防火墙成员账号的备注信息。 |
 
@@ -51,8 +46,4 @@ http(s)://[Endpoint]/?Action=AddInstanceMembers
   "RequestId": "B40A54DF-C142-44F7-8441-B31C1EADB36E"
 }
 ```
-
-## 错误码
-
-访问[错误中心](https://error-center.aliyun.com/status/product/Cloudfw)查看更多错误码。
 
