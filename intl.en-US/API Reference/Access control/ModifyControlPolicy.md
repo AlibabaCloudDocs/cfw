@@ -1,6 +1,6 @@
 # ModifyControlPolicy
 
-You can call this operation to modify the configurations of an access control policy.
+Modifies the configurations of an access control policy.
 
 ## Debugging
 
@@ -10,18 +10,16 @@ You can call this operation to modify the configurations of an access control po
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|AclAction|String|Yes|accept|The action that Cloud Firewall performs on the traffic. Valid values:
+|Action|String|Yes|ModifyControlPolicy|The operation that you want to perform. Set the value to **ModifyControlPolicy**. |
+|AclAction|String|Yes|accept|The action that Cloud Firewall performs on the traffic. Valid values: Valid values:
 
- -   **accept**: Allow
--   **drop**: Deny
--   **log**: Monitor |
-|AclUuid|String|Yes|00281255-d220-4db1-8f4f-c4df221ad84c|The unique ID of the access control policy.
+ -   **accept**: allows the traffic.
+-   **drop**: denies the traffic.
+-   **log**: monitors the traffic. |
+|AclUuid|String|Yes|00281255-d220-4db1-8f4f-c4df221ad84c|The ID of the access control policy.
 
- You can call the DescribeControlPolicy operation to query the ID. |
-|Action|String|Yes|ModifyControlPolicy|The operation that you want to perform. Set the value to ModifyControlPolicy. |
-|ApplicationName|String|Yes|HTTP|The application type defined in the access control policy.
-
- Valid values:
+ **Note:** To modify the access control policy, you must provide the ID of the policy. You can call the [DescribeControlPolicy](~~138866~~) operation to obtain the IDs of access control policies. |
+|ApplicationName|String|Yes|HTTP|The type of the application that the access control policy supports. Valid values:
 
  -   **ANY**
 -   **HTTP**
@@ -38,51 +36,57 @@ You can call this operation to modify the configurations of an access control po
 -   **Memcache**
 -   **SSL**
 
- **Note:** The value of **ANY** indicates that the policy is applied to all types of applications. |
+ **Note:** The value **ANY** indicates all types of applications. |
 |Description|String|Yes|test|The description of the access control policy. |
-|Destination|String|Yes|1.2.3.4/24|The destination address defined in the access control policy.
+|Destination|String|Yes|1.2.3.4/24|The destination address in the access control policy.
 
- -   If the DestinationType parameter is set to net, this parameter specifies the destination CIDR block. Example: 1.2.3.4/24
--   If the DestinationType parameter is set to group, this parameter specifies the name of the destination address book. Example: db\_group
--   If the DestinationType parameter is set to domain, this parameter specifies the destination domain name. Example: \*.aliyuncs.com
--   If the DestinationType parameter is set to location, this parameter specifies the destination region. For more information about region codes, see the following section. Example: \["BJ11", "ZB"\] |
-|DestinationType|String|Yes|net|The type of the destination address defined in the access control policy. Valid values:
+ -   If **DestinationType** is set to net, the value of this parameter is the **destination CIDR block**. Example: 1.2.3.4/24.
+-   If **DestinationType** is set to group, the value of this parameter is the **destination address book**. Example: db\_group.
+-   If **DestinationType** is set to domain, the value of this parameter is the **destination domain name**. Example: \*.aliyuncs.com.
+-   If **DestinationType** is set to location, the value of this parameter is the **destination location**. For more information about the location codes, see the "AddControlPolicy" topic. Example: \["BJ11", "ZB"\]. |
+|DestinationType|String|Yes|net|The type of the destination address in the access control policy. Valid values:
 
- -   net: destination CIDR block
--   group: destination address book
--   domain: destination domain name
--   location: destination region |
-|Direction|String|Yes|in|The traffic direction defined in the access control policy. Valid values:
+ -   **net**: destination CIDR block
+-   **group**: destination address book
+-   **domain**: destination domain name
+-   **location**: destination location |
+|Direction|String|Yes|in|The direction of the traffic to which the access control policy applies. Valid values:
 
  -   **in**: inbound traffic
 -   **out**: outbound traffic |
-|Proto|String|Yes|TCP|The security protocol type defined in the access control policy. If you cannot determine the protocol type, you can set this parameter to **ANY**. Valid values:
+|Proto|String|Yes|TCP|The security protocol type defined in the access control policy. Valid values: Valid values:
 
- -   ANY
--   TCP
--   UDP
--   ICMP |
-|Source|String|Yes|1.2.3.0/24|The source address defined in the access control policy.
+ -   **ANY**
+-   **TCP**
+-   **UDP**
+-   **ICMP**
 
- -   If the SourceType parameter is set to net, this parameter specifies the source CIDR block. Example: 1.2.3.0/24
--   If the SourceType parameter is set to group, this parameter specifies the name of the source address book. Example: db\_group
--   If the SourceType parameter is set to location, this parameter specifies the source region. For more information about region codes, see the following section. Example: \["BJ11", "ZB"\] |
-|SourceType|String|Yes|net|The source address type defined in the access control policy. Valid values:
+ **Note:** The value **ANY** indicates all types of applications. |
+|Source|String|Yes|1.2.3.0/24|The source address in the access control policy.
 
- -   net: source CIDR block
--   group: source address book
--   location: source region |
-|DestPort|String|No|80|The destination port defined in the access control policy. |
-|DestPortGroup|String|No|my\_port\_group|The name of the destination port address book defined in the access control policy. |
-|DestPortType|String|No|port|The type of the destination port defined in the access control policy. Valid values:
+ -   If **SourceType** is set to net, the value of this parameter is the **source CIDR block**. Example: 1.2.3.0/24.
+-   If **SourceType** is set to group, the value of this parameter is the name of the **source address book**. Example: db\_group.
+-   If **SourceType** is set to location, the value of this parameter is the **source location**. For more information about the location codes, see the "AddControlPolicy" topic. Example: \["BJ11", "ZB"\]. |
+|SourceType|String|Yes|net|The type of the source address in the access control policy. Valid values:
+
+ -   **net**: source CIDR block
+-   **group**: source address book
+-   **location**: source location |
+|SourceIp|String|No|1.2.3.5|The source IP address of the request. |
+|Lang|String|No|zh|The natural language of the request and response. Valid values:
+
+ -   **zh**: Chinese
+-   **en**: English |
+|DestPort|String|No|80|The destination port in the access control policy. |
+|DestPortType|String|No|port|The type of the destination port in the access control policy. Valid values:
 
  -   **port**: port
 -   **group**: port address book |
-|Lang|String|No|zh|The language of the request and response. Valid values:
+|DestPortGroup|String|No|my\_port\_group|The name of the destination port address book in the access control policy. |
+|Release|String|No|true|The status of the access control policy. Valid values:
 
- -   **en**: English
--   **zh**: Chinese |
-|SourceIp|String|No|1.2.3.5|The source IP address of the request. |
+ -   true: enables the policy.
+-   false: disables the policy. |
 
 ## Response parameters
 
@@ -95,12 +99,11 @@ You can call this operation to modify the configurations of an access control po
 Sample requests
 
 ```
-
-http(s)://[Endpoint]/? Action=ModifyControlPolicy
+http(s)://[Endpoint]/?Action=ModifyControlPolicy
 &AclAction=accept
 &AclUuid=00281255-d220-4db1-8f4f-c4df221ad84c
-&ApplicationName=ANY
-&Description=demo_rule_1
+&ApplicationName=HTTP
+&Description=test
 &Destination=1.2.3.4/24
 &DestinationType=net
 &Direction=in
@@ -108,7 +111,6 @@ http(s)://[Endpoint]/? Action=ModifyControlPolicy
 &Source=1.2.3.0/24
 &SourceType=net
 &<Common request parameters>
-
 ```
 
 Sample success responses
@@ -116,20 +118,16 @@ Sample success responses
 `XML` format
 
 ```
-<ModifyControlPolicy>
-	  <RequestId>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</RequestId>
-</ModifyControlPolicy>
+<ModifyControlPolicyResponse>
+  <RequestId>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</RequestId>
+</ModifyControlPolicyResponse>
 ```
 
 `JSON` format
 
 ```
 {
-	"RequestId":"CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D"
+    "RequestId": "CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D"
 }
 ```
-
-## Error codes
-
-For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cloudfw).
 
