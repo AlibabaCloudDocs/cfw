@@ -18,13 +18,13 @@ On the Internet Firewall tab, you can configure **inbound policies** to control 
 
 4.  On the **Inbound Policies** tab, click **Create Policy**.
 
-    ![Create Policy](../images/p290361.png)
+    ![Create Policy](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7427506261/p290361.png)
 
 5.  In the **Create Inbound Policy** dialog box, configure the parameters.
 
     Set **Source Type** to **Region**, **Source** to Regions Outside China, and **Policy Action** to **Deny**. Then, click **Submit**. The following table describes the parameters.
 
-    ![Create Inbound Policy](../images/p290575.png)
+    ![Create Inbound Policy](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7427506261/p290575.png)
 
 
 |Parameter|Description|
