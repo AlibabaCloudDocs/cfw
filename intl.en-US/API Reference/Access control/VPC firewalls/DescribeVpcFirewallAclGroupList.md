@@ -82,7 +82,3 @@ Sample success responses
 {"TotalCount":1,"AclGroupList":[{"AclGroupId":"vfw-a42bbb7b887148c9****","AclGroupName":"group_test"}]}
 ```
 
-## Error codes
-
-For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Cloudfw).
-
