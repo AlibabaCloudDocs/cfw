@@ -38,7 +38,7 @@ The Internet Traffic Blocking tab contains the following sections:
 
         ![Details panel of an IPS blocking event](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5958136261/p211164.png)
 
-    -   On the right of the search box, click the ![Download icon](../images/p286642.png) icon to download intrusion prevention policies. ![Export intrusion prevention policies](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5958136261/p286614.png)
+    -   On the right of the search box, click the ![Download icon](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1026146261/p286642.png) icon to download intrusion prevention policies. ![Export intrusion prevention policies](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5958136261/p286614.png)
 
 ## VPC Traffic Blocking
 
